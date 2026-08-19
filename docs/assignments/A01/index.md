@@ -78,7 +78,7 @@ My homepage will clearly show that this is my mechanical engineering portfolio a
 I added a personal logo to the portfolio to give the website a recognizable idientity and make it feel more like my own engineering portfolio. The original template did not include anything that visually identified the the portfolio as mine. The logo will provide a consistent visual identifier that can be used throughout the website and will help distiguish my portfolio from the template given to me.
 
 ### Documentation Standard
-
+My documentation standard is to clearly explain my engineering decisions, calculations, assumptions, and my results with enough detail that another engineering student could understand my reasoning and even reproduce my work without needing to call me.
 
 ## Communicate
 
