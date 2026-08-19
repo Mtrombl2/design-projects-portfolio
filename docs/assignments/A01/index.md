@@ -47,12 +47,37 @@ The governing model for the bottle is the moment equation M=Fd. Where M is the m
 ##### Component Analysis
 
 ###### Complete Bottle Opener
+![Complete Bottle Opener](IMG_5345.jpg)
+The Bottle opener consist of a long cylinder handle conected to a flat metal opening head. The long handle increases the perpendicular distance from the user's applied force to the contact point, increasing the moment produced.
 
+###### Handle
+![Handle](IMG_5346.jpg)
+The handle is long and cylindrical, which allows the user to comfortably grip the bottle opener and aplly force farther away from the contact point. The longer distance increases the moment produced because M=Fd. This allows the bottle cap to be easily removed with less force required from the user. The rounded surface also provides a smooth surface for the hand to apply force.
 
+###### Opener Head
+![Opener Head](IMG_5347.jpg)
+The opener head has an opening with a hooked edge that fits perfectly underneath the edge of the bottle cap. The opposite side of the opening contacts the top ofthe cap and acts as the pivot point. When the user's force is applied to the handle, the head roatates about the contact point and the hooked edge apllies an upward force providing leverage to the cap. The shaope of the opening head allows it to securely contact the cap while the moment from the handle gives enough force to lift it off.
 
+##### Patent Research
+Patent Number: US2018083A
+Inventor: James Andrew Murdock
 
+###### Alternative Solutions
+Two alternative devices that perform the same primary function are a bartender speed opener and a wall mounted bottle opener.
+A bartender speed opener , also known as a bar blade, uses a long flat handle with an opening at the end that will catch underneath the bottle cap. The long handle provides levarage and allows the cap to be removed swiftly. A wall mounted bottle opener is fixed to a wall and also uses leverage to remove the cap. Since the opener is fixed in place and does not allow for a moment to be created from the handle, the user moves the bottle instead.
+
+###### Design Decision
+One design decision that the engineer made was making the upper contact section longer than the lower hooked section. I believe this was done so the upper section could rest securely on top of the bottle cap to create a stable pivot point, while the shorter lower section could fit nicely underneath the edge of the cap. When the handle is lifted, the opener rotates about the upper contact point and the lower section pulls upward on the cap. 
 
 ## Decide
+
+### Homepage Identity
+My homepage will clearly show that this is my mechanical engineering portfolio and will provide access to my engineering projects and assignments. I want the projects to be the main focus of the homepage so that an employer or engineer can easily see the work I have completed and navigate to more detailed information. The homepage will focus on what the portfolio contains, while the About me section will provide information about me personally.
+
+### One intentional Customization
+I added a personal logo to the portfolio to give the website a recognizable idientity and make it feel more like my own engineering portfolio. The original template did not include anything that visually identified the the portfolio as mine. The logo will provide a consistent visual identifier that can be used throughout the website and will help distiguish my portfolio from the template given to me.
+
+### Documentation Standard
 
 
 ## Communicate
