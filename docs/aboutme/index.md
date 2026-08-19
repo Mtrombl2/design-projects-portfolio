@@ -1,2 +1,6 @@
 #About Me
-This is how to edit
+## Professional Introduction
+
+## Defending an Engineering Decision
+
+## Time Spent
