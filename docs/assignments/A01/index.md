@@ -9,7 +9,7 @@
 Portfolio: [Thanh Tran Mechanical Engineering Portfolio] (https://thanhvtran.com/)
 
 #### Navigability 
-I was able to find all of his projects and internships like his Space X internship under 60 seconds. On the top of his homepage there was a projects tab and the Space X internship took one click to give me pictures and description of what he all did at his internship. Thanh also made a timeline which shows all of his projects in chronological order with a button that says read more if you wanted information. The timeline improves navigation by showing when everything happened and how many years he has been doing projects.
+I was able to find all of his projects and internships like his Space X internship under 60 seconds. On the top of his homepage there was a projects tab and the Space X internship took one click to give me pictures and description of what he all did at his internship. Thanh also made a timeline which shows all of his projects in chronological order with a button that says read more if you wanted more information. The timeline improves navigation by showing when everything happened and how many years he has been doing projects.
 
 #### Reproducibility
 His portfolio shows the parts and projects that he made, but it does not provide enough information for me to look at it and create the exact model he created. You can get a good idea of how to create it from the pictures posted, but it is missing dimensions, materials, drawings, and step-by-step manufacturing processes. I would definitely have to contact him to recreate his projects.
@@ -18,7 +18,7 @@ His portfolio shows the parts and projects that he made, but it does not provide
 He mostly just provides the information of what he did other than why he did it. He would briefly explain reasoning behind some decisions like lower cost or lower welding takt time for his Space X internship. More explanation of why certain materials, designs, or manufacturing procedures were selected would make the decision making clearer to follow.
 
 #### Professional Tone 
-The portfolio has a professional tone because it s organized and focuses on his engineering experiences. All of his projects include pictures along with descriptions that explain what he accomplished using engineering vocabulary. The portfolio also includes his resume, internships, and engineering projects all in individual sections. This allows an employer to easily understand his level of experience. The design is consistent throughout the website and does not distract from his engineering work.
+The portfolio has a professional tone because it's organized and focuses on his engineering experiences. All of his projects include pictures along with descriptions that explain what he accomplished using engineering vocabulary. The portfolio also includes his resume, internships, and engineering projects all in individual sections. This allows an employer to easily understand his level of experience. The design is consistent throughout the website and does not distract from his engineering work.
 
 ### Portfolio 2: Nathan Hoong Engineering Portfolio
 Portfolio: [Nathan Hoong Engineering Portfolio] (https://nhoong.github.io/)
@@ -27,7 +27,7 @@ Portfolio: [Nathan Hoong Engineering Portfolio] (https://nhoong.github.io/)
 The portfolio is very easy to navigate because the projects are displayed directly on the first page. I was able to find his senior Capstone Project under 60 seconds. The project includes pictures that shows what he worked on, how he made it, and also provided another link to a full report which has all the information you need. This made it easy to locate the project first and find additional information if needed.
 
 #### Reproducibility
-This portfolio provides much more information for being able to reproduce the products. For example his senior Capstone Project includes dimensions. detailed drawings, pictures from all angles, and even a full report that umps into the whole process even including failures that lead to solutions. This would allow someone to easily reproduce his product without having to contact him a lot. Not all of the projects have that full report but they do all have drawings with dimensions.
+This portfolio provides much more information for being able to reproduce the products. For example his senior Capstone Project includes dimensions. detailed drawings, pictures from all angles, and even a full report that jumps into the whole process even including failures that lead to solutions. This would allow someone to easily reproduce his product without having to contact him a lot. Not all of the projects have that full report but they do all have drawings with dimensions.
 
 #### Evidence Of Reasoning
 The portfolio provides evidence of reasoning, but the amount varies between projects. In the full report for the Capstone Project, he explains why certain decisions were made instead of just showing the final design. However, some of the other projects provide less explanation of reasoning and just photos on the final design and drawings to assemble it. Including the same level of reasoning from the capstone report in the other projects would make his decision making easier to follow.
@@ -52,7 +52,7 @@ The Bottle opener consist of a long cylinder handle conected to a flat metal ope
 
 ###### Handle
 ![Handle](IMG_5346.jpg)
-The handle is long and cylindrical, which allows the user to comfortably grip the bottle opener and aplly force farther away from the contact point. The longer distance increases the moment produced because M=Fd. This allows the bottle cap to be easily removed with less force required from the user. The rounded surface also provides a smooth surface for the hand to apply force.
+The handle is long and cylindrical, which allows the user to comfortably grip the bottle opener and apply a force farther away from the contact point. The longer distance increases the moment produced because M=Fd. This allows the bottle cap to be easily removed with less force required from the user. The rounded surface also provides a smooth surface for the hand to apply a force comfortably.
 
 ###### Opener Head
 ![Opener Head](IMG_5347.jpg)
@@ -75,7 +75,7 @@ One design decision that the engineer made was making the upper contact section 
 My homepage will clearly show that this is my mechanical engineering portfolio and will provide access to my engineering projects and assignments. I want the projects to be the main focus of the homepage so that an employer or engineer can easily see the work I have completed and navigate to more detailed information. The homepage will focus on what the portfolio contains, while the About me section will provide information about me personally.
 
 ### One intentional Customization
-I added a personal logo to the portfolio to give the website a recognizable idientity and make it feel more like my own engineering portfolio. The original template did not include anything that visually identified the the portfolio as mine. The logo will provide a consistent visual identifier that can be used throughout the website and will help distiguish my portfolio from the template given to me.
+I added a personal logo to the portfolio to give the website a recognizable idientity and make it feel more like my own engineering portfolio. The original template did not include anything that visually identified the portfolio as mine. The logo will provide a consistent visual identifier that can be used throughout the website and will help distiguish my portfolio from the template given to me.
 
 ### Documentation Standard
 My documentation standard is to clearly explain my engineering decisions, calculations, assumptions, and my results with enough detail that another engineering student could understand my reasoning and even reproduce my work without needing to call me.
