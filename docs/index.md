@@ -1,4 +1,7 @@
 # Mason Trombley – MEGR 2156 portfolio
+<p align="center">
+<img src="MT%20LOGO.jpg" alt="MT Engineering Logo" width="250">
+</p>
 
 ![MEGR 2156-7 Title](MEGR2156title.png)
 
