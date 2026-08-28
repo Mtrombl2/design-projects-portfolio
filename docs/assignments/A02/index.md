@@ -7,8 +7,10 @@ The Objective of this project was to design and analyze a lightweight planar tru
 I began the analysis by identifying the given geometric constraints and loading conditions for the truss. I then determined the support reactions usng the overall free body diagram before analyzing the individual joints. After finding the internal member forces, I used the largest internal force to calculate the required cross sectional area of the truss members and then designed the connecting pins based on the largest reaction force.
 ### Given Constraints
 The first step was to identify the geometric and loading constraints provided in the problem. The truss has a total span of 1.2m, a height of 0.3m, and 0.4m distance between the lower joints. I selected P=25kN for the applied loads and used these dimensions throughout the analysis.
+![Given truss constraints](Constraints.jpg)
 
 ### Support Reactions
+I created an overall free body diagram of the truss to determine the support reactions.I used the equations of equilibrium, including sum of moments equals zero, sum of forces in the x direction equals zero, and sum of forces in the y direction equals zero, to solve for the reactions at supports A and B. The resulting reactions were used as the starting point for the method of joints analysis. 
 
 ### Method of Joints
 
