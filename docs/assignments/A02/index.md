@@ -17,6 +17,7 @@ I created an overall free body diagram of the truss to determine the support rea
 I used the method of joints to determine the internal forces in each of the truss members. At each joint, I applied the equations of equilibrium, sum of forces in the x and y direction equal zero, and resolved the angled members into their x and y components using the geometry of the truss. I used the resulting signs and directions to classify each member as being in tension or compression.
 
 ### Joint B
+![Joint B](joint%20B.jpg)
 
 ### Joint C
 
