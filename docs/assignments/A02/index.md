@@ -10,9 +10,13 @@ The first step was to identify the geometric and loading constraints provided in
 ![Given truss constraints](Constraints.jpg)
 
 ### Support Reactions
-I created an overall free body diagram of the truss to determine the support reactions.I used the equations of equilibrium, including sum of moments equals zero, sum of forces in the x direction equals zero, and sum of forces in the y direction equals zero, to solve for the reactions at supports A and B. The resulting reactions were used as the starting point for the method of joints analysis. 
+I created an overall free body diagram of the truss to determine the support reactions.I used the equations of equilibrium, including sum of moments equals zero, sum of forces in the x direction equals zero, and sum of forces in the y direction equals zero, to solve for the reactions at supports A and B. The resulting reactions were used as the starting point for the method of joints analysis.
+![Support Reactions](Truss.jpg)
 
 ### Method of Joints
+I used the method of joints to determine the internal forces in each of the truss members. At each joint, I applied the equations of equilibrium, sum of forces in the x and y direction equal zero, and resolved the angled members into their x and y components using the geometry of the truss. I used the resulting signs and directions to classify each member as being in tension or compression.
+
+### Joint B
 
 ### Joint C
 
