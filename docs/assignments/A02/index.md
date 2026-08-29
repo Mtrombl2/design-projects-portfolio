@@ -37,7 +37,11 @@ After solving for the internal forces in each member, I compared the magnitudes 
 ### Member Cross Sectional Area
 I used the maximum internal member force of 20.04 kN to determine the required cross sectional area of the truss members. A safety factor of 3.5 was applied to the yield strength of the material to determine the allowable stress. The calculated minimum cross sectional area was 0.343 in^2, and this same area was used for each truss member.
 
+### Total Member Length and Weight of the Truss
+I calculated the length of the diagonal members using the Pythagorean theorem. With a=0.4m and b=0.3m, the diagonal member length was 0.3606m. I then added the lengths of all seven truss members to obtain a total member length of 3.0424m. I converted this length to inches so that it was consistent with the cross sectional area and steel density units. Then using V=AL, I calculated the total volume of the truss members as 41.08in^3. Using the steel density of 0.2831lb/in^3, I calculated the approximate truss weight using W=pV. The resulting truss weight was 11.61lb.
+
 ### Pin Design
+I designed the connecting pins using the largest reaction load. The pins were modeled as single shear connections using hardened tool steel, a safety factor of 4, and the specified material properties.
 
 
 
