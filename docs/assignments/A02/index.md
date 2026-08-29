@@ -40,9 +40,16 @@ I used the maximum internal member force of 20.04 kN to determine the required c
 
 ### Total Member Length and Weight of the Truss
 I calculated the length of the diagonal members using the Pythagorean theorem. With a=0.4m and b=0.3m, the diagonal member length was 0.3606m. I then added the lengths of all seven truss members to obtain a total member length of 3.0424m. I converted this length to inches so that it was consistent with the cross sectional area and steel density units. Then using V=AL, I calculated the total volume of the truss members as 41.08in^3. Using the steel density of 0.2831lb/in^3, I calculated the approximate truss weight using W=pV. The resulting truss weight was 11.61lb.
+![Total Member Length and Weight of Truss](Weight.jpg)
 
 ### Pin Design
 I designed the connecting pins using the largest reaction load. The pins were modeled as single shear connections using hardened tool steel, a safety factor of 4, and the specified material properties.
+
+### Minimum Pin Cross Sectional Area
+For the single shear connection, I used the shear stress relationship and applied the required safety factor to determine the minimum pin cross sectional area.
+
+### Combined Pin weight
+After determining the required pin area, I calculated the volume and weight of the pins using their geometry and the material density 0.278 lb/in^3. The combined weight of the pins was determined to be 0.061lb.
 
 
 
