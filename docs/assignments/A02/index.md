@@ -31,7 +31,11 @@ I used the method of joints to determine the internal forces in each of the trus
 ### Internal Force Results
 ![Internal Force Results](OverallMember.jpg)
 
+### Max Internal Force 
+After solving for the internal forces in each member, I compared the magnitudes of the member forces to identify the governing load of the truss member design. The largest internal force was 20.04 kN, which occurred in members CO and OD. Iused this value as the maximum internal force when determining the required cross sectional area of the truss members.
+
 ### Member Cross Sectional Area
+I used the maximum internal member force of 20.04 kN to determine the required cross sectional area of the truss members. A safety factor of 3.5 was applied to the yield strength of the material to determine the allowable stress. The calculated minimum cross sectional area was 0.343 in^2, and this same area was used for each truss member.
 
 ### Pin Design
 
