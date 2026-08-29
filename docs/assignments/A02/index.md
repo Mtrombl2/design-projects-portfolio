@@ -1,7 +1,7 @@
 # A2 – Truss Stress Analysis
 
 ## Objective
-The Objective of this project was to design and analyze a lightweight planar truss qhilw satisfying the given geometric and loading constraints. I used static equilibrium and method of joints to determine the internal forces in each member. I then used the maximum internal force and the required safety factor to determine the minimum cross sectional area of the truss members and connecting pins. Finally, I created a CAD model of the truss to evaluate it's weight and compared the Cad results with my analytical calculations.
+The Objective of this project was to design and analyze a lightweight planar truss while satisfying the given geometric and loading constraints. I used static equilibrium and method of joints to determine the internal forces in each member. I then used the maximum internal force and the required safety factor to determine the minimum cross sectional area of the truss members and connecting pins. Finally, I created a CAD model of the truss to evaluate it's weight and compared the CAD results with my analytical calculations.
 
 ## Analyze
 I began the analysis by identifying the given geometric constraints and loading conditions for the truss. I then determined the support reactions usng the overall free body diagram before analyzing the individual joints. After finding the internal member forces, I used the largest internal force to calculate the required cross sectional area of the truss members and then designed the connecting pins based on the largest reaction force.
@@ -32,7 +32,7 @@ I used the method of joints to determine the internal forces in each of the trus
 ![Internal Force Results](OverallMember.jpg)
 
 ### Max Internal Force 
-After solving for the internal forces in each member, I compared the magnitudes of the member forces to identify the governing load of the truss member design. The largest internal force was 20.04 kN, which occurred in members CO and OD. Iused this value as the maximum internal force when determining the required cross sectional area of the truss members.
+After solving for the internal forces in each member, I compared the magnitudes of the member forces to identify the governing load of the truss member design. The largest internal force was 20.04 kN, which occurred in members CO and OD. I used this value as the maximum internal force when determining the required cross sectional area of the truss members.
 
 ### Member Cross Sectional Area
 I used the maximum internal member force of 20.04 kN to determine the required cross sectional area of the truss members. A safety factor of 3.5 was applied to the yield strength of the material to determine the allowable stress. The calculated minimum cross sectional area was 0.343 in^2, and this same area was used for each truss member.
@@ -44,12 +44,14 @@ I calculated the length of the diagonal members using the Pythagorean theorem. W
 
 ### Pin Design
 I designed the connecting pins using the largest reaction load. The pins were modeled as single shear connections using hardened tool steel, a safety factor of 4, and the specified material properties.
+![Pin Design](Shear.jpg)
 
 ### Minimum Pin Cross Sectional Area
 For the single shear connection, I used the shear stress relationship and applied the required safety factor to determine the minimum pin cross sectional area.
-
+![Minimum Pin Cross Sectional Area](Apin.jpg)
 ### Combined Pin weight
 After determining the required pin area, I calculated the volume and weight of the pins using their geometry and the material density 0.278 lb/in^3. The combined weight of the pins was determined to be 0.061lb.
+![Combined Pin Weight](WeightP.jpg)
 
 
 
