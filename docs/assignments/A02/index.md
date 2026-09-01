@@ -58,10 +58,12 @@ After determining the required pin area, I calculated the volume and weight of t
 ## Decide
 ### Overall Length and Height
 I first concerted the required overall dimensions from meters to inches so that I could use them in Creo. I then created one large rectangle using the specified overall length and height and extruded it 0.5 in. This rectangle established the overall boundary of my truss and provided the starting geometry for the rest of my design.
+![Rectangle](Rectangle.jpg)
 
 ### Extrusion Cut 1
 I created two triangular sections on the ends of the rectangular truss boundary. I dimensioned the triangle using the corrected diagonal length which also required me to recalculate the weight. The triangles were then used to cut away the unwanted material, creating the diagonal openings for the truss design.
-
+![Recalc](Recalc.jpg) 
+![
 ### Extrusion Cut 2
 I created the center triangular section of the truss using the calculated diagonal geometry. I then used the sketch to remove the unwanted material form the rectangular body, creating the center opening while maintaining the required member thickness of 0.686 in , which I calculated from the minimum cross sectional area.
 
