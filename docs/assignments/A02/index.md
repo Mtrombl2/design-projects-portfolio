@@ -59,25 +59,33 @@ After determining the required pin area, I calculated the volume and weight of t
 ### Overall Length and Height
 I first concerted the required overall dimensions from meters to inches so that I could use them in Creo. I then created one large rectangle using the specified overall length and height and extruded it 0.5 in. This rectangle established the overall boundary of my truss and provided the starting geometry for the rest of my design.
 ![Rectangle](Rectangle.jpg)
+![Extrusion](Extrusion.jpg)
 
 ### Extrusion Cut 1
 I created two triangular sections on the ends of the rectangular truss boundary. I dimensioned the triangle using the corrected diagonal length which also required me to recalculate the weight. The triangles were then used to cut away the unwanted material, creating the diagonal openings for the truss design.
 ![Recalc](Recalc.jpg) 
-![
+![Cut1](Cut1.jpg)
+![Extrude 1](Extrude1.jpg)
 ### Extrusion Cut 2
 I created the center triangular section of the truss using the calculated diagonal geometry. I then used the sketch to remove the unwanted material form the rectangular body, creating the center opening while maintaining the required member thickness of 0.686 in , which I calculated from the minimum cross sectional area.
-
+![Calculation](0.686.jpg)
+![Cut2](Cut2.jpg)
 ### Extrusion Cut 3
 I created the two remaining triangular sections using the calculated truss geometry. I then used an extruded cut to remove the material from both ends of the truss, leaving the required member thickness of 0.686 in and completing the main truss geometry.
-
+![Cut 3](Cut3.jpg)
+![Extrude3](Extrude3.jpg)
 ### Material selection
 I chose low carbon steel as the closest available material for the truss. This will provide sufficient strength for the expected loads.
+![Material](Material.jpg)
 
 ### Pin Creation
 I designed the connecting pins using the largest reaction load from my truss analysis. I calculated the minimum required pin cross sectional area using the shear stress, safety factor, and specified material properties. I then used a large pin size in my CAD model than the minimum calculated size. I chose the larger pins to provide extra strength and stability in the connections and to make the pins easier to model and assemble. Although my hand calculation from earlier did not account for this, I accounted for it in my final weight calculation. The large pins increased the volume which will increase the overall weight of the truss.
+![Pins](Pins.jpg)
+![Pin Extrude](PinExtrude.jpg)
 
 ### Compared CAD weight with Hand Calculation Weight
 I compared the final weight obtained from my CAD model with my original hand calculation. The CAD weight was slightly heavier because of the larger connected pins and using a low carbon steel material instead of the exact material that was given. I accounted for these differences when determining the final CAD weight. My calculated truss weight was 12.69 lb and my calculate pin weight was 0.061lb. The overall weight of the truss from CAD was 13.6106lb which is a 7.26 % difference. My calculated weight, was close but since I made the pins bigger than my original design, it made the weight increase a lot more.
+![Weight](WeightCAD.jpg)
 ## Communicate
 
 ### Key engineering lessons learned
