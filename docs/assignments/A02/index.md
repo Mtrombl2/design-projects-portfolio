@@ -57,7 +57,7 @@ After determining the required pin area, I calculated the volume and weight of t
 
 ## Decide
 ### Overall Length and Height
-I first concerted the required overall dimensions from meters to inches so that I could use them in Creo. I then created one large rectangle using the specified overall length and height and extruded it 0.5 in. This rectangle established the overall boundary of my truss and provided the starting geometry for the rest of my design.
+I first converted the required overall dimensions from meters to inches so that I could use them in Creo. I then created one large rectangle using the specified overall length and height and extruded it 0.5 in. This rectangle established the overall boundary of my truss and provided the starting geometry for the rest of my design.
 ![Rectangle](Rectangle.jpg)
 ![Extrusion](Extrusion.jpg)
 
@@ -89,7 +89,7 @@ I compared the final weight obtained from my CAD model with my original hand cal
 ## Communicate
 
 ### Key engineering lessons learned
-This project taught me the importance of checking calculations before applying them to a CAD design. I learned that changing the truss geometry, member dimensions, or pin sizes can affect the final weight and design. I also learned that engineering decisions require balancing strength, stability, and weight rather than focusing on only one factor. Finally, comparing my hand calculations with my CAD model helped me understand how important design assumptions and material election can affect the final result. This project also shopwed me how important being prepared with time is, especially while working with both calculations and CAD. I realized that I was some what rusty with CAD, which made the modeling process take longer than expected. In the future I plan to start the CAD creation earlier and give myself more time to trouble shoot and make changes. I also want to improve my CAD skills and may explore SolidWorks and also taking a class online. Hopefully though my portfolio this year you will be able to see how much I improve on the design process.
+This project taught me the importance of checking calculations before applying them to a CAD design. I learned that changing the truss geometry, member dimensions, or pin sizes can affect the final weight and design. I also learned that engineering decisions require balancing strength, stability, and weight rather than focusing on only one factor. Finally, comparing my hand calculations with my CAD model helped me understand how important design assumptions and material election can affect the final result. This project also showed me how important being prepared with time is, especially while working with both calculations and CAD. I realized that I was some what rusty with CAD, which made the modeling process take longer than expected. In the future I plan to start the CAD creation earlier and give myself more time to trouble shoot and make changes. I also want to improve my CAD skills and may explore SolidWorks and also taking a class online. Hopefully though my portfolio this year you will be able to see how much I improve on the design process.
 
 ### Finished Cad design 
 [CAD Truss Model](./truss.prt.2)
