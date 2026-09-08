@@ -34,4 +34,4 @@ I then considered the effect of adding a substantial pin hole to the bar without
 ## Communicate
 One of the biggest challenges I had during this assignment was setting up the FEA in Creo. I initially could not access Creo because my license expired and then I couldn't access the simulate extension because it was not installed. After installing the extension, I was able to set up the constraints, apply the axial load, and successfully run the analysis. I also learned how important it is to verify the direction of an applied load before running the FEA. Overall, this assignment helped me better understand how parametric modeling, hand calculations, and FEA can be used together to verify a design. This assignment took me about 5 hours to do all of the work, but I waited days for Solid Works to download, and it is still downloading as I am typing and it took hours to renew my Creo license.
 ### Finished Beam Part
-
+[Beam Model](beam.prt.2)
