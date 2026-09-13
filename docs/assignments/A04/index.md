@@ -46,16 +46,21 @@ After creating the main body, I added the required openings and clearance holes 
 ![4HWE](4HWE.jpg)
 ### Deflection Reduction- Gussets
 To further reduce deflection in the motor mount, I added triangular gussets at both sides of the 90 degree connection between Features 1 and 2. Each gusset was designed with a 10 mm x 10 mm triangular profile with a 3 mm thickness. The gussets increase the stiffness of the connection and provides additional support between the two features, helping reduce bending and deflection under the applied load. I created one gusset and then mirrored it to the opposite side to maintain symmetric design.
+![GUSSET](GUSSET.jpg)
+![GR](GR.jpg)
+![Plane](PLANE.jpg)
+![Mirror](MIRROR.jpg)
 ### Parmetric Modeling
 I used parametric modeling techniques throughpout the SolidWorks design by creating dimension driven sketches and fully defining the geometry with dimensions and geometric relations. I also created global variables for key design dimensions, including the 40 mm mount width, 15 mm feature thickness, 10 mm gusset size, and 3.4 mm bolt clearances. I linked these parameters to the corresponding dimensions so that important features of the design could be updated more efficiently if the design requirements changed.
+![parametrics](P.jpg)
 ### Final CAD Model
 After completing the design, I perfromed a final review of the CAD model and noticed that some sketches were still underdefined. I went back and added the necessary dimensions and geometric relations until the sketches were fully defined. This helped ensure that the geometry and hole locations remained constrained to the intended dimensions. The final CAD model included both mounting features, the required clearance holes, The PLA material, parametric design features, and the added gussets.
-
+![Final](FINAL.jpg)
 ## Communicate
 ### Lessons Learned
 This assignment helped me better understand how hand calculations can be used to determine dimensions before creating the CAD model. I also learned the importance of fully defining sketches in SolidWorks. Some of my sketches were initially underdefined, and going back to add the proper geometric relations showed me how fully defined sketches make a model more stable and prevent geometry from moving or changing unexpectedly. I also gained more experience using parametric modeling and learned how global variables can make important design dimensions easier to modify. Finally, adding the gussets helped me understand how changes to geometry can increase stiffness and reduce deflection without completely redesigning the mount.
 ### Time Spent
-This assignment took me about 8 hours in total and this time I already had SolidWorks downlaoded which made me very happy.
+This assignment took me about 8 hours in total and this time I already had SolidWorks downloaded which made me very happy.
 
 ## Appendix
 ### Motor Mount Research
