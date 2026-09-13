@@ -48,3 +48,4 @@ This assignment took me about 8 hours in total and this time I already had Solid
 - [Adafruit DC Motor L-Bracket](https://www.adafruit.com/product/3768)
 - [AndyMark Motor Mount Bracket](https://andymark.com/products/bearing-and-motor-mount-bracket)
 ### SolidWorks Part File
+[Motor Mount Part](./Motor%20Mount.SLDPRT)
