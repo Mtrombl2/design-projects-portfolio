@@ -6,27 +6,36 @@ The objective of this assignment was to design a motor mount that attaches a 24 
 ## Analyze
 ### Material Selection
 I selected PLA as the material for the motor mount. PLA was used througoput the hand calculations with a modulus of elasticity of 3250 MPa and a yield strength of 52.5 MPa. With the required safety factor of 3 , the allowable stress was 17.5 MPa. These properties were then used in the stress and deflection calculations to determine the required dimensions for both features.
+![PLA](MAT.jpg)
 ### Feature 1- Motor Attachment
 #### Knowns, unknowns, and FBD
 For Feature 1, I modeled the motor attachment as a cantilever beam subjected to a 300 N load. I first identified the known and unknown values and created a free body diagram to represent the loading and boundary conditions. The unkmown cross sectional dimension was then determined using both the stress and deflection requirements.
+![F1](F!C.jpg)
 
 #### Stress and Deflection Analysis
 I analyzed Feature 1 for both bending stress and deflection. I first solved the equations symbolically and then substituted the known values to determine the minimum required cross sectional geometry, both requirements were checked, and the larger required dimension was used so the feature would satisfy both the allowable stress and the 0.30 mm maximum deflection
+![F1C](F1CC.jpg)
 
 ### Feature 2- Wall Attachment 
 #### Knowns, unknowns, and FBD
 For Feature 2, I analyzed the portion of the motor mount that attaches to rigid Wall A. I identified the known and unknown values and created a free body diagram showing how the 300 N load is transferred through the mount to the wall. I then used this loading condition to determine the required dimensions of Feature 2.
+![F2](F2C.jpg)
 
 #### Stress and Deflection Analysis
 I analyzed Feature 2 using the beam bending stress and deflection equations. I first solved the equations symbolically and then plugged in the known values and PLA material properties. I compared the dimensions required by the stress and deflection limits and used the larger value so Feature 2 would satisfy both the factor of safety requirement and the 0.30 mm maximum deflection.
-
+![F2C](F2CC.jpg)
 ## Decide
 ### Final Motor Mount Design
 After completing the stress and deflection analyses for both features, I selected dimensions that met or exceeded the minimum calculated requirements. I then combined Features 1 and 2 into an L-shaped motor mount and created an isometric sketch showing the final dimensions, motor opening, and mounting hole locations.
+![Sketch](SKETCH.jpg)
 
 ## CAD Model
 ### Building The Motor Mount
 I began the CAD model by sketching the L-shaped side profile using the dimensions determined from my hand calculations. I then extruded the profile to the required 40 mm width, Creating the main body of the motor mount. This established both Feature 1, which supports the motor, and Feature 2. which attaches the mount to the rigid wall.
+![L](L.jpg)
+![LE](LE.jpg)
+![circle](BIGCIRCLE.lpg)
+
 ### Clearance Holes
 After creating the main body, I added the required openings and clearance holes for the bracket to the wall. For the motor attachment, I created the 18 mm diameter recess, 6.5 mm center opening, and four 3.4 mm bolt clearance holes positioned symmetrically around the motor center. I also added four 3.4 mm clearance holes to Feature 2 so the motor mount could be bolted to the rigid wall.
 ### Deflection Reduction- Gussets
