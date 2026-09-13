@@ -10,7 +10,7 @@ I selected PLA as the material for the motor mount. PLA was used througoput the 
 ### Feature 1- Motor Attachment
 #### Knowns, unknowns, and FBD
 For Feature 1, I modeled the motor attachment as a cantilever beam subjected to a 300 N load. I first identified the known and unknown values and created a free body diagram to represent the loading and boundary conditions. The unkmown cross sectional dimension was then determined using both the stress and deflection requirements.
-![F1](F!C.jpg)
+![F1](F1C.jpg)
 
 #### Stress and Deflection Analysis
 I analyzed Feature 1 for both bending stress and deflection. I first solved the equations symbolically and then substituted the known values to determine the minimum required cross sectional geometry, both requirements were checked, and the larger required dimension was used so the feature would satisfy both the allowable stress and the 0.30 mm maximum deflection
@@ -34,10 +34,11 @@ After completing the stress and deflection analyses for both features, I selecte
 I began the CAD model by sketching the L-shaped side profile using the dimensions determined from my hand calculations. I then extruded the profile to the required 40 mm width, Creating the main body of the motor mount. This established both Feature 1, which supports the motor, and Feature 2. which attaches the mount to the rigid wall.
 ![L](L.jpg)
 ![LE](LE.jpg)
-![circle](BIGCIRCLE.lpg)
-
 ### Clearance Holes
 After creating the main body, I added the required openings and clearance holes for the bracket to the wall. For the motor attachment, I created the 18 mm diameter recess, 6.5 mm center opening, and four 3.4 mm bolt clearance holes positioned symmetrically around the motor center. I also added four 3.4 mm clearance holes to Feature 2 so the motor mount could be bolted to the rigid wall.
+![circle](BIGCIRCLE.jpg)
+![BCE](BCE.jpg)
+![Lil Circle](
 ### Deflection Reduction- Gussets
 To further reduce deflection in the motor mount, I added triangular gussets at both sides of the 90 degree connection between Features 1 and 2. Each gusset was designed with a 10 mm x 10 mm triangular profile with a 3 mm thickness. The gussets increase the stiffness of the connection and provides additional support between the two features, helping reduce bending and deflection under the applied load. I created one gusset and then mirrored it to the opposite side to maintain symmetric design.
 ### Parmetric Modeling
