@@ -38,7 +38,12 @@ I began the CAD model by sketching the L-shaped side profile using the dimension
 After creating the main body, I added the required openings and clearance holes for the bracket to the wall. For the motor attachment, I created the 18 mm diameter recess, 6.5 mm center opening, and four 3.4 mm bolt clearance holes positioned symmetrically around the motor center. I also added four 3.4 mm clearance holes to Feature 2 so the motor mount could be bolted to the rigid wall.
 ![circle](BIGCIRCLE.jpg)
 ![BCE](BCE.jpg)
-![Lil Circle](
+![Lil Circle](LILCIRCLE.jpg)
+![LCE](LCE.jpg)
+![4H](4H.jpg)
+![4HE](4HE.jpg)
+![4HW](4HW.jpg)
+![4HWE](4HWE.jpg)
 ### Deflection Reduction- Gussets
 To further reduce deflection in the motor mount, I added triangular gussets at both sides of the 90 degree connection between Features 1 and 2. Each gusset was designed with a 10 mm x 10 mm triangular profile with a 3 mm thickness. The gussets increase the stiffness of the connection and provides additional support between the two features, helping reduce bending and deflection under the applied load. I created one gusset and then mirrored it to the opposite side to maintain symmetric design.
 ### Parmetric Modeling
