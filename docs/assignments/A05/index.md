@@ -11,12 +11,16 @@ I selected an applied strap force of 600 lbf and 6061-T6 aluminum for the bracke
 ### Stress Analysis
 #### Feature A
 I began the stress analysis with Feature A, which supports the polyester strap. I modeled Feature A as a cantilever beam subjected to a distributed strap load with a total resultant force of 1200 lbf. I assumed a 1.00 in length to provide enough space for the 0.75 in wide strap. Using the bending stress and section modulus equations, I determined the minimum required radius and diameter for Feature A.
+![FA1](FA1.jpg)
 #### Feature B
 The reaction force from Feature A was transferred into Feature B. I modeled Feature B as an axially loaded bar carrying a 1200 lbf load. I assumed a 1.00 in length for Feature B based on the proposed bracket geometry. Using the allowable normal stress, I determined the minimum required cross-sectional area and then selected the width and thickness based on the dimensions established by Feature A.
+![FB1](FB1.jpg)
 #### Feature C
 Feature C was modeled as a simply supported beam with a concentrated 1200 lbf load at the center. Due to symmetry, each support reaction was 600 lbf. I assumed a 2.00 in span for Feature C and selected a 4.00 in bracket depth based on the proposed geometry. I then used the maximum bending moment and section modulus to determine the minimum required thickness of Feature C.
+![FC1](FC1,jpg)
 #### Feature D
 Feature D carries one of the 600 lbf reactions transferred from Feature C. I modeled Feature D as an axially loaded section and used the allowable normal stress to determine its minimum required cross-sectional area. The height of Feature D was based on the rigid T-beam interface dimension \(c=1.499\) in, while the bracket maintained the selected 4.00 in depth.
+![
 #### Feature E
 Feature E transfers the load from Feature D into the rigid T-beam and was modeled as an axially loaded section carrying 600 lbf. I used the rigid T-beam dimension \(b=0.9992\) in as the width of Feature E and maintained the selected 4.00 in bracket depth. Using the allowable normal stress, I determined the minimum required cross-sectional area and thickness for Feature E.
 ### Stiffness Analysis
