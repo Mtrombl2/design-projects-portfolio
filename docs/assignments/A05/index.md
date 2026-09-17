@@ -33,7 +33,7 @@ Feature B was analyzed for stiffness as an axially loaded bar carrying the 1200 
 ![FB2](FB2.jpg)
 #### Feature C
 Feature C was analyzed for stiffness as a simply supported beam with a concentrated 1200 lbf load at the center. I maintained the assumed 2.00 in span and 4.00 in bracket depth used in the stress design. Using the maximum allowable deflection of 0.005 in, I calculated the required area moment of inertia and used it to determine the minimum thickness of Feature C for the stiffness-based design.
-![FC2](F2C.jpg)
+![FC2](FC2.jpg)
 #### Feature D
 Feature D was analyzed for stiffness as an axially loaded section carrying 600 lbf. I maintained the selected 4.00 in length and used the maximum allowable deflection of 0.005 in. Using the axial deformation equation, I determined the minimum required cross-sectional area and thickness while maintaining the T-beam interface height of 1.499 in.
 ![FD2](FD2.jpg)
