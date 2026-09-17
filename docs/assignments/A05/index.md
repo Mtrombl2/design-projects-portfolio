@@ -17,32 +17,39 @@ The reaction force from Feature A was transferred into Feature B. I modeled Feat
 ![FB1](FB1.jpg)
 #### Feature C
 Feature C was modeled as a simply supported beam with a concentrated 1200 lbf load at the center. Due to symmetry, each support reaction was 600 lbf. I assumed a 2.00 in span for Feature C and selected a 4.00 in bracket depth based on the proposed geometry. I then used the maximum bending moment and section modulus to determine the minimum required thickness of Feature C.
-![FC1](FC1,jpg)
+![FC1](FC1.jpg)
 #### Feature D
 Feature D carries one of the 600 lbf reactions transferred from Feature C. I modeled Feature D as an axially loaded section and used the allowable normal stress to determine its minimum required cross-sectional area. The height of Feature D was based on the rigid T-beam interface dimension \(c=1.499\) in, while the bracket maintained the selected 4.00 in depth.
-![
+![FD1](FD1.jpg)
 #### Feature E
 Feature E transfers the load from Feature D into the rigid T-beam and was modeled as an axially loaded section carrying 600 lbf. I used the rigid T-beam dimension \(b=0.9992\) in as the width of Feature E and maintained the selected 4.00 in bracket depth. Using the allowable normal stress, I determined the minimum required cross-sectional area and thickness for Feature E.
+![FE1](FE1.jpg)
 ### Stiffness Analysis
 #### Feature A
 I then analyzed Feature A for stiffness using the maximum allowable deflection of 0.005 in. I kept the same 1.00 in assumed length and modeled the strap loading as a distributed load with a total resultant of 1200 lbf. Using the cantilever-beam deflection equation and the modulus of elasticity for 6061-T6 aluminum, I determined the required area moment of inertia and minimum diameter for Feature A based on stiffness.
+![FA2](FA2.jpg)
 #### Feature B
 Feature B was analyzed for stiffness as an axially loaded bar carrying the 1200 lbf load transferred from Feature A. I maintained the assumed 1.00 in length and used the axial deformation equation with the maximum allowable deflection of 0.005 in. The resulting minimum cross-sectional area was then used to determine the required width and thickness for the stiffness-based design.
+![FB2](FB2.jpg)
 #### Feature C
 Feature C was analyzed for stiffness as a simply supported beam with a concentrated 1200 lbf load at the center. I maintained the assumed 2.00 in span and 4.00 in bracket depth used in the stress design. Using the maximum allowable deflection of 0.005 in, I calculated the required area moment of inertia and used it to determine the minimum thickness of Feature C for the stiffness-based design.
-
+![FC2](F2C.jpg)
 #### Feature D
 Feature D was analyzed for stiffness as an axially loaded section carrying 600 lbf. I maintained the selected 4.00 in length and used the maximum allowable deflection of 0.005 in. Using the axial deformation equation, I determined the minimum required cross-sectional area and thickness while maintaining the T-beam interface height of 1.499 in.
+![FD2](FD2.jpg)
 #### Feature E
 Feature E was analyzed for stiffness as an axially loaded section carrying 600 lbf. I maintained the selected 4.00 in length and used the maximum allowable deflection of 0.005 in. Using the axial deformation equation, I determined the minimum required cross-sectional area and thickness while maintaining the T-beam interface width of 0.9992 in.
+![FE2](FE2.jpg)
 
 
 
 ## Decide
 ### Stress-Based Design
 After completing the stress analyses for Features A through E, I combined the calculated dimensions into a complete bracket design. I created a detailed multiview sketch showing the top, front, and right-side views, along with an isometric view to better communicate the overall geometry. The dimensions shown in this design are based on the minimum requirements determined from the stress analyses.
+![MSTRESS](MSTRESS.jpg)
 ### Stiffness-Based Design
 After completing the stiffness analyses for Features A through E, I created a second detailed multiview sketch using the dimensions determined from the 0.005 in maximum deflection requirement. The top, front, right-side, and isometric views show how the bracket dimensions change when the design is governed by stiffness rather than allowable stress.
+![MS](MS.jpg)
 ### Fits
 The rigid T-beam dimensions and tolerances were provided as part of the design requirements. Dimension \(a=0.498^{+0.000}_{-0.001}\) in was used where accuracy was not essential. Dimension \(b=0.9992^{+0.000}_{-0.0005}\) in was used for the interface requiring the closest fit while still allowing free movement. Dimension \(c=1.499^{+0.000}_{-0.001}\) in was used where accurate location with minimum play was required. These dimensions were incorporated into the bracket design to maintain the required fit with the rigid T-beam.
 
