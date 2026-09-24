@@ -178,3 +178,5 @@ Creating the engineering drawing also helped me understand why drawings are cons
 I spent approximately 8 hours completing the parametric CAD model, engineering drawing, tolerances, and documentation.
 
 ### Appendix
+- [Parametric Bracket Part](BRACKET.SLDPRT)
+- [Engineering Drawing](BRACKETDRAWING.SLDDRW)
