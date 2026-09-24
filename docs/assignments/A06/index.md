@@ -9,6 +9,8 @@ The objective of this assignment was to use the strength and stiffness analysis 
 I created the bracket in SolidWorks using the stress-based design developed in the previous assignment. Instead of treating every dimension as an independent value, I created global variables and equations for the important design inputs and calculated dimensions. This allowed changes to an input parameter to automatically update related dimensions in the model.
 
 I used parameters for the applied force, factor of safety, yield strength, feature dimensions, T-beam interface dimensions, and calculated stress-based dimensions.
+![Paramters](PARAMETERS.jpg)
+
 
 ### Feature A
 
@@ -16,19 +18,25 @@ Feature A supports the strap and was modeled using the cantilever-beam stress an
 
 The bending moment and required section modulus were calculated parametrically. The required radius was then calculated from the section modulus for a circular cross section, and the diameter was defined as twice the radius. This resulted in a Feature A diameter of approximately 0.849 in.
 
-The actual diameter of Feature A in the CAD model was linked to this calculated diameter rather than manually entering the final value.
 
+The actual diameter of Feature A in the CAD model was linked to this calculated diameter rather than manually entering the final value.
+![pind](PIND.jpg)
+![pine](PINE.jpg)
 ### Feature B
 
 Feature B was modeled as an axially loaded member based on the analysis from the previous assignment. The load transferred from Feature A was used with the allowable stress to calculate the required cross-sectional area of Feature B.
 
 The width of Feature B was related to the dimensions established by Feature A, while the required thickness was calculated from the required area. The 1.00 in length of Feature B was maintained as a selected design dimension and was also included as a parameter.
+![featurebb](FEATUREBB.jpg)
+![extrudeb](EXTRUDEB.jpg)
 
 ### Feature C
 
 Feature C was modeled as a simply supported beam with a concentrated load at its center. Parameters were created for its span, depth, maximum bending moment, required section modulus, and required thickness.
 
 During the CAD process, I changed the selected depth of Feature C from 4.00 in to 2.00 in to create a more practical overall geometry. Because the thickness was controlled by the stress equation, SolidWorks automatically recalculated the required Feature C thickness when the depth changed. This demonstrated the advantage of using parametric modeling because I did not have to manually redo the geometry after changing the design parameter.
+![boxex](BASICBOX.jpg)
+![boxex1](BOXEX1.jpg)
 ### Features D and E
 
 Features D and E transfer the reactions from Feature C into the rigid T-beam interface. Both were modeled using the axial stress relationships developed in the previous assignment.
@@ -40,17 +48,22 @@ T-Beam Interface Parameters
 
 The supplied rigid T-beam dimensions were also added as parameters so that the mating geometry could be controlled independently from the structural calculations. The interface dimensions used were:
 
+
 \(a = 0.498\) in
 \(b = 0.9992\) in
 \(c = 1.499\) in
 
 These parameters controlled the dimensions of the T-shaped opening in the bracket. Separating the interface dimensions from the stress-calculated dimensions made it easier to maintain the required fit while still allowing the structural dimensions to update.
-
+![boxx](BOXX.jpg)
+![boxex](BOXEX.jpg)
+![re](RE.jpg)
+![top](TE.jpg)
 ### Final Parametric CAD Model
 
 After linking the important CAD dimensions to the global variables and equations, I rebuilt the model and verified that changing a parameter caused the corresponding geometry to update. The final model maintained the T-shaped interface with the rigid T-beam while using the dimensions determined from the governing stress analysis.
 
 The parametric model also allowed selected design dimensions to be changed while automatically recalculating dependent dimensions. This made the model easier to modify without manually rebuilding individual features.
+![final](FINALL.jpg)
 ## Engineering Drawing
 ### Third-Angle Multiview Drawing
 
@@ -90,6 +103,7 @@ I added a general tolerance block to the engineering drawing for dimensions that
 $$ X.X\pm0.02\text{ in} $$ $$ X.XX\pm0.01\text{ in} $$ $$ X.XXX\pm0.005\text{ in} $$
 
 I also specified that all drawing dimensions are in inches. This allows the number of displayed decimal places to communicate the default manufacturing tolerance when a separate tolerance is not provided.
+![Drawing](DRAWING.jpg)
 ## Decide
 
 
@@ -121,9 +135,9 @@ $$ \boxed{D_A=0.849\text{ in}} $$
 
 Because the CAD dimension is linked to the analytical equation, changing an input such as the applied force or yield strength causes SolidWorks to recalculate the required diameter and rebuild the model automatically.
 
-[Insert Feature A equation chain screenshot here]
 
-Effect of Parametric Changes
+
+### Effect of Parametric Changes
 
 The effect of parametric modeling was also demonstrated when I changed the selected depth of Feature C. The required thickness of a rectangular section was controlled by:
 
@@ -161,5 +175,6 @@ Creating the engineering drawing also helped me understand why drawings are cons
 
 ### Time Spent
 
-I spent approximately [ENTER TOTAL TIME] hours completing the parametric CAD model, engineering drawing, tolerances, and documentation.
+I spent approximately 8 hours completing the parametric CAD model, engineering drawing, tolerances, and documentation.
 
+### Appendix
