@@ -1,4 +1,4 @@
-# A6 – [Topic]
+# A6 – [BRACKET DRAWING]
 
 ## Objective
 The objective of this assignment was to use the strength and stiffness analysis from the previous bracket assignment to create a parametric solid model and a fully dimensioned engineering drawing. Since stress was the governing design requirement, I used the stress-based design as the basis for the CAD model. The model was created so that important dimensions were controlled by parameters and engineering equations rather than only manually entered dimensions. I then created a third-angle multiview engineering drawing with dimensions, fit tolerances, and a general tolerance block.
