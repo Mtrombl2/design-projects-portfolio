@@ -11,8 +11,6 @@ For each design, I tested different mesh densities and compared the maximum von 
 ### Design I – Original Bracket
 I began by analyzing my original bracket from the previous assignment. The bracket was made of 6061-T6 aluminum with a yield strength of approximately 275 MPa.
 
-![Original Bracket](images/design1-original.png)
-
 #### FEA Setup
 
 I created a static study in SOLIDWORKS Simulation. A fixed constraint was applied to the interior horizontal surface of the upper bracket to represent the rigid T-beam support. A total downward force of 1,200 lbf was applied to the cylinder, representing two 600 lbf strap forces.
