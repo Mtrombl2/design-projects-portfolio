@@ -213,6 +213,6 @@ The project demonstrated the importance of using FEA results to guide engineerin
 
 The SOLIDWORKS CAD files for the bracket designs are linked below.
 
-- [Design I – Original Bracket](PASTE_LINK_HERE)
-- [Design II – Modified Bracket](PASTE_LINK_HERE)
-- [Design III – Final Bracket](PASTE_LINK_HERE)
+- [Design I – Original Bracket](BRACKET.SLDPRT)
+- [Design II – Modified Bracket](BRACKETDESIGNII.SLDPRT)
+- [Design III – Final Bracket](BRACKETDESIGNIII.SLDPRT)
