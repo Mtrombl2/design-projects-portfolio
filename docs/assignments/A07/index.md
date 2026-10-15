@@ -15,17 +15,17 @@ I began by analyzing my original bracket from the previous assignment. The brack
 
 I created a static study in SOLIDWORKS Simulation. A fixed constraint was applied to the interior horizontal surface of the upper bracket to represent the rigid T-beam support. A total downward force of 1,200 lbf was applied to the cylinder, representing two 600 lbf strap forces.
 
-![Fixed Support](images/design1-fixed.png)
+![Fixed Support](FIXSUP.jpg)
 
-![Applied Force](images/design1-force.png)
+![Applied Force](APPFORCE.jpg)
 
 #### Mesh Convergence
 
 I started with a coarse mesh and refined it to a medium mesh to check convergence. The coarse mesh contained 2,808 elements, while the medium mesh contained 7,559 elements.
 
-![Coarse Mesh](images/design1-coarse.png)
+![Coarse Mesh](2808.jpg)
 
-![Medium Mesh](images/design1-medium.png)
+![Medium Mesh](7559.jpg)
 
 The changes in maximum stress, displacement, and factor of safety were all below the required 7% convergence tolerance.
 
@@ -33,13 +33,13 @@ The changes in maximum stress, displacement, and factor of safety were all below
 
 The stress plot revealed high stress near the vertical support (Feature B). The simulation also produced a stability warning, so I checked for underconstrained bodies. SOLIDWORKS reported that the model was fully constrained.
 
-![Von Mises Stress](images/design1-stress.png)
+![Von Mises Stress](VM1.jpg)
 
-![Displacement](images/design1-displacement.png)
+![Displacement](DIS1.jpg)
 
-![Factor of Safety](images/design1-fos.png)
+![Factor of Safety](FOS1.jpg)
 
-![Constraint Diagnostic](images/design1-diagnostic.png)
+![Constraint Diagnostic](FULLY.jpg)
 
 These results helped identify Feature B as the main area to improve for Design II.
 
@@ -47,15 +47,11 @@ These results helped identify Feature B as the main area to improve for Design I
 
 For my second design, I increased the thickness of Feature B (the vertical support) from 0.1141 in to 0.200 in. I made this change because the original FEA showed high stress around the vertical support. My goal was to reduce stress and displacement while minimizing the additional mass.
 
-![Design II Modified Bracket](images/design2-bracket.png)
-
 #### Geometry Modification
 
 I used SOLIDWORKS Equations to modify Feature B while keeping the original T-beam fit dimensions unchanged. I also verified the dimensions using the Measure tool to ensure the bracket maintained its required fit.
 
-![Updated Equations](images/design2-equations.png)
-
-![Fit Verification](images/design2-fit.png)
+![Updated Equations](UPEQ1.jpg)
 
 #### Mesh Convergence
 
@@ -65,11 +61,11 @@ I performed three mesh iterations to evaluate the consistency of the FEA results
 - Medium Mesh: 8,264 elements
 - Fine Mesh: 24,216 elements
 
-![Coarse Mesh Details](images/design2-coarse.png)
+![Coarse Mesh Details](2865.jpg)
 
-![Medium Mesh Details](images/design2-medium.png)
+![Medium Mesh Details](8264.jpg)
 
-![Fine Mesh Details](images/design2-fine.png)
+![Fine Mesh Details](24216.jpg)
 
 The medium-to-fine mesh comparison showed a 4.47% change in maximum von Mises stress and a 1.75% change in maximum displacement. Both were below the required 7% convergence tolerance.
 
@@ -77,18 +73,18 @@ The medium-to-fine mesh comparison showed a 4.47% change in maximum von Mises st
 
 The increased thickness reduced the maximum stress and displacement compared with Design I. However, the bracket still did not meet the required factor of safety of 4.
 
-![Von Mises Stress](images/design2-stress.png)
+![Von Mises Stress](VM2.jpg)
 
-![Displacement](images/design2-displacement.png)
+![Displacement](DIS2.jpg)
 
-![Factor of Safety](images/design2-fos.png)
+![Factor of Safety](FOS2.jpg)
 
 These results showed that increasing Feature B's thickness improved the bracket's performance, but additional reinforcement was needed for Design III.
 
 ### Design III – Reinforced Bracket
 For my third design, I made several modifications to improve the bracket's strength and stiffness. I increased Feature B's thickness from 0.200 in to 0.500 in, added fillets to reduce stress concentrations, and extended the cylinder to provide more room for the strap.
 
-![Design III Modified Bracket](images/design3-bracket.png)
+![Design III Modified Bracket](DES3.jpg)
 
 #### Geometry Modifications
 
@@ -102,11 +98,7 @@ The following changes were made in SOLIDWORKS:
 
 These modifications were intended to strengthen the connections between the bracket features and reduce bending and stress concentrations.
 
-![Updated Equations](images/design3-equations.png)
-
-![Lower Fillet](images/design3-lower-fillet.png)
-
-![Upper Fillet](images/design3-upper-fillet.png)
+![Updated Equations](UPEQ2.jpg)
 
 #### Mesh Convergence
 
@@ -116,11 +108,11 @@ I performed three mesh iterations to evaluate the consistency of the simulation 
 - Medium Mesh: 7,960 elements
 - Fine Mesh: 25,087 elements
 
-![Coarse Mesh Details](images/design3-coarse.png)
+![Coarse Mesh Details](3519.jpg)
 
-![Medium Mesh Details](images/design3-medium.png)
+![Medium Mesh Details](7960.jpg)
 
-![Fine Mesh Details](images/design3-fine.png)
+![Fine Mesh Details](25087.jpg)
 
 The medium-to-fine mesh comparison showed a 1.08% change in maximum von Mises stress and a 0.63% change in maximum displacement. Both were within the required 7% convergence tolerance.
 
@@ -128,11 +120,11 @@ The medium-to-fine mesh comparison showed a 1.08% change in maximum von Mises st
 
 The final design showed a substantial reduction in stress and displacement compared with the previous designs. The maximum von Mises stress was below the material's yield strength, although the factor of safety remained below the target of 4.
 
-![Von Mises Stress](images/design3-stress.png)
+![Von Mises Stress](VM3.jpg)
 
-![Displacement](images/design3-displacement.png)
+![Displacement](DIS3.jpg)
 
-![Factor of Safety](images/design3-fos.png)
+![Factor of Safety](FOS3.jpg)
 
 The results demonstrated that increasing the support thickness and adding fillets improved the bracket's structural performance. The longer cylinder also provided additional exposed surface for the strap.
 
@@ -142,7 +134,7 @@ After completing Design III, I wanted to continue improving my bracket to get cl
 
 I added a reinforcing gusset to the back of Feature B to strengthen the connection between the vertical support and the cylinder. I then performed another FEA simulation to evaluate the effect of this modification.
 
-![Gusset Reinforcement](images/gusset-design.png)
+![Gusset Reinforcement](DES4.jpg)
 
 #### Von Mises Stress Results
 
@@ -152,7 +144,7 @@ I added a reinforcing gusset to the back of Feature B to strengthen the connecti
 - Estimated Factor of Safety: 2.04
 - Target Factor of Safety: 4.0
 
-![Gusset Von Mises Stress](images/gusset-stress.png)
+![Gusset Von Mises Stress](VM4.jpg)
 
 Adding the gusset reduced the maximum von Mises stress by approximately 39.1%. This showed that reinforcing the support connection was effective at improving the bracket's structural performance.
 
