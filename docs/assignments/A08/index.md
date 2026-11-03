@@ -620,11 +620,11 @@ This project helped me improve my CAD modeling and engineering problem-solving s
 
 The following files contain the gearbox assembly and the custom components created during this project.
 
-- [Complete Gearbox Assembly](cad/A8_GEARBOX_ASSEMBLY.SLDASM)
-- [Bottom Gearbox Housing](cad/A8_Gearbox_Base.SLDPRT)
-- [Removable Top Cover](cad/A8_Gearbox_Cover.SLDPRT)
-- [Input Shaft](cad/A8_Input_Shaft.SLDPRT)
-- [Output Shaft](cad/A8_Output_Shaft.SLDPRT)
+- [Complete Gearbox Assembly](A8_GEARBOX_ASSEMBLY.SLDASM)
+- [Bottom Gearbox Housing](A8_GearBOX_BASE.SLDPRT)
+- [Removable Top Cover](Part1.SLDPRT)
+- [Input Shaft](A8_INPUT_SHAFT.SLDPRT)
+- [Output Shaft](A8_OUTPUT_SHAFT.SLDPRT)
 
 The assembly also incorporates downloaded McMaster-Carr CAD components, including the gears, journal bearings, bolts, and nuts.
 
