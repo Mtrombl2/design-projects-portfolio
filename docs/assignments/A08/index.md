@@ -47,7 +47,7 @@ The calculated results were:
 - Shaft power capacity: **0.0716 hp**
 - Required transmitted power: **0.0218 hp**
 
-![Input Shaft Handwritten Calculations](images/input-shaft-calculations.jpg)
+![Horsepower Calculations](HORSEP.jpeg)
 
 #### Material Selection and Design Conclusion
 
@@ -56,6 +56,8 @@ I selected AISI 1045 steel as the proposed shaft material because it is commonly
 The calculated power capacity exceeded the required transmitted power. Therefore, the original 0.125-inch shaft diameter was considered sufficient under the assumptions of the course's power-transmission design equation.
 
 This analysis allowed me to retain the original shaft diameter without increasing its size, helping keep the gearbox compact.
+
+![Material Selection](MATSELECT.jpeg)
 
 
 ### Output Shaft Analysis
@@ -70,9 +72,8 @@ I first identified the known and unknown variables needed for the analysis. I th
 
 This diagram helped me understand how the shaft experiences torsional loading and provided the basis for calculating the maximum shear stress.
 
-![Output Shaft Knowns and Unknowns](images/output-shaft-knowns.jpg)
+![Output Shaft Calculations](OUTPUT.jpeg)
 
-![Output Shaft Free-Body Diagram](images/output-shaft-fbd.jpg)
 
 #### Shaft Stress and Power Calculations
 
@@ -88,7 +89,6 @@ The calculated results were:
 - Estimated shaft power capacity: **0.4523 hp**
 - Required transmitted power: **0.0218 hp**
 
-![Output Shaft Handwritten Calculations](images/output-shaft-calculations.jpg)
 
 #### Material Selection and Design Conclusion
 
@@ -123,7 +123,6 @@ For the preliminary bearing analysis, I assumed the gear was centered between tw
 
 The estimated load on each bearing was **1.33 lbf**.
 
-![Gear Force and Bearing Load Calculations](images/gear-force-calculations.jpg)
 
 #### Bearing Pressure, Velocity, and PV Analysis
 
@@ -146,9 +145,7 @@ The calculated results were:
 | Surface Velocity | 96.0 ft/min | 72.0 ft/min |
 | PV Value | 4,090 psi-ft/min | 1,534 psi-ft/min |
 
-![Journal Bearing Pressure Calculations](images/bearing-pressure-calculations.jpg)
-
-![Journal Bearing Velocity and PV Calculations](images/bearing-pv-calculations.jpg)
+![Journal Bearing Design](JOURNALD.jpeg)
 
 #### Bearing Material Selection
 
@@ -183,9 +180,7 @@ The flanged output bearing required additional consideration during the housing 
 
 The catalog dimensions were used to create the bearing seats in SOLIDWORKS. The final design also required consideration of running clearances and bearing operating limits.
 
-![Input Journal Bearing Selection](images/input-bearing-selection.jpg)
-
-![Output Journal Bearing Selection](images/output-bearing-selection.jpg)
+![Free-Body Diagram](FBD.jpeg)
 
 #### Journal Bearing Design Conclusion
 
@@ -223,7 +218,7 @@ The calculated nominal wall thickness for both bearings was:
 
 **t = 0.0625 inches**
 
-![Journal Bearing Thickness Calculations](images/bearing-thickness-calculations.jpg)
+![Bearing Thickness](BEAR%20THICK.jpeg)
 
 #### Bearing Thickness Design Considerations
 
@@ -244,8 +239,6 @@ Because the housing floor was only 0.125 inches thick, I added raised circular b
 This created a total nominal bearing support length of 0.250 inches, matching the selected journal bearings.
 
 The raised supports provided additional material around the bearing openings without requiring the entire housing floor to be thicker.
-
-![SOLIDWORKS Bearing Support Design](images/bearing-supports.jpg)
 
 #### Design Conclusion
 
@@ -268,7 +261,7 @@ The calculated center distance between the gears was **0.6875 inches**, which wa
 
 I also included preliminary clearances around the gears and housing walls to prevent contact during operation.
 
-![Original Gearbox Housing Sketch](images/original-housing-sketch.jpg)
+![Original Housing Sketch](BADSKETCH.jpeg)
 
 #### Two-Piece Housing Design
 
@@ -281,7 +274,6 @@ I chose to use four bolts and nuts to fasten the two housing halves together. Th
 
 I also created a side-view sketch to demonstrate how the two housing halves would fit together.
 
-![Gearbox Housing Side View](images/housing-side-view.jpg)
 
 #### Design Modification: Rounded to Rectangular Housing
 
@@ -295,7 +287,6 @@ Another advantage was that the rectangular design would simplify several manufac
 
 Although the external shape changed, I maintained the important functional requirements from my original sketch, including the gear center distance, shaft locations, bearing supports, and removable fastening system.
 
-![Rectangular Gearbox Housing in SOLIDWORKS](images/rectangular-housing.jpg)
 
 #### Preliminary Housing Dimensions
 
@@ -336,7 +327,7 @@ Next, I created a smaller rectangle measuring 2.50 inches by 2.00 inches on the 
 
 This left a 0.125-inch floor and 0.125-inch walls around the housing. The cavity provided space for the gears and shafts while maintaining the structure of the housing.
 
-![Bottom Housing and Gear Cavity](images/bottom-housing-cavity.jpg)
+![Gearbox Interior](INTERIOR.jpg)
 
 #### Bearing Supports and Shaft Openings
 
@@ -357,7 +348,7 @@ I then used Extruded Cut to create openings through the housing for the journal 
 
 These supports allowed me to provide additional material around the bearings without increasing the thickness of the entire housing.
 
-![Bearing Supports in SOLIDWORKS](images/bearing-supports-cad.jpg)
+![Bearing Support Extrusion](BEAREXTRUDE.jpg)
 
 #### Mounting Tabs and Bolt Holes
 
@@ -369,7 +360,7 @@ I then created four 0.196-inch clearance holes for the #8-32 fastening bolts.
 
 The purpose of these tabs was to provide a secure way to connect the bottom housing and removable cover while keeping the fasteners outside the internal gear cavity.
 
-![Bottom Housing Mounting Tabs](images/housing-mounting-tabs.jpg)
+![Mounting Bolt Holes](BOLTHOLE.jpg)
 
 #### Removable Top Cover
 
@@ -385,7 +376,6 @@ I also created two upper bearing openings and circular supports to help maintain
 
 The top cover was designed to be removable so the internal gearbox components could be accessed for assembly and maintenance.
 
-![Top Cover CAD Model](images/gearbox-top-cover.jpg)
 
 #### Gear and Shaft Assembly
 
@@ -408,7 +398,9 @@ The shafts were assigned AISI 1045 cold-drawn steel in SOLIDWORKS.
 
 After inserting the shafts, I used assembly mates to align them with their respective gears and lock their relative rotation to represent the press-fit connections.
 
-![Gears and Shafts Inside Housing](images/gear-shaft-assembly.jpg)
+![Gear Assembly](GEARS.jpg)
+
+![Shafts](SHAFTSBOFA.jpg)
 
 #### Journal Bearing Installation
 
@@ -420,7 +412,7 @@ The output bearings were flanged, so I positioned their flanges against the exte
 
 The bearings were intended to remain stationary while the shafts rotated through them.
 
-![Journal Bearings Installed](images/journal-bearings-installed.jpg)
+![Rotation and Mates](LOCKS.jpg)
 
 #### Fastening Hardware
 
@@ -432,7 +424,7 @@ I then installed the nuts underneath the housing to complete the fastening arran
 
 This design allows the top cover to be removed without permanently joining the two housing components.
 
-![Gearbox Bolts and Nuts](images/gearbox-fasteners.jpg)
+![Bolts and Fasteners](SCREWBOLTS.jpg)
 
 #### Gear Motion Testing
 
@@ -448,7 +440,7 @@ This test confirmed the intended rotational relationship between the gears. It d
 
 I also used SOLIDWORKS Interference Detection to inspect the assembly and observed a reported interference near the fastening hardware. This was identified as an item requiring verification before finalizing the design.
 
-![Completed Gearbox Assembly](images/final-gearbox-assembly.jpg)
+![Final Gearbox Assembly](FINALA8.jpeg)
 
 #### CAD Development Conclusion
 
@@ -498,7 +490,7 @@ This demonstrated that the rotational assembly mates were functioning as intende
 
 The two-piece housing and removable fastening hardware also provided a way to access the internal components during assembly and maintenance.
 
-![Final Gearbox Assembly](images/final-gearbox-assembly.jpg)
+
 
 ### Design Challenges and Improvements
 
@@ -514,7 +506,7 @@ Although the gearbox demonstrated the intended rotational motion, the interferen
 
 If I continued improving the design, I would focus on confirming the bearing fits, checking gear and housing clearances, and refining the fastening hardware.
 
-![Gearbox Assembly Evaluation](images/gearbox-design-evaluation.jpg)
+![Assembly Verification](VERIFICATION.jpg)
 
 ### Final Design Decision
 
@@ -550,7 +542,7 @@ I tested the assembly by rotating the shafts and observing the resulting gear mo
 
 The project allowed me to connect engineering analysis with practical mechanical design and assembly techniques.
 
-![Completed A8 Gearbox Assembly](images/final-gearbox-assembly.jpg)
+
 
 ### Lessons Learned
 
@@ -581,7 +573,7 @@ During the assembly process, I received a computer memory warning. This reinforc
 
 Finally, I observed an interference warning near the fastening hardware during SOLIDWORKS evaluation. This showed me the importance of inspecting the finished assembly rather than relying only on its appearance.
 
-![SOLIDWORKS Assembly Process](images/assembly-process.jpg)
+
 
 ### Time Spent
 
@@ -589,13 +581,13 @@ The project required time for calculations, preliminary design, CAD modeling, co
 
 | Activity | Time Spent |
 |---|---|
-| Shaft analysis and calculations | [Enter hours] |
-| Journal bearing analysis and selection | [Enter hours] |
-| Preliminary housing sketches | [Enter hours] |
-| SOLIDWORKS housing modeling | [Enter hours] |
-| Component assembly and mating | [Enter hours] |
-| Verification and documentation | [Enter hours] |
-| **Total Time** | **[Enter total hours]** |
+| Shaft analysis and calculations | [2] |
+| Journal bearing analysis and selection | [0.5] |
+| Preliminary housing sketches | [0.5] |
+| SOLIDWORKS housing modeling | [1.5] |
+| Component assembly and mating | [2] |
+| Verification and documentation | [1] |
+| **Total Time** | **[7.5]** |
 
 ### Final Reflection
 
@@ -637,12 +629,6 @@ The commercially available gearbox components were selected using:
 - Machinery's Handbook — Shaft design and bearing material references
 - SOLIDWORKS — CAD modeling and assembly tools
 
-### Additional Project Images
 
-![Gearbox Housing Concept Sketch](images/original-housing-sketch.jpg)
-
-![Gearbox Interior](images/gear-shaft-assembly.jpg)
-
-![Final Gearbox CAD Model](images/final-gearbox-assembly.jpg)
 
 
