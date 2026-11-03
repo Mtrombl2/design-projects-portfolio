@@ -19,7 +19,6 @@ The main objectives of this project were to:
 
 ## Analyze
 
-
 ## Design and Analysis
 
 ### Input Shaft Analysis
@@ -32,9 +31,7 @@ I began by identifying the known and unknown variables. The input shaft had a di
 
 I created a free-body diagram (FBD) to represent the torque acting on the shaft. The diagram shows the applied input torque and the opposing torque from the gear. This helped establish rotational equilibrium and identify the loading conditions for the stress analysis.
 
-![Input Shaft Knowns and Unknowns](images/input-shaft-knowns.jpg)
-
-![Input Shaft Free-Body Diagram](images/input-shaft-fbd.jpg)
+![Input Shaft Calculations](INPUT.jpeg)
 
 #### Shaft Stress Calculations
 
