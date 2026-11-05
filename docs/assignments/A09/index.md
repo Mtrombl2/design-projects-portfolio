@@ -41,13 +41,7 @@ I first constructed a static free-body diagram to analyze the forces acting on t
 
 Next, I developed a dynamic free-body diagram to represent the system while transmitting power. During operation, the tight-side belt tension becomes greater than the loose-side tension. This difference in tension produces the torque transmitted through the pulley.
 
-![Static Belt FBD](images/a9_static_fbd.jpg)
-
-*Figure 2: Static free-body diagram showing the equal belt tensions and shaft reaction.*
-
-![Dynamic Belt FBD](images/a9_dynamic_fbd.jpg)
-
-*Figure 3: Dynamic free-body diagram showing the tight-side and loose-side forces, shaft reaction, and transmitted torque.*
+![Belt Selection](BELTSELECT.jpg)
 
 #### Belt Force and Friction Analysis
 
@@ -59,9 +53,7 @@ Using the friction relationship and the initial belt tension, I calculated a max
 
 These forces were then used to calculate the theoretical maximum transmitted torque of 9.837 lbf·in and power of approximately 174.6 W at 1,500 RPM.
 
-![Belt Force Calculations](images/a9_belt_forces.jpg)
-
-*Figure 4: Calculations for belt friction, tight-side and loose-side tension, torque, and transmitted power.*
+![Engineering Calculations](WORK.jpg)
 
 #### Belt Stress and Diameter
 
@@ -73,10 +65,6 @@ The maximum tight-side tension was used to determine the minimum required cross-
 
 The calculated minimum diameter was approximately 0.259 inches. I selected a standard 5/16-inch polyurethane round belt, which produced a preliminary tensile safety factor of approximately 4.36.
 
-![Belt Stress Calculations](images/a9_belt_stress.jpg)
-
-*Figure 5: Calculations for allowable stress, minimum belt area, required diameter, and actual factor of safety.*
-
 #### Belt Circumference and Selection
 
 After selecting the belt diameter, I calculated the required belt length using the pulley diameter and shaft center distance.
@@ -85,15 +73,13 @@ The calculated installed belt circumference was approximately 19.425 inches, ass
 
 Using preliminary manufacturer load-elongation data, I estimated an unstretched belt length of 18.257 inches to generate the selected initial tension. This length requires verification for the final purchased belt and pulley groove geometry.
 
-![Belt Length Calculations](images/a9_belt_length.jpg)
-
-*Figure 6: Calculations used to determine the belt circumference, estimated elongation, and unstretched length.*
-
 #### Belt Analysis Conclusion
 
 The preliminary analysis resulted in the selection of a 5/16-inch polyurethane round belt. The belt satisfied the required tensile factor of safety under the simplified loading assumptions.
 
 The calculated forces and transmitted torque also provided the loading information needed for the subsequent shaft and bearing analyses.
+
+![Additional Engineering Calculations](WORK2.jpg)
 
 ### Part 2 — Shaft Design and Analysis
 
@@ -114,6 +100,8 @@ The yield strength was selected based on a documented heat-treatment condition f
 
 The unknown values included the minimum shaft diameter, maximum torsional shear stress, and actual factor of safety.
 
+![Shaft Design Calculations](SHAFTDES.jpg)
+
 #### Shaft Free-Body Diagram
 
 I constructed a free-body diagram showing the torque transmitted through the shaft.
@@ -122,9 +110,7 @@ The shaft was modeled under steady operating conditions, with the applied torque
 
 This free-body diagram helped establish the relationship between the torque applied to the shaft and the internal torsional loading.
 
-![Shaft Free-Body Diagram](images/a9_shaft_fbd.jpg)
-
-*Figure 7: Free-body diagram showing the applied and resisting torques acting on the shaft.*
+![Shaft Free Body Diagram](FBDSHAFT.jpg)
 
 #### Symbolic Shaft Analysis
 
@@ -135,10 +121,6 @@ The shaft's polar moment of inertia and outer radius were substituted into the e
 I then applied the von Mises yield criterion and the required factor of safety to derive an equation for the minimum shaft diameter.
 
 The symbolic derivation was completed before numerical values were substituted, allowing the relationship between torque, material strength, shaft geometry, and safety factor to be established.
-
-![Symbolic Shaft Calculations](images/a9_shaft_symbolic.jpg)
-
-*Figure 8: Symbolic derivation of the minimum shaft diameter using torsional stress and the von Mises yield criterion.*
 
 #### Numerical Shaft Analysis
 
@@ -151,10 +133,6 @@ Since this value was not the preferred practical shaft size, I selected a **3/16
 Using the selected diameter, I recalculated the torsional stress and obtained a preliminary factor of safety of approximately **7.37**.
 
 This exceeded the minimum required factor of safety of 3.
-
-![Numerical Shaft Calculations](images/a9_shaft_numerical.jpg)
-
-*Figure 9: Numerical calculations showing the minimum shaft diameter, selected shaft size, and torsional factor of safety.*
 
 #### Shaft Design Conclusion
 
@@ -199,9 +177,7 @@ The total transverse load was approximately 10 lbf, resulting in a reaction forc
 
 These reaction forces were used in the subsequent bearing pressure calculations.
 
-![Journal Bearing FBD](images/a9_bearing_fbd.jpg)
-
-*Figure 10: Shaft free-body diagram showing the applied pulley load and reaction forces at the two journal bearings.*
+![Journal Bearing Analysis](JB.jpg)
 
 #### Symbolic Bearing Analysis
 
@@ -214,10 +190,6 @@ Next, I determined the surface velocity of the rotating shaft using its diameter
 Finally, I combined the pressure and velocity to calculate the PV value. This quantity is used to evaluate whether a journal bearing material can operate under the specified combination of loading and sliding speed.
 
 Completing the symbolic analysis first allowed me to identify the important design variables before substituting the numerical values.
-
-![Symbolic Bearing Calculations](images/a9_bearing_symbolic.jpg)
-
-*Figure 11: Symbolic equations for bearing pressure, shaft surface velocity, and the PV relationship.*
 
 #### Numerical Bearing Analysis
 
@@ -233,9 +205,7 @@ Multiplying the pressure and velocity produced a PV value of approximately **7,8
 
 These results were used to evaluate potential bearing materials.
 
-![Numerical Bearing Calculations](images/a9_bearing_numerical.jpg)
-
-*Figure 12: Numerical calculations showing the journal bearing reactions, projected pressure, shaft surface velocity, and PV value.*
+![Engineering Analysis](VWORK.jpg)
 
 #### Journal Bearing Material Selection
 
@@ -254,10 +224,6 @@ The calculated operating values were below these representative limits.
 A nominal bearing size of **3/16-inch inside diameter, 1/4-inch outside diameter, and 1/4-inch length** was selected for the preliminary design.
 
 The final bearing fit, actual dimensional tolerances, and the material ratings in the assigned Machinery's Handbook table would need to be confirmed before manufacturing.
-
-![Bearing Selection and Comparison](images/a9_bearing_selection.jpg)
-
-*Figure 13: Bearing material selection and comparison of the calculated pressure, velocity, and PV values against representative allowable limits.*
 
 #### Journal Bearing Analysis Conclusion
 
@@ -296,9 +262,7 @@ The shaft center height was selected to provide clearance between the 3-inch-dia
 
 Each bearing support also included a mounting foot extending approximately 0.75 inches to allow the supports to be secured to the base.
 
-![Frame Geometry](images/a9_frame_geometry.jpg)
-
-*Figure 14: Preliminary frame dimensions and the arrangement of the four bearing supports.*
+![Frame Design](FRAMEDES.jpg)
 
 #### Frame Free-Body Diagram
 
@@ -312,10 +276,6 @@ The force produces a bending moment at the bottom of the support.
 
 This simplified model was used to estimate the maximum bending stress in the upright and determine whether the selected aluminum dimensions could withstand the applied loading.
 
-![Frame Free-Body Diagram](images/a9_frame_fbd.jpg)
-
-*Figure 15: Free-body diagram of one bearing support showing the applied 5 lbf load, support height, and fixed-base reactions.*
-
 #### Symbolic Frame Analysis
 
 I began the analysis by calculating the bending moment generated by the force acting at the bearing center.
@@ -327,10 +287,6 @@ The bending stress equation was then used to relate the applied bending moment t
 Finally, I compared the resulting stress with the assumed yield strength of aluminum 6061-T6 to calculate the preliminary factor of safety.
 
 This analysis allowed me to evaluate the selected support dimensions before considering additional details such as mounting holes and fasteners.
-
-![Symbolic Frame Calculations](images/a9_frame_symbolic.jpg)
-
-*Figure 16: Symbolic calculations showing the bending moment, moment of inertia, bending stress equation, and factor of safety relationship.*
 
 #### Numerical Frame Analysis
 
@@ -345,10 +301,6 @@ Using the flexure formula, I calculated a maximum bending stress of approximatel
 With an assumed yield strength of 35,000 psi for aluminum 6061-T6, the preliminary factor of safety was approximately **24.3**.
 
 This value exceeded the required minimum factor of safety of 3 under the simplified loading assumptions.
-
-![Numerical Frame Calculations](images/a9_frame_numerical.jpg)
-
-*Figure 17: Numerical calculations showing the applied bending moment, cross-sectional moment of inertia, maximum bending stress, and preliminary factor of safety.*
 
 #### Frame Design in SolidWorks
 
@@ -365,10 +317,6 @@ The bearing support was then inserted into the assembly four times.
 I positioned the supports to create two sets of aligned bearing holes, one set for each shaft, while maintaining the required 5-inch distance between the shaft centerlines.
 
 Finally, I added eight #6-32 UNC tapped mounting holes to the base at the support locations. The actual screws were not inserted into the CAD assembly.
-
-![SolidWorks Frame Model](images/a9_frame_cad.jpg)
-
-*Figure 18: SolidWorks model showing the aluminum base plate, four bearing supports, bearing holes, and mounting locations.*
 
 #### Frame Analysis Conclusion
 
@@ -424,13 +372,7 @@ The 4-inch width provided space to position two bearing supports along each shaf
 
 After fully defining the rectangle, I used the Extruded Boss/Base feature to extrude the sketch to a thickness of 0.250 inches.
 
-![Base Plate Sketch](images/a9_base_sketch.jpg)
-
-*Figure 19: Fully defined SolidWorks sketch showing the 9-inch by 4-inch base plate dimensions.*
-
-![Extruded Base Plate](images/a9_base_extruded.jpg)
-
-*Figure 20: Completed 3D base plate created using the Extruded Boss/Base feature.*
+![Base Plate](BASE.jpg)
 
 #### Base Plate Design Decision
 
@@ -464,9 +406,7 @@ After fully defining the sketch, I used Extruded Boss/Base to create the upright
 
 The support height was selected to position the shaft center 2.25 inches above the base plate, providing clearance for the 3-inch-diameter pulleys.
 
-![Bearing Support Upright](images/a9_support_upright.jpg)
-
-*Figure 21: Initial bearing support geometry showing the upright dimensions and extruded profile.*
+![Bearing Support Model](BEARBOX.jpg)
 
 #### Step 3 — Creating the Journal Bearing Hole
 
@@ -484,9 +424,7 @@ I then used Extruded Cut to create the through-hole.
 
 The 0.250-inch diameter was selected to correspond to the nominal outside diameter of the proposed bronze bushing. The exact hole tolerance and press fit would need to be verified before manufacturing.
 
-![Bearing Support Hole](images/a9_support_bearing_hole.jpg)
-
-*Figure 22: Bearing support with the 0.250-inch through-hole positioned at the shaft center.*
+![Bearing Hole](BEARHOLE.jpg)
 
 #### Step 4 — Creating the Mounting Foot
 
@@ -504,9 +442,7 @@ This feature provided a flat mounting surface and space for two fasteners.
 
 The foot was merged with the upright to create a single SolidWorks part.
 
-![Mounting Foot](images/a9_support_mounting_foot.jpg)
-
-*Figure 23: L-shaped bearing support showing the added mounting foot.*
+![Mounting Hole Locations](HOLDEM.jpg)
 
 #### Step 5 — Creating the Mounting Holes
 
@@ -520,9 +456,7 @@ Using Extruded Cut, I cut both holes through the mounting foot.
 
 This configuration would allow the supports to be fastened to threaded holes in the base plate.
 
-![Bearing Support Mounting Holes](images/a9_support_mounting_holes.jpg)
-
-*Figure 24: Completed bearing support showing the journal bearing hole and two mounting screw clearance holes.*
+![Mounting Hole Design](HOLEY.jpg)
 
 #### Bearing Support Design Decision
 
@@ -534,7 +468,7 @@ The bearing hole provided the intended mounting location for an oil-impregnated 
 
 During the preliminary CAD process, I also checked the orientation of the supports and adjusted their placement to ensure that the bearing holes would align with the shafts.
 
-The completed part was saved as `A9_BEARING_SUPPORT.SLDPRT` and later inserted four times into the main assembly.
+The completed part was saved and later inserted four times into the main assembly.
 
 ### Part 3 — Frame Assembly and Mounting Holes
 
@@ -551,10 +485,6 @@ The base was fixed in position to provide a stable reference for the remaining c
 Next, I inserted four copies of the bearing support part. I chose to reuse the same support design because all four supports required identical dimensions and bearing-hole locations.
 
 I used SolidWorks assembly mates to position the supports on the upper surface of the base plate.
-
-![Initial Frame Assembly](images/a9_initial_frame_assembly.jpg)
-
-*Figure 25: Initial assembly showing the rectangular base plate and four bearing supports.*
 
 #### Step 7 — Positioning and Aligning the Supports
 
@@ -574,9 +504,7 @@ To correct these issues, I reviewed the assembly constraints, removed or adjuste
 
 This demonstrated the importance of using appropriate assembly references and checking component alignment before adding additional parts.
 
-![Aligned Bearing Supports](images/a9_aligned_supports.jpg)
-
-*Figure 26: Four bearing supports positioned in the assembly with two aligned supports for each shaft and a 5-inch distance between shaft centers.*
+![Base and Bearing Supports](BASEBEAR.jpg)
 
 #### Step 8 — Creating the Threaded Mounting Holes
 
@@ -597,9 +525,7 @@ The mounting holes were placed to align with the clearance holes in the support 
 
 Creating these features in the assembly context helped establish the correct hole locations relative to the existing bearing supports.
 
-![Threaded Base Holes](images/a9_base_threaded_holes.jpg)
-
-*Figure 27: Threaded mounting holes created in the base plate using SolidWorks Hole Wizard.*
+![Base Mounting Holes](BASEHOLE.jpg)
 
 #### Frame Assembly Conclusion
 
@@ -644,11 +570,7 @@ The design allowed approximately 0.125 inches of shaft extension beyond each end
 
 ![Shaft Sketch and Dimensions](images/a9_shaft_sketch.jpg)
 
-*Figure 28: SolidWorks sketch showing the 3/16-inch diameter of the shaft.*
-
-![Completed Shaft Model](images/a9_shaft_model.jpg)
-
-*Figure 29: Completed shaft model with a diameter of 0.1875 inches and a length of 4.25 inches.*
+![Shaft Model](SHAFT.jpg)
 
 #### Step 10 — Inserting the Shafts into the Assembly
 
@@ -662,9 +584,7 @@ After positioning the first shaft, I inserted a second copy of the same part and
 
 Using identical shafts simplified the assembly and ensured consistent shaft dimensions throughout the system.
 
-![Shafts Installed in Assembly](images/a9_shafts_installed.jpg)
-
-*Figure 30: SolidWorks assembly showing both steel shafts positioned through their corresponding bearing supports.*
+![Additional Shaft Modeling](%2BSHAFT.jpg)
 
 #### Shaft Alignment and Assembly Considerations
 
@@ -711,13 +631,7 @@ The selected pulley dimensions were:
 
 The 0.500-inch thickness was selected to provide space for the rounded belt groove while keeping the pulley relatively compact.
 
-![Pulley Body Sketch](images/a9_pulley_sketch.jpg)
-
-*Figure 31: Initial SolidWorks pulley sketch showing the 3-inch diameter.*
-
-![Extruded Pulley Body](images/a9_pulley_body.jpg)
-
-*Figure 32: Completed pulley body after extruding the circular profile to a thickness of 0.500 inches.*
+![Circular Sketch](CIRCLE.jpg)
 
 #### Step 12 — Creating the Shaft Hole
 
@@ -729,9 +643,7 @@ I then used Extruded Cut to remove material through the pulley.
 
 The hole was positioned at the center of the pulley to maintain alignment with the shaft axis.
 
-![Pulley Shaft Hole](images/a9_pulley_hole.jpg)
-
-*Figure 33: Pulley with a centered 3/16-inch through-hole for the steel shaft.*
+![Shaft Hole](SHAFTHOLE.jpg)
 
 #### Step 13 — Creating the Rounded Belt Groove
 
@@ -753,13 +665,7 @@ During this process, I initially had difficulty determining whether the circular
 
 I corrected the feature setup by using Cut-Revolve and checking the resulting geometry to confirm that a groove had been formed.
 
-![Pulley Groove Sketch](images/a9_pulley_groove_sketch.jpg)
-
-*Figure 34: Circular cutting profile used to create the rounded belt groove.*
-
-![Completed Pulley Groove](images/a9_pulley_groove.jpg)
-
-*Figure 35: Completed pulley showing the rounded groove created using a 360-degree revolved cut.*
+![Pulley Groove](GROOVE.jpg)
 
 #### Step 14 — Installing the Pulleys into the Assembly
 
@@ -775,9 +681,7 @@ This arrangement helped keep the pulleys centered between their supports.
 
 I also checked that both pulley grooves were aligned so the belt could travel between them without an intentional lateral offset.
 
-![Pulleys Installed](images/a9_pulleys_installed.jpg)
-
-*Figure 36: Both 3-inch pulleys installed on the steel shafts and positioned between their bearing supports.*
+![SolidWorks Design](COOKED.jpg)
 
 #### Pulley Design Decision
 
@@ -785,7 +689,7 @@ I selected identical 3-inch aluminum pulleys because they satisfied the design r
 
 The rounded grooves were created to guide the polyurethane round belt and help maintain its position during rotation.
 
-The completed pulley model was saved as `A9_PULLEY.SLDPRT` and inserted twice into the assembly.
+The completed pulley model was saved and inserted twice into the assembly.
 
 Although the pulleys were positioned on the shafts in SolidWorks, a physical system would require a suitable torque-transmitting connection, such as a keyway, clamping hub, or set screw.
 
@@ -808,9 +712,7 @@ Since each pulley was 0.500 inches thick, the reference plane was positioned hal
 
 This plane was used to keep the belt centered along the rounded grooves of both pulleys.
 
-![Belt Reference Plane](images/a9_belt_plane.jpg)
-
-*Figure 37: Reference plane created through the center of the pulleys to establish the belt location.*
+![Belt Design](BELT.jpg)
 
 #### Step 16 — Creating the Belt/Chain Relationship
 
@@ -824,11 +726,7 @@ The resulting belt path length was approximately **19.42 inches**, which closely
 
 I also enabled the **Engage Belt** option to establish the rotational relationship between the two pulleys.
 
-This was important because the model needed to represent the transfer of rotational motion from one shaft to the other.
-
-![Belt Chain Feature](images/a9_belt_chain.jpg)
-
-*Figure 38: SolidWorks Belt/Chain feature showing the generated belt path connecting the two pulleys.*
+This was important because the model needed to represent the transfer of rotational motion from one shaft to the other
 
 #### Step 17 — Modeling the Physical Belt
 
@@ -840,11 +738,7 @@ I used the Convert Entities feature to transfer the belt path into the new part'
 
 After creating the continuous path, I used Swept Boss/Base with a circular profile corresponding to the selected belt diameter of 0.3125 inches.
 
-This produced a continuous round belt extending around both pulleys.
-
-![Belt Sweep Feature](images/a9_belt_sweep.jpg)
-
-*Figure 39: SolidWorks sweep feature used to create the three-dimensional polyurethane round belt.*
+This produced a continuous round belt extending around both pulleys.*
 
 #### Challenges During Belt Modeling
 
@@ -883,9 +777,7 @@ The preliminary SolidWorks assembly included:
 
 The bronze journal bearings, mounting screws, and pulley-to-shaft locking hardware were not included as separate CAD components.
 
-![Final Pulley System Assembly](images/a9_final_assembly.jpg)
-
-*Figure 40: Final SolidWorks assembly showing the base plate, bearing supports, steel shafts, aluminum pulleys, and polyurethane round belt.*
+![SolidWorks Assembly](DONE2.jpg)
 
 #### Final CAD Design Conclusion
 
@@ -974,21 +866,7 @@ When I manually rotated one pulley in the assembly, the second pulley also rotat
 
 The round belt was also modeled as a separate solid component using a swept feature.
 
-Although the complete physical mounting hardware and bronze bushings were not included in the CAD model, their proposed locations and dimensions were considered during the design process.
-
-![Final Pulley System Assembly](images/a9_final_assembly.jpg)
-
-*Figure 41: Final isometric view of the preliminary pulley system assembly created in SolidWorks.*
-
-![Pulley System Top View](images/a9_final_top_view.jpg)
-
-*Figure 42: Top view showing the two pulleys, belt arrangement, and shaft alignment.*
-
-![Pulley System Side View](images/a9_final_side_view.jpg)
-
-*Figure 43: Side view showing the base plate, bearing supports, and shaft placement.*
-
----
+Although the complete physical mounting hardware and bronze bushings were not included in the CAD model, their proposed locations and dimensions were considered during the design process
 
 ### Challenges and Corrections
 
@@ -1084,7 +962,7 @@ These improvements would allow the preliminary design to be developed into a mor
 
 ### Time Spent
 
-**Total Time Spent: [ENTER YOUR ACTUAL HOURS] hours**
+**Total Time Spent: [10] hours**
 
 This time included:
 
@@ -1103,16 +981,7 @@ This time included:
 ### SolidWorks CAD Files
 
 The following CAD files were created during the modeling process:
-
-- [Base Plate](cad_files/A9_BASE.SLDPRT)
-- [Bearing Support](cad_files/A9_BEARING_SUPPORT.SLDPRT)
-- [Steel Shaft](cad_files/A9_SHAFT.SLDPRT)
-- [Pulley](cad_files/A9_PULLEY.SLDPRT)
-- [Pulley System Assembly](cad_files/A9_ASSEMBLY.SLDASM)
-
-The separate belt component can also be included after confirming its saved filename.
-
-All linked CAD files should be uploaded to the `cad_files` folder so that the links function correctly.
+[Download Assembly File](A9_ASSEMBLY.SLDASM)[Download Assembly File](A9_ASSEMBLY.SLDASM)
 
 ---
 
