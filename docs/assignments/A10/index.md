@@ -86,6 +86,9 @@ This establishes the minimum diameter required to resist the assumed axial load 
 
 This calculation addresses axial yielding only. Buckling and other loading conditions are evaluated separately.
 
+![Work 1](Work1.jpg)
+
+
 
 ### 2. Leadscrew Rotational Speed Range
 
@@ -151,12 +154,9 @@ Both leadscrews must rotate at the same speed and in the appropriate direction t
 
 The drive system must therefore provide controlled low-speed rotation across this range.
 
-#### Handwritten Calculations
 
-![Leadscrew Rotational Speed Calculation](images/A10_Leadscrew_RPM.png)
-#### Handwritten Calculations
+![Work 2](work2.jpg)
 
-![Minimum Leadscrew Diameter Calculation](images/A10_Leadscrew_Diameter.png)
 
 ### 3. Maximum Driving Torque
 
@@ -284,9 +284,8 @@ This calculation represents the torque required to advance the Acme screws under
 
 Additional torque may be required to overcome bearing friction, drivetrain losses, and other mechanical resistance. These effects must be considered when selecting the final drive mechanism.
 
-#### Handwritten Calculations
+![Work 3](work3.jpg)
 
-![Maximum Driving Torque Calculation](images/A10_Leadscrew_Torque.png)
 
 ### 4. Leadscrew Selection and Verification
 
@@ -393,12 +392,6 @@ Two identical screws will be used, with a minimum required length of 18 inches e
 
 Although the leadscrew satisfies the preliminary axial stress calculation, its buckling resistance and actual support conditions must also be evaluated before final design approval.
 
-#### Selected Component Reference
-
-![Roton Acme Leadscrew Specifications](images/A10_Leadscrew_Selection.png)
-
-*Figure 4. Manufacturer specifications for the selected Roton 1/2"-10 Acme leadscrew.*
-
 **Manufacturer Reference:**  
 [Roton – Acme Right-Hand Screws and Nuts](https://www.roton.com/family/acme-right-screws-and-nuts-7059284/)
 
@@ -489,20 +482,6 @@ The bronze nuts provide the threaded interface for converting screw rotation int
 The selected flange dimensions also influenced the crosshead redesign, which increased its depth from 30 mm to 80 mm to accommodate the mounting hardware.
 
 Further verification is required for the actual nut material, internal thread engagement, and connection details.
-
-#### Selected Component Images
-
-**Bronze Nut:**
-
-![Roton Bronze Nut](images/A10_Bronze_Nut.png)
-
-*Figure 5. Selected Roton #90222 bronze mounting nut.*
-
-**Mounting Flange:**
-
-![Roton Mounting Flange](images/A10_Mounting_Flange.png)
-
-*Figure 6. Selected Roton #89838 mounting flange.*
 
 #### Manufacturer Reference
 
@@ -619,11 +598,12 @@ This exceeds the required factor of safety of 4 under the assumed material prope
 
 However, actual thread engagement, material properties, and nonuniform thread loading must be verified before considering the selected bronze nut fully validated.
 
-#### Handwritten Calculations
 
-![Bronze Nut Thread Bending Stress](images/A10_Bronze_Nut_Stress.png)
+![Work 4](work4.jpg)
 
-*Figure 7. Handwritten calculations used to determine the bronze nut thread bending stress and preliminary factor of safety.*
+![Work 5](work5.jpg)
+
+
 
 
 ### 7. Crosshead Bending Stress
@@ -651,11 +631,6 @@ The crosshead was modeled as a simply supported beam with the tensile force appl
 - Minimum crosshead height, \(h_{\min}\)
 - Actual bending stress, \(\sigma_{\max}\)
 
-#### Free-Body Diagram
-
-![Crosshead Free-Body Diagram](images/A10_Crosshead_FBD.png)
-
-*Figure 8. Crosshead free-body diagram showing the 2,000 N center load and two 1,000 N support reactions.*
 
 #### Governing Equations
 
@@ -777,11 +752,9 @@ The initial crosshead dimensions were 260 mm × 30 mm × 30 mm. However, the dep
 
 The revised crosshead dimensions and updated stress calculations are documented in the following sections.
 
-#### Handwritten Calculations
 
-![Crosshead Bending Stress Calculation](images/A10_Crosshead_Bending.png)
+![Work 6](work6.jpg)
 
-*Figure 9. Handwritten calculations used to determine the minimum crosshead height and initial bending stress.*
 
 
 ### 8. Crosshead Deflection
@@ -871,11 +844,11 @@ Therefore, the crosshead dimensions were revised to provide additional mounting 
 
 The updated geometry and corresponding calculations are documented in the next section.
 
-#### Handwritten Calculations
 
-![Initial Crosshead Deflection Calculation](images/A10_Crosshead_Deflection.png)
+![Work 7](work7.jpg)
 
-*Figure 10. Handwritten calculation used to verify the initial crosshead deflection.*
+![Work 8](work8.jpg)
+
 
 
 ### 9. Crosshead Design Revisions and Final Preliminary Dimensions
@@ -1098,18 +1071,6 @@ The design satisfies the bending stress and deflection requirements under the si
 
 These results do not include the effects of mounting holes, local stress concentrations, connection flexibility, or detailed grip loading. Those features require further verification during final design development.
 
-#### Handwritten Calculations
-
-![Revised Crosshead Calculations](images/A10_Crosshead_Revised.png)
-
-*Figure 11. Revised crosshead bending stress, deflection, and dimensional calculations.*
-
-#### CAD Design Layout
-
-![Crosshead Mounting Layout](images/A10_Crosshead_Layout.png)
-
-*Figure 12. Preliminary crosshead layout showing leadscrew locations, flange mounting holes, and central specimen attachment.*
-
 
 ### 10. Central Grip Bolt Verification
 
@@ -1137,12 +1098,6 @@ For the preliminary analysis, the load was assumed to be distributed equally bet
 - Bolt tensile stress, \(\sigma_b\)
 - Allowable tensile stress, \(\sigma_{\text{allow}}\)
 - Actual bolt factor of safety
-
-#### Free-Body Diagram
-
-![Central Grip Bolt FBD](images/A10_Grip_Bolt_FBD.png)
-
-*Figure 13. Free-body diagram of the central grip adapter showing the applied tensile force and the two supporting bolt forces.*
 
 #### Governing Equations
 
@@ -1244,13 +1199,6 @@ However, this calculation assumes equal loading, negligible bending and prying f
 
 The aluminum internal threads must also be checked to ensure that the bolts cannot strip out of the crosshead.
 
-#### Handwritten Calculations
-
-![Central Grip Bolt Calculations](images/A10_Grip_Bolt_Calculations.png)
-
-*Figure 14. Handwritten calculations used to verify the tensile strength of the central grip attachment bolts.*
-
-
 ### 11. Aluminum Thread Stripping Verification
 
 After verifying the tensile strength of the central grip attachment bolts, the next step was evaluating the internal aluminum threads in the crosshead.
@@ -1278,12 +1226,6 @@ Therefore, a preliminary thread stripping calculation was performed to evaluate 
 - Approximate thread shear area, \(A_s\)
 - Estimated internal thread shear stress, \(\tau\)
 - Preliminary thread stripping factor of safety
-
-#### Thread Engagement Diagram
-
-![Aluminum Thread Engagement Diagram](images/A10_Thread_Engagement.png)
-
-*Figure 15. Diagram showing the M6 bolt engaged in the aluminum crosshead with a proposed 10 mm full thread engagement.*
 
 #### Governing Equations
 
@@ -1385,14 +1327,7 @@ These results indicate that the proposed 10 mm full thread engagement is promisi
 
 However, the shear area equation is an approximation. Actual ISO metric thread geometry, thread tolerances, nonuniform load distribution, and bolt preload can affect the connection's strength.
 
-Therefore, this result is considered a preliminary verification rather than a final certified thread stripping capacity.
-
-#### Handwritten Calculations
-
-![Aluminum Thread Stripping Calculations](images/A10_Thread_Stripping.png)
-
-*Figure 16. Handwritten calculations used to estimate the internal aluminum thread shear stress and preliminary factor of safety.*
-
+Therefore, this result is considered a preliminary verification rather than a final certified thread stripping capacity
 
 ### 12. Flange Mounting Bolt Verification
 
@@ -1557,17 +1492,6 @@ However, the actual load path, bolt preload, possible prying forces, aluminum th
 
 The final CAD assembly must also confirm that the proposed bolt-hole arrangement matches the selected Roton flange.
 
-#### Handwritten Calculations
-
-![Flange Mounting Bolt Calculations](images/A10_Flange_Bolt_Verification.png)
-
-*Figure 17. Preliminary flange mounting bolt stress and edge-distance calculations.*
-
-#### Flange Mounting Layout
-
-![Flange Mounting Layout](images/A10_Flange_Mounting_Layout.png)
-
-*Figure 18. Proposed four-bolt flange mounting arrangement on the revised aluminum crosshead.*
 
 ### 13. Leadscrew Buckling Verification
 
@@ -1732,17 +1656,7 @@ Therefore, **buckling verification remains unresolved**, and the selected leadsc
 
 The final design must establish the actual axial loading direction, unsupported length, and support conditions before confirming whether the selected leadscrew is acceptable.
 
-#### Handwritten Calculations
-
-![Leadscrew Buckling Calculations](images/A10_Leadscrew_Buckling.png)
-
-*Figure 19. Preliminary Euler buckling calculation for the selected 1/2"-10 Acme leadscrew.*
-
 #### Leadscrew Support Arrangement
-
-![Leadscrew Support Diagram](images/A10_Leadscrew_Support.png)
-
-*Figure 20. Preliminary leadscrew support arrangement used to evaluate possible buckling conditions.*
 
 ## Cost Analysis
 
