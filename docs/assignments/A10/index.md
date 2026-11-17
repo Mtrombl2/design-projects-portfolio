@@ -1731,9 +1731,19 @@ References for aluminum framing components that would be used in the assembly we
 
 The development of the CAD models helped in understanding how the movement of the crosshead would be achieved and arrangement of the major parts.
 
+# Downloadable CAD Files
 
-## Decide
-_Reference your concept selection (Pugh matrix) here. How does this design follow from that decision?_
+-
 
-## Communicate
+-
+
+-
+
+# Lesson Learned
+
+This project gave a demonstration of how engineering computations are used in the design of mechanical components and assembly.
+
+We learnt how to place components in an assembly, align the components in relation to the leadscrews and crosshead, and how to use supplier's CAD models in Solidworks.
+
+It was also demonstrated that component dimensions and mounting places have to be checked in assembly.
 
