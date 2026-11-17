@@ -1733,11 +1733,13 @@ The development of the CAD models helped in understanding how the movement of th
 
 # Downloadable CAD Files
 
--
+- [Download Beam Assembly](tbeamh.SLDASM?raw=1)
 
--
+- [Download Crosshead Assembly](Assem2.SLDASM?raw=1)
 
--
+- [Download T-Slot Beam Assembly](tslotbeam.SLDASM?raw=1)
+
+- [Download Acme Leadscrew STEP File](98940A305_4140%20Black-Oxide%20Steel%20Precision%20Acme%20Lead%20Screw.STEP?raw=1)
 
 # Lesson Learned
 
