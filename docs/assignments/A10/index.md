@@ -1749,3 +1749,23 @@ We learnt how to place components in an assembly, align the components in relati
 
 It was also demonstrated that component dimensions and mounting places have to be checked in assembly.
 
+# Individual Team Member Contriubutions
+
+## Amaha Martin
+
+- Assisted Jakub with CAD modeling and assembly development in SolidWorks.
+
+- Organized and updated the GitHub portfolio, including CAD screenshots, documentation, and downloadable files
+
+## Jakub
+
+- Worked on CAD modeling and assembly of the tensile tester components
+
+- Helped develop the mechanical design using SolidWorks
+
+## Mason
+
+- Completed the engineering calculations and mathematical analysis for the tensile tester
+
+- Analyzed the leadscrew system, component strength, and design requirements to support the team's design decisions
+
