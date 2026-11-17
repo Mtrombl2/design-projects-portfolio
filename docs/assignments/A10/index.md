@@ -1684,6 +1684,38 @@ The current subtotal is $176.70, excluding shipping and taxes. It is not the fin
 
 **Design note:** The selected leadscrews require additional buckling verification. Bolt lengths, bearing supports, and motor mounting details must also be confirmed before purchasing.
 
+## CAD Modeling and Assembly
+
+The parts of the tensile tester were modeled in SolidWorks to be able to show the mechanical structure as well as to determine the positioning of the crosshead, leadscrews, and the frame holding them. The assembly of the tensile tester was created from the individual parts that were designed and downloaded from the suppliers. 
+
+# Crosshead Design 
+
+Two mounting holes for the leadscrews were designed into the crosshead. This design serves as the link between the leadscrews and the crosshead.
+
+# Assembly of Crosshead and Leadscrews 
+
+The crosshead has been assembled using two parallel leadscrews to demonstrate how they are aligned and positioned. This arrangement shares the load on both the leadscrews.
+
+# Leadscrew of Acne Type
+
+An Acme type leadscrew of 1/2" - 10 Right hand and 18 inches in length has been chosen for the preliminary design as the reference leadscrew. This was done using the supplier's CAD data as source material for component assembly.
+
+# Supporting Frame Design
+
+An aluminum frame of T-slot type has been chosen for designing the frame components to be used as a supporting structure for the leadscrew system.
+
+# Assembly of Tensile Tester
+
+The assembly of the prototype consists of the crosshead, two leadscrews, and the aluminum framing parts. The model gives an indication of how all the major components of the system would be arranged and positioned.
+
+# Aluminum Frame Part References
+
+References for aluminum framing components that would be used in the assembly were obtained from supplier specifications.
+
+# CAD Model Summary
+
+The development of the CAD models helped in understanding how the movement of the crosshead would be achieved and arrangement of the major parts.
+
 
 ## Decide
 _Reference your concept selection (Pugh matrix) here. How does this design follow from that decision?_
