@@ -1733,6 +1733,18 @@ The development of the CAD models helped in understanding how the movement of th
 
 # Downloadable CAD Files
 
+- [Download T-Slot Beam Assembly](tslotbeam%20%281%29.SLDASM?raw=1)
+
+-  [Download Beam Assembly](tbeamh%20%283%29.SLDASM?raw=1)
+
+- [Download Leadscrew Part](leadscrew.SLDPRT?raw=1)
+
+- [Download Grainger STEP Model](grainger-804T48%20%281%29.stp?raw=1)
+
+- [Download Final Tensile Tester Assembly](finalassembly.SLDASM?raw=1)
+
+- [Download Crosshead Assembly](crossheadassembly.SLDASM?raw=1)
+
 # Lesson Learned
 
 This project gave a demonstration of how engineering computations are used in the design of mechanical components and assembly.
