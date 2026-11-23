@@ -10,399 +10,544 @@ The final design will incorporate a complete CAD assembly, structural finite ele
 
 ## Analyze
 
-### 1. Motor Selection and Verification
 
-The tensile testing machine requires two motors to drive the Acme lead screws and move the crosshead at a controlled speed. The **Bodine Electric Model 4762 DC gearmotor** was selected as the preliminary design candidate based on its torque capacity, rated speed, and availability of manufacturer CAD files.
+<section id="motor-selection">
 
-**Motor specifications**
+  <h2>Engineering Analysis</h2>
+  <h3>1. Motor Selection and Verification</h3>
 
-| Parameter | Value |
-|---|---|
-| Motor | Bodine Electric Model 4762 |
-| Rated output torque | 32.77 N·m |
-| Peak output torque | 52.42 N·m |
-| Rated output speed | 21 rpm |
-| Gear ratio | 120:1 |
-| Supply voltage | 24 V DC |
-| Rated current | 8.8 A |
-| Rated power | 0.25 hp |
-| Quantity | 2 |
+  <p>
+    Two motors are proposed to drive the Acme lead screws of
+    the tensile testing machine. The Bodine Electric Model
+    4762 DC gearmotor was selected as the preliminary
+    candidate based on its torque capacity, rated speed,
+    and availability of manufacturer CAD files.
+  </p>
 
-Manufacturer: https://www.bodine-electric.com/products/dc-right-angle-gearmotors/42a-gb-series-dc-right-angle-gearmotor/4762/
+  <h4>Selected Motor Specifications</h4>
 
-#### A. Required Force
+  <table border="1" cellpadding="8">
+    <tr><th>Parameter</th><th>Value</th></tr>
+    <tr><td>Motor</td><td>Bodine Electric 4762</td></tr>
+    <tr><td>Rated Torque</td><td>32.77 N&#183;m</td></tr>
+    <tr><td>Peak Torque</td><td>52.42 N&#183;m</td></tr>
+    <tr><td>Rated Speed</td><td>21 rpm</td></tr>
+    <tr><td>Gear Ratio</td><td>120:1</td></tr>
+    <tr><td>Voltage</td><td>24 V DC</td></tr>
+    <tr><td>Rated Current</td><td>8.8 A</td></tr>
+    <tr><td>Motor Power Rating</td><td>0.25 hp</td></tr>
+    <tr><td>Quantity</td><td>2</td></tr>
+  </table>
 
-Maximum tensile load:
+  <figure>
+    <img src="MOTORS.jpg"
+         alt="Bodine 4762 motor" width="500">
+    <figcaption>
+      Figure 1. Selected Bodine Electric 4762 motor.
+    </figcaption>
+  </figure>
 
-\[
-F_{\text{total}}=2000\text{ N}
-\]
+  <figure>
+    <img src="MOTORS2.jpg"
+         alt="Motor specifications" width="500">
+    <figcaption>
+      Figure 2. Manufacturer motor specifications.
+    </figcaption>
+  </figure>
 
-Assuming equal load distribution between the two lead screws:
+  <h4>A. Required Force</h4>
 
-\[
-F_{\text{screw}}=\frac{2000}{2}
-=\boxed{1000\text{ N}}
-\]
+  <p>Maximum tensile load:</p>
+  <p>F<sub>total</sub> = 2000 N</p>
 
-#### B. Required Rotational Speed
+  <p>Number of lead screws = 2</p>
 
-From A10, the Acme screw lead is:
+  <p>
+    F<sub>screw</sub> = F<sub>total</sub> / 2
+  </p>
 
-\[
-L=2.54\text{ mm/rev}
-\]
+  <p>
+    F<sub>screw</sub> = 2000 / 2
+  </p>
 
-Using:
+  <p><strong>F<sub>screw</sub> = 1000 N</strong></p>
 
-\[
-n=\frac{v}{L}
-\]
+  <h4>B. Required Rotational Speed</h4>
 
-Minimum:
+  <p>Lead screw travel per revolution:</p>
+  <p>L = 2.54 mm/rev</p>
 
-\[
-n_{\min}=\frac{1}{2.54}
-=\boxed{0.394\text{ rpm}}
-\]
+  <p>Rotational speed equation:</p>
+  <p>n = v / L</p>
 
-Maximum:
+  <p><strong>Minimum Speed:</strong></p>
+  <p>n<sub>min</sub> = 1 / 2.54</p>
+  <p><strong>n<sub>min</sub> = 0.394 rpm</strong></p>
 
-\[
-n_{\max}=\frac{50}{2.54}
-=\boxed{19.69\text{ rpm}}
-\]
+  <p><strong>Maximum Speed:</strong></p>
+  <p>n<sub>max</sub> = 50 / 2.54</p>
+  <p><strong>n<sub>max</sub> = 19.69 rpm</strong></p>
 
-#### C. Required Torque
+  <h4>C. Required Design Torque</h4>
 
-The A10 analysis estimated a drive torque of 1.30 N·m per lead screw.
+  <p>
+    From A10, the estimated drive torque per lead screw
+    was 1.30 N&#183;m.
+  </p>
 
-Applying a conservative torque-sizing factor of 4:
+  <p>Using a conservative torque-sizing factor of 4:</p>
 
-\[
-T_{\text{design}}=4(1.30)
-\]
+  <p>
+    T<sub>design</sub> =
+    FS &times; T<sub>required</sub>
+  </p>
 
-\[
-\boxed{T_{\text{design}}=5.20\text{ N}\cdot\text{m}}
-\]
+  <p>T<sub>design</sub> = 4 &times; 1.30</p>
 
-#### D. Motor Torque Verification
+  <p>
+    <strong>T<sub>design</sub> = 5.20 N&#183;m</strong>
+  </p>
 
-The motor's rated output torque is:
+  <h4>D. Motor Torque Verification</h4>
 
-\[
-T_{\text{rated}}=32.77\text{ N}\cdot\text{m}
-\]
+  <p>Rated motor output torque = 32.77 N&#183;m</p>
 
-Torque capacity ratio:
+  <p>
+    Torque capacity ratio = 32.77 / 1.30
+  </p>
 
-\[
-\frac{32.77}{1.30}=\boxed{25.21}
-\]
+  <p><strong>Torque capacity ratio = 25.21</strong></p>
 
-Since the rated torque exceeds the 5.20 N·m design target, the motor passes the preliminary rated-torque capacity check.
+  <p>
+    Since 32.77 N&#183;m exceeds the conservative
+    5.20 N&#183;m design target, the motor passes
+    the preliminary rated-torque capacity check.
+  </p>
 
-#### E. Mechanical Power
+  <h4>E. Mechanical Power</h4>
 
-At maximum required rotational speed:
+  <p>Angular velocity:</p>
 
-\[
-\omega=\frac{2\pi(19.69)}{60}
-=2.062\text{ rad/s}
-\]
+  <p>
+    &omega; = (2&pi; &times; n) / 60
+  </p>
 
-\[
-P=T\omega=(1.30)(2.062)
-\]
+  <p>
+    &omega; = (2&pi; &times; 19.69) / 60
+  </p>
 
-\[
-\boxed{P=2.68\text{ W per screw}}
-\]
+  <p>
+    <strong>&omega; = 2.062 rad/s</strong>
+  </p>
 
-Total mechanical power:
+  <p>Power equation:</p>
+  <p>P = T &times; &omega;</p>
 
-\[
-P_{\text{total}}=2(2.68)=\boxed{5.36\text{ W}}
-\]
+  <p>P = 1.30 &times; 2.062</p>
 
-#### F. Estimated Efficiency
+  <p><strong>P = 2.68 W per lead screw</strong></p>
 
-At the motor's rated operating point:
+  <p>Total power for two lead screws:</p>
+  <p>P<sub>total</sub> = 2 &times; 2.68</p>
 
-\[
-P_{\text{out}}=32.77\left(\frac{2\pi(21)}{60}\right)
-=72.07\text{ W}
-\]
+  <p><strong>P<sub>total</sub> = 5.36 W</strong></p>
 
-\[
-P_{\text{in}}=VI=(24)(8.8)=211.2\text{ W}
-\]
+  <p>
+    This is the preliminary mechanical power
+    requirement, excluding additional drivetrain losses.
+  </p>
 
-\[
-\eta=\frac{72.07}{211.2}(100)
-=\boxed{34.1\%}
-\]
+  <h4>F. Estimated Motor Efficiency</h4>
 
-This represents an approximate overall motor-and-gearbox efficiency calculated from the published rated values.
+  <p>Mechanical output power at rated conditions:</p>
 
-#### G. Speed–Torque Curve
+  <p>
+    P<sub>out</sub> =
+    T &times; (2&pi;n / 60)
+  </p>
 
-The motor lecture describes the ideal DC motor speed–torque relationship as:
+  <p>
+    P<sub>out</sub> =
+    32.77 &times; (2&pi; &times; 21 / 60)
+  </p>
 
-\[
-\omega=\frac{V}{k_e}-\frac{R}{k_e k_t}T
-\]
+  <p><strong>P<sub>out</sub> = 72.07 W</strong></p>
 
-An illustrative linear curve was created using an assumed 25 rpm no-load output speed and the manufacturer-rated point of 32.77 N·m at 21 rpm:
+  <p>Electrical input power:</p>
 
-\[
-\boxed{n=25-0.1221T}
-\]
+  <p>P<sub>in</sub> = V &times; I</p>
+  <p>P<sub>in</sub> = 24 &times; 8.8</p>
 
-The assumed no-load speed is not manufacturer-verified. Therefore, this curve is a preliminary engineering illustration, not a validated performance curve.
+  <p><strong>P<sub>in</sub> = 211.2 W</strong></p>
 
-**Graph:** Insert `Bodine_4762_illustrative_speed_torque.png` here.
+  <p>Estimated overall efficiency:</p>
 
-#### H. Motor Selection Conclusion
+  <p>
+    &eta; =
+    (P<sub>out</sub> / P<sub>in</sub>) &times; 100
+  </p>
 
-The Bodine 4762 meets the preliminary rated-torque and maximum-speed requirements for the tensile testing machine.
+  <p>
+    &eta; = (72.07 / 211.2) &times; 100
+  </p>
 
-However, continuous performance across the full 0.394–19.69 rpm range has not been verified. The minimum operating speed, permissible control method, and synchronization of both lead screws require further investigation.
+  <p><strong>&eta; = 34.1%</strong></p>
 
-The Bodine 4762 remains the working motor selection for preliminary CAD development, subject to these outstanding checks.
+  <p>
+    This is an approximate motor-and-gearbox efficiency
+    calculated from the published rated operating values.
+  </p>
 
-### 2. Motor Mount Bracket Design
+  <h4>G. Speed-Torque Curve</h4>
 
-Two motor mounting brackets are required to attach the Bodine 4762 gearmotors to the upper frame of the tensile testing machine. The brackets must support the motor weight, resist applied loads and torque reactions, and maintain proper alignment with the Acme lead screws.
+  <p>
+    The ideal DC motor speed-torque relationship is:
+  </p>
 
-6061-T6 aluminum was selected for the brackets because of its strength, machinability, and relatively low weight.
+  <p>
+    &omega; = V/k<sub>e</sub> -
+    (R &times; T)/(k<sub>e</sub>k<sub>t</sub>)
+  </p>
+
+  <p>
+    For an illustrative linear model, a no-load
+    gearmotor output speed of 25 rpm was assumed.
+    Using the manufacturer-rated point of 32.77 N&#183;m
+    at 21 rpm:
+  </p>
+
+  <p>
+    n = 25 - [(25 - 21) / 32.77]T
+  </p>
+
+  <p><strong>n = 25 - 0.1221T</strong></p>
+
+  <p>
+    The 25 rpm no-load assumption is not verified
+    manufacturer data. Therefore, the graph is an
+    illustrative engineering estimate, not a validated
+    manufacturer speed-torque curve.
+  </p>
+
+  <p>
+    <strong>
+      [INSERT SPEED-TORQUE GRAPH HERE]
+    </strong>
+  </p>
+
+  <h4>H. Engineering Conclusion</h4>
+
+  <p>
+    The Bodine Electric 4762 was retained as the
+    preliminary motor selection based on its rated
+    torque capacity and maximum rated speed.
+    Its rated output torque of 32.77 N&#183;m exceeds
+    the conservative design target of 5.20 N&#183;m.
+  </p>
+
+  <p>
+    Continuous operation across the full required
+    speed range of 0.394 to 19.69 rpm has not been
+    verified. The minimum operating speed, allowable
+    speed-control method, and synchronization of both
+    lead screws remain unresolved design items.
+  </p>
+
+  <p>
+    Manufacturer:
+    <a href="https://www.bodine-electric.com/products/dc-right-angle-gearmotors/42a-gb-series-dc-right-angle-gearmotor/4762/">
+      Bodine Electric Model 4762
+    </a>
+  </p>
+
+</section>
+
+
+<section id="motor-mount-analysis">
+
+  <h3>2. Motor Mount Bracket Design</h3>
+
+  <p>
+    Two mounting brackets are required to attach the
+    Bodine 4762 gearmotors to the upper frame of the
+    tensile testing machine.
+  </p>
+
+  <p>
+    The brackets must support the motor weight,
+    resist applied loads and torque reactions,
+    and maintain proper alignment with the
+    Acme lead screws.
+  </p>
+
+  <p>
+    Aluminum 6061-T6 was selected because of its
+    strength, machinability, and relatively low weight.
+  </p>
 
-**[INSERT PICTURE 5 — Motor Mount Bracket Concept]**
+  <figure>
+    <img src="MOUNTDES.jpg"
+         alt="Motor mount bracket design" width="500">
+    <figcaption>
+      Figure 5. Preliminary motor mounting bracket
+      design concept.
+    </figcaption>
+  </figure>
 
-*Figure 5. Preliminary motor mounting bracket design showing its attachment to the upper aluminum frame.*
+  <h4>A. Known Values</h4>
 
-#### A. Known Values
+  <table border="1" cellpadding="8">
+    <tr><th>Parameter</th><th>Value</th></tr>
+    <tr><td>Motor</td><td>Bodine 4762</td></tr>
+    <tr><td>Motor Mass</td><td>8.85 kg</td></tr>
+    <tr><td>Rated Output Torque</td>
+        <td>32.77 N&#183;m</td></tr>
+    <tr><td>Assumed Axial Load</td>
+        <td>1000 N</td></tr>
+    <tr><td>Bracket Material</td>
+        <td>6061-T6 Aluminum</td></tr>
+    <tr><td>Yield Strength</td>
+        <td>276 MPa</td></tr>
+    <tr><td>Factor of Safety</td><td>4</td></tr>
+    <tr><td>Mounting Bolts</td><td>4 M8</td></tr>
+    <tr><td>Proposed Bolt Pattern</td>
+        <td>80 x 80 mm</td></tr>
+    <tr><td>Unsupported Length</td>
+        <td>40 mm</td></tr>
+    <tr><td>Effective Bracket Width</td>
+        <td>80 mm</td></tr>
+  </table>
 
-| Parameter | Value |
-|---|---|
-| Motor | Bodine 4762 |
-| Motor mass | 8.85 kg |
-| Rated output torque | 32.77 N·m |
-| Assumed axial load per bracket | 1,000 N |
-| Bracket material | 6061-T6 aluminum |
-| Yield strength | 276 MPa |
-| Factor of safety | 4 |
-| Proposed frame mounting bolts | Four M8 |
-| Preliminary bolt spacing | 80 × 80 mm |
-| Assumed unsupported length | 40 mm |
-| Preliminary effective bracket width | 80 mm |
+  <p>
+    These dimensions are preliminary assumptions.
+    The final bracket must be checked against the
+    motor and frame geometry.
+  </p>
 
-The bolt spacing, unsupported length, and effective width are preliminary geometric assumptions that must be checked against the final CAD assembly. The 1,000 N axial force is conservatively assigned to the bracket until the actual thrust-bearing load path is established.
+  <h4>B. Free-Body Diagram</h4>
 
-#### B. Free-Body Diagram
+  <figure>
+    <img src="MOUNTDES2.jpg"
+         alt="Motor mount free-body diagram"
+         width="500">
+    <figcaption>
+      Figure 6. Motor bracket loading and
+      support reactions.
+    </figcaption>
+  </figure>
 
-The mounting bracket is analyzed under the motor torque, motor weight, and assumed axial load.
+  <h4>C. Force per Mounting Bolt</h4>
 
-**[INSERT PICTURE 6 — Motor Mount Free-Body Diagram]**
+  <p>
+    Assuming the axial load is equally
+    distributed between four mounting bolts:
+  </p>
 
-*Figure 6. Free-body diagram showing the assumed 1,000 N axial load, 32.77 N·m torque reaction, motor weight, and frame mounting reactions.*
+  <p>
+    F<sub>axial</sub> = 1000 / 4
+  </p>
 
-#### C. Force per Mounting Bolt
+  <p>
+    <strong>F<sub>axial</sub> = 250 N</strong>
+  </p>
 
-Assuming the axial force is distributed equally among four bolts:
+  <p>
+    For an 80 x 80 mm square bolt pattern:
+  </p>
 
-\[
-F_{\text{axial}}=\frac{1000}{4}
-\]
+  <p>
+    r = &radic;(40<sup>2</sup> + 40<sup>2</sup>)
+  </p>
 
-\[
-\boxed{F_{\text{axial}}=250\text{ N}}
-\]
+  <p><strong>r = 56.57 mm = 0.05657 m</strong></p>
 
-For the assumed 80 × 80 mm square bolt pattern:
+  <p>Torque-induced tangential force:</p>
 
-\[
-r=\sqrt{40^2+40^2}
-\]
+  <p>
+    F<sub>T</sub> = T / (4r)
+  </p>
 
-\[
-\boxed{r=56.57\text{ mm}=0.05657\text{ m}}
-\]
+  <p>
+    F<sub>T</sub> = 32.77 / (4 x 0.05657)
+  </p>
 
-Torque-induced tangential force per bolt:
+  <p><strong>F<sub>T</sub> = 144.8 N</strong></p>
 
-\[
-F_T=\frac{T}{4r}
-\]
+  <p>Motor weight:</p>
 
-\[
-F_T=\frac{32.77}{4(0.05657)}
-\]
+  <p>W = mg</p>
 
-\[
-\boxed{F_T=144.8\text{ N}}
-\]
+  <p>W = 8.85 x 9.81</p>
 
-Motor weight:
+  <p><strong>W = 86.8 N</strong></p>
 
-\[
-W=mg
-\]
+  <p>Weight contribution per bolt:</p>
 
-\[
-W=(8.85)(9.81)
-\]
+  <p>F<sub>W</sub> = 86.8 / 4</p>
 
-\[
-\boxed{W=86.8\text{ N}}
-\]
+  <p><strong>F<sub>W</sub> = 21.7 N</strong></p>
 
-Weight contribution per bolt:
+  <p>
+    Illustrative resultant force assuming
+    perpendicular loading components:
+  </p>
 
-\[
-F_W=\frac{86.8}{4}=21.7\text{ N}
-\]
+  <p>
+    F<sub>b</sub> =
+    &radic;(250<sup>2</sup> +
+    144.8<sup>2</sup> +
+    21.7<sup>2</sup>)
+  </p>
 
-For an illustrative orthogonal force combination:
+  <p><strong>F<sub>b</sub> = 290 N</strong></p>
 
-\[
-F_b=\sqrt{250^2+144.8^2+21.7^2}
-\]
+  <p>
+    This is a simplified bolt-force estimate.
+    Actual forces depend on the motor orientation,
+    bracket geometry, and bolt preload.
+  </p>
 
-\[
-\boxed{F_b\approx290\text{ N}}
-\]
+  <h4>D. Allowable Stress</h4>
 
-This force estimate assumes perpendicular loading components and equal sharing. The final bolt-group analysis must account for actual load directions, bolt preload, and bracket geometry.
+  <p>Yield strength:</p>
 
-#### D. Allowable Stress
+  <p>&sigma;<sub>y</sub> = 276 MPa</p>
 
-For 6061-T6 aluminum:
+  <p>
+    &sigma;<sub>allow</sub> =
+    &sigma;<sub>y</sub> / FS
+  </p>
 
-\[
-\sigma_y=276\text{ MPa}
-\]
+  <p>&sigma;<sub>allow</sub> = 276 / 4</p>
 
-Using a factor of safety of 4:
+  <p>
+    <strong>
+      &sigma;<sub>allow</sub> = 69 MPa
+    </strong>
+  </p>
 
-\[
-\sigma_{\text{allow}}=\frac{\sigma_y}{FS}
-\]
+  <h4>E. Minimum Thickness - Bearing Stress</h4>
 
-\[
-\sigma_{\text{allow}}=\frac{276}{4}
-\]
+  <p>Projected bearing stress:</p>
 
-\[
-\boxed{\sigma_{\text{allow}}=69\text{ MPa}}
-\]
+  <p>&sigma;<sub>b</sub> = F<sub>b</sub> / (dt)</p>
 
-#### E. Minimum Thickness — Bearing Stress
+  <p>Solving for thickness:</p>
 
-The projected bearing-stress relationship is:
+  <p>
+    t<sub>min</sub> =
+    F<sub>b</sub> /
+    (d &times; &sigma;<sub>allow</sub>)
+  </p>
 
-\[
-\sigma_b=\frac{F_b}{dt}
-\]
+  <p>
+    t<sub>min</sub> = 290 / (8 x 69)
+  </p>
 
-Rearranging for thickness:
+  <p>
+    <strong>t<sub>min</sub> = 0.525 mm</strong>
+  </p>
 
-\[
-t_{\min}=\frac{F_b}{d\sigma_{\text{allow}}}
-\]
+  <p>
+    This is a simplified projected bearing
+    calculation, not a full fastener or
+    connection-strength verification.
+  </p>
 
-Using an 8 mm nominal bolt diameter:
+  <h4>F. Minimum Thickness - Bending</h4>
 
-\[
-t_{\min}=\frac{290}{8(69)}
-\]
+  <p>
+    Model the bracket as an equivalent
+    rectangular cantilever:
+  </p>
 
-\[
-\boxed{t_{\min}=0.525\text{ mm}}
-\]
+  <p>
+    &sigma; = 6FL / (bt<sup>2</sup>)
+  </p>
 
-This is a preliminary projected bearing calculation. It does not establish the actual bolt-hole bearing allowable, edge-tearout strength, or complete bracket capacity.
+  <p>Solving for thickness:</p>
 
-#### F. Minimum Thickness — Bending
+  <p>
+    t = &radic;[6FL /
+    (b &times; &sigma;<sub>allow</sub>)]
+  </p>
 
-Modeling the bracket as an equivalent rectangular cantilever:
+  <p>
+    F = 1000 N, L = 40 mm, b = 80 mm
+  </p>
 
-\[
-\sigma=\frac{6FL}{bt^2}
-\]
+  <p>
+    t = &radic;[(6 x 1000 x 40) / (80 x 69)]
+  </p>
 
-Rearranging:
+  <p><strong>t<sub>min</sub> = 6.59 mm</strong></p>
 
-\[
-t=\sqrt{\frac{6FL}{b\sigma_{\text{allow}}}}
-\]
+  <p>Selected preliminary thickness:</p>
 
-Using:
+  <p><strong>t = 8 mm</strong></p>
 
-\[
-F=1000\text{ N},\quad L=40\text{ mm},\quad b=80\text{ mm}
-\]
+  <h4>G. Bending Stress Verification</h4>
 
-\[
-t=\sqrt{\frac{6(1000)(40)}{80(69)}}
-\]
+  <p>
+    &sigma; = 6FL / (bt<sup>2</sup>)
+  </p>
 
-\[
-\boxed{t_{\min}=6.59\text{ mm}}
-\]
+  <p>
+    &sigma; = (6 x 1000 x 40) /
+    (80 x 8<sup>2</sup>)
+  </p>
 
-A preliminary plate thickness of 8 mm was selected.
+  <p><strong>&sigma; = 46.88 MPa</strong></p>
 
-#### G. Bending Stress Verification
+  <p>Comparison:</p>
 
-\[
-\sigma=\frac{6FL}{bt^2}
-\]
+  <p>46.88 MPa &lt; 69 MPa</p>
 
-\[
-\sigma=\frac{6(1000)(40)}{80(8)^2}
-\]
+  <p>
+    <strong>
+      Result: The 8 mm bracket satisfies the
+      simplified bending calculation.
+    </strong>
+  </p>
 
-\[
-\boxed{\sigma=46.88\text{ MPa}}
-\]
+  <h4>H. Preliminary Design Specifications</h4>
 
-Since:
+  <table border="1" cellpadding="8">
+    <tr><th>Feature</th><th>Specification</th></tr>
+    <tr><td>Material</td>
+        <td>6061-T6 Aluminum</td></tr>
+    <tr><td>Plate Thickness</td><td>8 mm</td></tr>
+    <tr><td>Frame Attachment</td>
+        <td>Four M8 bolts</td></tr>
+    <tr><td>Preliminary Bolt Pattern</td>
+        <td>80 x 80 mm</td></tr>
+    <tr><td>Motor Attachment</td>
+        <td>Manufacturer mounting interface</td></tr>
+    <tr><td>Quantity</td><td>2</td></tr>
+  </table>
 
-\[
-46.88<69\text{ MPa}
-\]
+  <h4>I. Engineering Conclusion</h4>
 
-The 8 mm thickness satisfies the simplified bending model.
+  <p>
+    A preliminary 8 mm thick 6061-T6 aluminum
+    bracket was selected.
+  </p>
 
-The actual bracket must also be checked for local stresses, motor mounting forces, connection rigidity, deflection, and bolt-group loading.
+  <p>
+    The calculated bending stress was 46.88 MPa,
+    below the allowable stress of 69 MPa,
+    for the assumed cantilever geometry.
+  </p>
 
-#### H. Preliminary Design Specifications
+  <p>
+    Final verification must include the actual
+    bracket dimensions, motor mounting interface,
+    bolt forces, local stresses, and load path
+    through the upper frame.
+  </p>
 
-| Feature | Selection |
-|---|---|
-| Material | 6061-T6 aluminum |
-| Preliminary plate thickness | 8 mm |
-| Frame attachment | Four M8 bolts |
-| Preliminary frame bolt pattern | 80 × 80 mm |
-| Motor attachment | Manufacturer mounting interface |
-| Quantity | 2 brackets |
-| Status | Preliminary design; geometry verification required |
+</section>
 
-**[INSERT PICTURE 7 — Dimensioned Motor Bracket CAD]**
-
-*Figure 7. CAD drawing showing bracket thickness, overall dimensions, mounting-hole positions, and attachment to the frame.*
-
-**[INSERT PICTURE 8 — Motor and Bracket Assembly]**
-
-*Figure 8. Complete motor-to-bracket assembly showing the motor output shaft aligned with its corresponding lead screw.*
-
-#### I. Engineering Conclusion
-
-An 8 mm thick 6061-T6 aluminum plate satisfies the preliminary cantilever bending calculation under the stated assumptions. The bearing-stress estimate gives a smaller minimum thickness, indicating that bending governs this simplified analysis.
-
-Final bracket approval requires confirmation of the motor mounting geometry, actual support and load path, bolt capacities, and compatibility with the upper aluminum frame.
 
 ### 3. Coupler Design and Torsion Analysis
 
