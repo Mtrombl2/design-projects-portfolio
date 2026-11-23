@@ -42,17 +42,11 @@ The final design will incorporate a complete CAD assembly, structural finite ele
   <figure>
     <img src="MOTORS.jpg"
          alt="Bodine 4762 motor" width="500">
-    <figcaption>
-      Figure 1. Selected Bodine Electric 4762 motor.
-    </figcaption>
   </figure>
 
   <figure>
     <img src="MOTORS2.jpg"
          alt="Motor specifications" width="500">
-    <figcaption>
-      Figure 2. Manufacturer motor specifications.
-    </figcaption>
   </figure>
 
   <h4>A. Required Force</h4>
@@ -229,11 +223,6 @@ The final design will incorporate a complete CAD assembly, structural finite ele
     manufacturer speed-torque curve.
   </p>
 
-  <p>
-    <strong>
-      [INSERT SPEED-TORQUE GRAPH HERE]
-    </strong>
-  </p>
 
   <h4>H. Engineering Conclusion</h4>
 
@@ -288,10 +277,6 @@ The final design will incorporate a complete CAD assembly, structural finite ele
   <figure>
     <img src="MOUNTDES.jpg"
          alt="Motor mount bracket design" width="500">
-    <figcaption>
-      Figure 5. Preliminary motor mounting bracket
-      design concept.
-    </figcaption>
   </figure>
 
   <h4>A. Known Values</h4>
@@ -330,10 +315,6 @@ The final design will incorporate a complete CAD assembly, structural finite ele
     <img src="MOUNTDES2.jpg"
          alt="Motor mount free-body diagram"
          width="500">
-    <figcaption>
-      Figure 6. Motor bracket loading and
-      support reactions.
-    </figcaption>
   </figure>
 
   <h4>C. Force per Mounting Bolt</h4>
@@ -549,699 +530,1163 @@ The final design will incorporate a complete CAD assembly, structural finite ele
 </section>
 
 
-### 3. Coupler Design and Torsion Analysis
 
-Two shaft couplers are required to connect the Bodine 4762 gearmotors to the Acme lead screws. Each coupler must transmit motor torque while maintaining shaft alignment and preventing excessive torsional stress.
+<section id="coupler-analysis">
+
+  <h3>3. Coupler Design and Torsional Analysis</h3>
+
+  <p>
+    Two couplers are required to connect the Bodine 4762
+    gearmotor output shafts to the Acme lead screws.
+    Each coupler must transmit rotational torque while
+    maintaining proper shaft alignment.
+  </p>
+
+  <p>
+    A preliminary aluminum coupler was evaluated using
+    torsional shear stress calculations. The final
+    connection geometry must match the motor output
+    shaft and the machined lead screw ends.
+  </p>
+
+  <figure>
+    <img src="COUPLER.jpg"
+         alt="Preliminary shaft coupler design"
+         width="500">
+  </figure>
+
+  <h4>A. Known Values</h4>
+
+  <table border="1" cellpadding="8">
+    <tr><th>Parameter</th><th>Value</th></tr>
+    <tr><td>Motor Output Shaft Diameter</td>
+        <td>19.05 mm (0.75 in)</td></tr>
+    <tr><td>Acme Lead Screw Nominal Diameter</td>
+        <td>12.7 mm (0.50 in)</td></tr>
+    <tr><td>Motor Rated Torque</td>
+        <td>32.77 N&#183;m</td></tr>
+    <tr><td>Factor of Safety</td><td>4</td></tr>
+    <tr><td>Material</td><td>6061-T6 Aluminum</td></tr>
+    <tr><td>Yield Strength</td><td>276 MPa</td></tr>
+    <tr><td>Selected Outside Diameter</td>
+        <td>35 mm</td></tr>
+    <tr><td>Quantity</td><td>2</td></tr>
+  </table>
+
+  <h4>B. Coupler Design Torque</h4>
+
+  <p>
+    The coupler was conservatively sized using four
+    times the rated output torque of the motor.
+  </p>
+
+  <p>
+    T<sub>design</sub> =
+    FS &times; T<sub>rated</sub>
+  </p>
+
+  <p>
+    T<sub>design</sub> = 4 &times; 32.77
+  </p>
+
+  <p>
+    <strong>
+      T<sub>design</sub> = 131.08 N&#183;m
+    </strong>
+  </p>
+
+  <p>
+    Converting to N&#183;mm:
+  </p>
+
+  <p>
+    T<sub>design</sub> = 131,080 N&#183;mm
+  </p>
+
+  <h4>C. Allowable Shear Stress</h4>
+
+  <p>
+    For a ductile material, the von Mises estimate
+    of shear yield strength is:
+  </p>
+
+  <p>
+    &tau;<sub>yield</sub> =
+    &sigma;<sub>y</sub> / &radic;3
+  </p>
+
+  <p>
+    &tau;<sub>yield</sub> = 276 / &radic;3
+  </p>
+
+  <p>
+    <strong>
+      &tau;<sub>yield</sub> = 159.35 MPa
+    </strong>
+  </p>
+
+  <p>
+    Because the design torque already includes a
+    factor of safety of 4, the design stress is
+    compared with the estimated shear yield
+    strength without applying that factor again.
+  </p>
+
+  <h4>D. Coupler Torsion Equation</h4>
+
+  <p>
+    For a uniform hollow circular shaft:
+  </p>
+
+  <p>
+    &tau;<sub>max</sub> = Tc / J
+  </p>
+
+  <p>
+    J = &pi;(D<sub>o</sub><sup>4</sup> -
+    D<sub>i</sub><sup>4</sup>) / 32
+  </p>
+
+  <p>
+    c = D<sub>o</sub> / 2
+  </p>
+
+  <p>
+    Substituting:
+  </p>
+
+  <p>
+    &tau;<sub>max</sub> =
+    16TD<sub>o</sub> /
+    [&pi;(D<sub>o</sub><sup>4</sup> -
+    D<sub>i</sub><sup>4</sup>)]
+  </p>
+
+  <p>
+    The maximum bore diameter was taken as
+    19.05 mm to represent the motor shaft end.
+  </p>
+
+  <h4>E. Preliminary Coupler Diameter</h4>
+
+  <p>
+    Using:
+  </p>
+
+  <p>
+    T = 131,080 N&#183;mm
+  </p>
+
+  <p>
+    D<sub>i</sub> = 19.05 mm
+  </p>
+
+  <p>
+    &tau;<sub>yield</sub> = 159.35 MPa
+  </p>
+
+  <p>
+    Solve:
+  </p>
+
+  <p>
+    159.35 =
+    (16 &times; 131,080 &times; D<sub>o</sub>) /
+    [&pi;(D<sub>o</sub><sup>4</sup> -
+    19.05<sup>4</sup>)]
+  </p>
+
+  <p>
+    <strong>
+      Minimum outside diameter is approximately
+      21.9 mm.
+    </strong>
+  </p>
+
+  <p>
+    A larger preliminary diameter was selected:
+  </p>
+
+  <p>
+    <strong>D<sub>o</sub> = 35 mm</strong>
+  </p>
+
+  <h4>F. Coupler Wall Thickness</h4>
+
+  <p>
+    Minimum wall thickness at the larger bore:
+  </p>
+
+  <p>
+    t = (D<sub>o</sub> - D<sub>i</sub>) / 2
+  </p>
+
+  <p>
+    t = (35 - 19.05) / 2
+  </p>
+
+  <p>
+    <strong>t = 7.975 mm</strong>
+  </p>
+
+  <h4>G. Torsional Stress Verification</h4>
+
+  <p>
+    Substitute the selected dimensions into the
+    hollow-shaft torsion equation:
+  </p>
+
+  <p>
+    &tau;<sub>max</sub> =
+    (16 &times; 131,080 &times; 35) /
+    [&pi;(35<sup>4</sup> - 19.05<sup>4</sup>)]
+  </p>
+
+  <p>
+    <strong>
+      &tau;<sub>max</sub> &asymp; 17.07 MPa
+    </strong>
+  </p>
+
+  <p>
+    Since:
+  </p>
+
+  <p>
+    17.07 MPa &lt; 159.35 MPa
+  </p>
+
+  <p>
+    The selected 35 mm outside diameter passes
+    this preliminary idealized torsional
+    stress check.
+  </p>
+
+  <h4>H. Coupler Load Diagram</h4>
+
+  <figure>
+    <img src="COUPLER2.jpg"
+         alt="Coupler torsional loading diagram"
+         width="500">
+  </figure>
+
+  <h4>I. Preliminary Design Specifications</h4>
+
+  <table border="1" cellpadding="8">
+    <tr><th>Feature</th><th>Specification</th></tr>
+    <tr><td>Material</td>
+        <td>6061-T6 Aluminum</td></tr>
+    <tr><td>Outside Diameter</td><td>35 mm</td></tr>
+    <tr><td>Motor-Side Bore</td><td>19.05 mm</td></tr>
+    <tr><td>Lead Screw Side</td>
+        <td>Machined shaft journal required</td></tr>
+    <tr><td>Connection Method</td>
+        <td>To be finalized</td></tr>
+    <tr><td>Quantity</td><td>2</td></tr>
+  </table>
+
+  <h4>J. Engineering Conclusion</h4>
+
+  <p>
+    A preliminary 35 mm outside diameter
+    aluminum coupler was selected.
+  </p>
+
+  <p>
+    At a design torque of 131.08 N&#183;m,
+    the idealized maximum torsional shear stress
+    is approximately 17.07 MPa, below the
+    estimated material shear yield strength
+    of 159.35 MPa.
+  </p>
+
+  <p>
+    This calculation assumes an uninterrupted
+    hollow circular section. Keyways, set screws,
+    shaft engagement, stress concentrations,
+    misalignment, and the actual machined lead screw
+    journal must still be verified before fabrication.
+  </p>
+
+</section>
+
+
+<section id="frame-connection-analysis">
+
+  <h3>4. Frame Connections and Twisting Analysis</h3>
+
+  <p>
+    The tensile testing machine uses heavy-duty
+    40-series aluminum T-slot extrusions to form
+    its supporting frame.
+  </p>
+
+  <p>
+    The upper frame connections must resist the
+    reaction torque transmitted by the motors while
+    maintaining alignment of the two Acme lead screws.
+  </p>
+
+  <p>
+    Preliminary calculations were performed to estimate
+    frame twisting loads and identify suitable
+    connection hardware.
+  </p>
+
+  <figure>
+    <img src="FRAME.jpg"
+         alt="Frame connection design" width="500">
+  </figure>
+
+  <h4>A. Known Values</h4>
+
+  <table border="1" cellpadding="8">
+    <tr><th>Parameter</th><th>Value</th></tr>
+    <tr><td>Frame Material</td>
+        <td>40-Series Aluminum T-Slot</td></tr>
+    <tr><td>Motor Quantity</td><td>2</td></tr>
+    <tr><td>Rated Torque per Motor</td>
+        <td>32.77 N&#183;m</td></tr>
+    <tr><td>Estimated Operating Torque per Screw</td>
+        <td>1.30 N&#183;m</td></tr>
+    <tr><td>Preliminary Force Couple Spacing</td>
+        <td>200 mm</td></tr>
+    <tr><td>Proposed Bracket</td>
+        <td>80/20 Part 40-4303</td></tr>
+    <tr><td>Proposed Bracket Quantity</td>
+        <td>4</td></tr>
+  </table>
+
+  <p>
+    The 200 mm distance is an assumed effective
+    moment-resisting lever arm. The actual connection
+    spacing must be confirmed from the CAD assembly.
+  </p>
+
+  <h4>B. Total Motor Reaction Torque</h4>
+
+  <p>
+    For a conservative preliminary loading case,
+    assume both motors transmit rated torque
+    in the same rotational direction.
+  </p>
+
+  <p>
+    M<sub>total</sub> = T<sub>1</sub> + T<sub>2</sub>
+  </p>
+
+  <p>
+    M<sub>total</sub> = 32.77 + 32.77
+  </p>
+
+  <p>
+    <strong>M<sub>total</sub> = 65.54 N&#183;m</strong>
+  </p>
+
+  <p>
+    The corresponding estimated normal operating
+    torque is:
+  </p>
+
+  <p>
+    M<sub>operating</sub> = 2 &times; 1.30
+  </p>
+
+  <p>
+    <strong>M<sub>operating</sub> = 2.60 N&#183;m</strong>
+  </p>
+
+  <p>
+    The rated-torque case was used to investigate
+    a more conservative frame loading condition.
+  </p>
+
+  <h4>C. Equivalent Connection Reaction Force</h4>
+
+  <p>
+    Approximate the twisting moment as a pair
+    of equal and opposite forces separated by
+    an effective distance S.
+  </p>
+
+  <p>
+    M = R &times; S
+  </p>
+
+  <p>
+    R = M / S
+  </p>
+
+  <p>
+    Assumed spacing:
+  </p>
+
+  <p>S = 200 mm = 0.200 m</p>
+
+  <p>
+    R = 65.54 / 0.200
+  </p>
+
+  <p>
+    <strong>R = 327.7 N</strong>
+  </p>
+
+  <p>
+    Therefore, the preliminary rated-torque
+    load case corresponds to an equivalent
+    force couple of 327.7 N.
+  </p>
+
+  <p>
+    This is an equivalent static reaction estimate.
+    It is not necessarily the load carried by
+    an individual bracket or bolt.
+  </p>
+
+  <h4>D. Frame Connection Free-Body Diagram</h4>
+
+  <figure>
+    <img src="FRAME2.jpg"
+         alt="Frame twisting free-body diagram"
+         width="500">
+  </figure>
+
+  <h4>E. Connection Bolt Group Analysis</h4>
+
+  <p>
+    For a bolt group subjected to an in-plane
+    moment, a preliminary elastic distribution
+    of the moment-induced shear force is:
+  </p>
+
+  <p>
+    F<sub>i</sub> =
+    M &times; r<sub>i</sub> /
+    &Sigma;(r<sub>j</sub><sup>2</sup>)
+  </p>
+
+  <p>Where:</p>
+
+  <ul>
+    <li>
+      F<sub>i</sub> = moment-induced force at bolt i
+    </li>
+    <li>
+      M = moment acting on the bolt group
+    </li>
+    <li>
+      r<sub>i</sub> = distance from the bolt
+      group centroid to bolt i
+    </li>
+    <li>
+      &Sigma;(r<sub>j</sub><sup>2</sup>) =
+      sum of squared bolt distances
+    </li>
+  </ul>
+
+  <p>
+    A numerical bolt-group force cannot be
+    finalized until the actual bracket locations,
+    number of bolts, and load distribution are
+    established in CAD.
+  </p>
+
+  <h4>F. Preliminary Bracket Selection</h4>
+
+  <p>
+    The proposed connection uses the 80/20
+    heavy-duty four-hole inside corner bracket,
+    part number 40-4303.
+  </p>
+
+  <p>
+    Four brackets are included in the preliminary
+    parts list to reinforce the upper frame
+    connections.
+  </p>
+
+  <table border="1" cellpadding="8">
+    <tr><th>Feature</th><th>Specification</th></tr>
+    <tr><td>Bracket Manufacturer</td><td>80/20</td></tr>
+    <tr><td>Bracket Part Number</td><td>40-4303</td></tr>
+    <tr><td>Bracket Type</td>
+        <td>Four-Hole Wide Inside Corner</td></tr>
+    <tr><td>Proposed Quantity</td><td>4</td></tr>
+    <tr><td>Frame Type</td>
+        <td>Heavy 40-Series T-Slot</td></tr>
+    <tr><td>Fasteners</td>
+        <td>Compatible T-slot hardware, TBD</td></tr>
+  </table>
+
+  <h4>G. Factor of Safety Requirement</h4>
+
+  <p>
+    The target factor of safety for the
+    design is 4.
+  </p>
+
+  <p>
+    FS = Connection Capacity / Applied Load
+  </p>
+
+  <p>
+    For the preliminary force-couple model,
+    the relevant applied force is 327.7 N.
+  </p>
+
+  <p>
+    To meet a factor of safety of 4 in
+    this simplified loading model:
+  </p>
+
+  <p>
+    Required Capacity = 4 &times; 327.7
+  </p>
+
+  <p>
+    <strong>
+      Required Capacity = 1310.8 N
+    </strong>
+  </p>
+
+  <p>
+    This value is the required capacity for
+    the modeled reaction force, not an
+    independently verified manufacturer
+    rating for the selected bracket.
+  </p>
+
+  <p>
+    A completed connection safety-factor check
+    requires the actual load path and published
+    bracket, fastener, and T-slot connection
+    capacities.
+  </p>
+
+  <h4>H. Engineering Conclusion</h4>
+
+  <p>
+    The combined rated motor reaction torque
+    is estimated as 65.54 N&#183;m.
+  </p>
+
+  <p>
+    Using an assumed 200 mm effective lever
+    arm, this corresponds to an equivalent
+    reaction force of 327.7 N.
+  </p>
+
+  <p>
+    Four 80/20 part 40-4303 corner brackets
+    are proposed for the upper frame.
+  </p>
+
+  <p>
+    Final verification of bracket capacity,
+    fastener shear, T-slot resistance,
+    extrusion twisting, and the factor of
+    safety must be completed using the
+    actual CAD geometry and manufacturer data.
+  </p>
+
+</section>
+
+
+
+<section id="floating-bearing-analysis">
+
+  <h3>7. Floating Bearing Mount Design</h3>
+
+  <p>
+    Two floating bearing mounts are proposed for
+    the lower ends of the Acme lead screws in the
+    tensile testing machine.
+  </p>
+
+  <p>
+    The upper fixed bearing supports are intended
+    to carry the axial thrust loads, while the lower
+    floating bearings provide radial support and
+    allow axial movement caused by thermal expansion
+    and manufacturing tolerances.
+  </p>
+
+  <p>
+    The floating mounts must maintain proper
+    alignment without overconstraining the
+    lead screws.
+  </p>
+
+  <figure>
+    <img src="FLOAT.jpg"
+         alt="Floating bearing mount concept"
+         width="500">
+  </figure>
+
+  <h4>A. Preliminary Design Specifications</h4>
+
+  <table border="1" cellpadding="8">
+    <tr><th>Parameter</th><th>Value</th></tr>
+    <tr><td>Number of Floating Mounts</td>
+        <td>2</td></tr>
+    <tr><td>Support Material</td>
+        <td>6061-T6 Aluminum</td></tr>
+    <tr><td>Proposed Mount Length</td>
+        <td>80 mm</td></tr>
+    <tr><td>Proposed Mount Width</td>
+        <td>40 mm</td></tr>
+    <tr><td>Proposed Mount Thickness</td>
+        <td>20 mm</td></tr>
+    <tr><td>Proposed Shaft Journal Diameter</td>
+        <td>12 mm</td></tr>
+    <tr><td>Proposed Mounting Bolts</td>
+        <td>2 M8 per mount</td></tr>
+    <tr><td>Proposed Bolt Clearance Holes</td>
+        <td>9 mm</td></tr>
+    <tr><td>Requested Fit Classification</td>
+        <td>RC3</td></tr>
+  </table>
+
+  <p>
+    These dimensions are preliminary and must
+    be checked against the final bearing selection,
+    lead screw end machining, and CAD assembly.
+  </p>
+
+  <h4>B. Fixed and Floating Bearing Arrangement</h4>
+
+  <p>
+    The lead screw support arrangement uses
+    two different bearing functions:
+  </p>
+
+  <ul>
+    <li>
+      Fixed bearing support: locates the screw
+      axially and carries thrust loads.
+    </li>
+    <li>
+      Floating bearing support: supports radial
+      loading while allowing axial displacement.
+    </li>
+  </ul>
+
+  <p>
+    This prevents the lead screw from being
+    constrained axially at both ends.
+  </p>
+
+  <h4>C. Shaft Journal Design</h4>
+
+  <p>
+    The Acme lead screw has a nominal outside
+    diameter of 12.7 mm.
+  </p>
+
+  <p>
+    A proposed 12 mm diameter machined journal
+    is used at the floating bearing location.
+  </p>
+
+  <p>
+    <strong>
+      d<sub>journal</sub> = 12 mm
+    </strong>
+  </p>
+
+  <p>
+    The bearing must contact the smooth
+    machined journal rather than the
+    Acme screw threads.
+  </p>
+
+  <p>
+    Final journal length, shoulder geometry,
+    surface finish, and bearing engagement
+    must be determined after selecting
+    the actual bearing.
+  </p>
+
+  <h4>D. RC3 Running Fit</h4>
+
+  <p>
+    An RC3 precision running fit is proposed
+    for the shaft and mating bore where
+    relative sliding or rotation is intended.
+  </p>
+
+  <p>
+    Diametral clearance is calculated by:
+  </p>
+
+  <p>
+    C = D<sub>bore</sub> - d<sub>shaft</sub>
+  </p>
+
+  <p>
+    Minimum clearance:
+  </p>
+
+  <p>
+    C<sub>min</sub> =
+    D<sub>bore,min</sub> -
+    d<sub>shaft,max</sub>
+  </p>
+
+  <p>
+    Maximum clearance:
+  </p>
+
+  <p>
+    C<sub>max</sub> =
+    D<sub>bore,max</sub> -
+    d<sub>shaft,min</sub>
+  </p>
+
+  <p>
+    The exact RC3 limits for the selected
+    nominal diameter must be taken from
+    the applicable ANSI B4.1 fit table.
+  </p>
+
+  <p>
+    <strong>
+      [INSERT VERIFIED RC3 SHAFT AND BORE
+      TOLERANCE TABLE HERE]
+    </strong>
+  </p>
+
+  <p>
+    The exact minimum and maximum shaft and
+    bore dimensions have not yet been
+    established. The final drawing must
+    specify both sets of limits.
+  </p>
+
+  <p>
+    If a rolling-element bearing is selected,
+    its shaft and housing fits must instead
+    be checked against the bearing
+    manufacturer's recommendations.
+  </p>
+
+  <h4>E. Floating Bearing Free-Body Diagram</h4>
+
+  <figure>
+    <img src="FLOAT2.jpg"
+         alt="Floating bearing loading diagram"
+         width="500">
+  </figure>
+
+  <p>
+    The floating bearing provides radial
+    reactions but is not intended to
+    carry the primary axial thrust.
+  </p>
+
+  <p>
+    The actual radial reaction must be
+    determined from the complete lead screw
+    loading and support geometry.
+  </p>
+
+  <h4>F. Bearing Pressure Calculation</h4>
+
+  <p>
+    For a preliminary plain-bearing model,
+    projected bearing pressure is:
+  </p>
+
+  <p>
+    p = R / (dL<sub>b</sub>)
+  </p>
+
+  <p>Where:</p>
+
+  <ul>
+    <li>R = radial bearing reaction (N)</li>
+    <li>d = journal diameter (mm)</li>
+    <li>
+      L<sub>b</sub> = effective bearing
+      contact length (mm)
+    </li>
+  </ul>
+
+  <p>
+    For an illustrative 12 mm journal and
+    20 mm effective bearing length:
+  </p>
+
+  <p>
+    p = R / (12 &times; 20)
+  </p>
+
+  <p>
+    <strong>p = R / 240 MPa</strong>
+  </p>
+
+  <p>
+    In this expression, R is entered in
+    newtons and the resulting pressure
+    is in N/mm<sup>2</sup>, or MPa.
+  </p>
+
+  <p>
+    A numerical pressure cannot be completed
+    until the actual radial reaction and
+    bearing contact length are confirmed.
+  </p>
+
+  <h4>G. Mounting Arrangement</h4>
+
+  <p>
+    Each floating support is preliminarily
+    attached to the lower frame using
+    two M8 fasteners.
+  </p>
+
+  <p>
+    Proposed bolt clearance hole diameter:
+  </p>
+
+  <p>
+    <strong>d<sub>hole</sub> = 9 mm</strong>
+  </p>
+
+  <p>
+    Fastener spacing, edge distances, and
+    attachment to the 40-series extrusion
+    must be finalized in CAD.
+  </p>
+
+  <h4>H. Preliminary Design Summary</h4>
+
+  <table border="1" cellpadding="8">
+    <tr><th>Feature</th><th>Selection</th></tr>
+    <tr><td>Mount Material</td>
+        <td>6061-T6 Aluminum</td></tr>
+    <tr><td>Mount Dimensions</td>
+        <td>80 x 40 x 20 mm (preliminary)</td></tr>
+    <tr><td>Journal Diameter</td>
+        <td>12 mm (preliminary)</td></tr>
+    <tr><td>Fit Type</td>
+        <td>RC3 proposed, limits pending</td></tr>
+    <tr><td>Mounting Hardware</td>
+        <td>2 M8 bolts per mount</td></tr>
+    <tr><td>Quantity</td><td>2</td></tr>
+  </table>
+
+  <h4>I. Engineering Conclusion</h4>
+
+  <p>
+    Two lower floating bearing mounts are
+    proposed to support the Acme lead screws
+    while permitting axial displacement.
+  </p>
+
+  <p>
+    A preliminary 6061-T6 aluminum mounting
+    block measuring 80 x 40 x 20 mm was
+    selected, with a proposed 12 mm
+    machined lead screw journal.
+  </p>
+
+  <p>
+    The actual bearing type, radial load,
+    required RC3 dimensional limits, and
+    mount strength must still be verified
+    before fabrication.
+  </p>
+
+</section>
+
+
+
+<section id="cost-analysis">
+
+  <h3>8. Combined A10/A11 Bill of Materials and Cost Analysis</h3>
+
+  <p>
+    A preliminary bill of materials (BOM) was
+    developed for the 2 kN tensile testing machine.
+    The BOM combines components selected during
+    A10 and A11, including the frame, Acme lead screws,
+    drive motors, couplers, mounting brackets,
+    and bearing supports.
+  </p>
+
+  <p>
+    Purchased components, custom-fabricated parts,
+    and estimated labor are considered separately.
+    Some component prices and manufacturing
+    requirements remain to be finalized.
+  </p>
+
+  <h4>A. Purchased Components</h4>
+
+  <table border="1" cellpadding="8">
+    <tr>
+      <th>Component</th>
+      <th>Qty.</th>
+      <th>Unit Cost</th>
+      <th>Total</th>
+    </tr>
+    <tr>
+      <td>Bodine 4762 Gearmotor</td>
+      <td>2</td>
+      <td>$1,145.44</td>
+      <td>$2,290.88</td>
+    </tr>
+    <tr>
+      <td>Roton 59284 Acme Lead Screw</td>
+      <td>3 ft total</td>
+      <td>$9.10/ft</td>
+      <td>$27.30</td>
+    </tr>
+    <tr>
+      <td>Roton 90222 Bronze Nut</td>
+      <td>2</td>
+      <td>$23.57</td>
+      <td>$47.14</td>
+    </tr>
+    <tr>
+      <td>80/20 40-4303 Corner Bracket</td>
+      <td>4</td>
+      <td>$8.79</td>
+      <td>$35.16</td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <strong>Priced Components Subtotal</strong>
+      </td>
+      <td><strong>$2,400.48</strong></td>
+    </tr>
+  </table>
+
+  <p>
+    The listed prices are preliminary estimates
+    and should be verified with current supplier
+    quotations before final purchasing.
+  </p>
+
+  <p>
+    The 3 ft lead screw estimate assumes two
+    18-inch pieces can be obtained without
+    additional material or cutting allowances.
+  </p>
+
+  <h4>B. Frame Material Cost</h4>
+
+  <p>
+    Heavy 40-series aluminum T-slot extrusion
+    was selected for the supporting frame.
+  </p>
+
+  <p>Estimated total extrusion length:</p>
+
+  <p><strong>L = 2160 mm</strong></p>
+
+  <p>Estimated cost per millimeter:</p>
+
+  <p><strong>C = $0.0821/mm</strong></p>
+
+  <p>Material cost:</p>
+
+  <p>C<sub>material</sub> = L &times; C</p>
+
+  <p>C<sub>material</sub> = 2160 &times; 0.0821</p>
+
+  <p><strong>C<sub>material</sub> = $177.34</strong></p>
+
+  <p>Estimated cutting cost:</p>
+
+  <p>4 cuts &times; $3.79/cut = $15.16</p>
+
+  <p>Total estimated frame cost:</p>
+
+  <p>C<sub>frame</sub> = 177.34 + 15.16</p>
+
+  <p><strong>C<sub>frame</sub> = $192.50</strong></p>
+
+  <p>
+    The 2160 mm frame length and number of
+    cuts are preliminary assumptions.
+    The final material cost must be updated
+    from the completed CAD frame dimensions.
+  </p>
+
+  <h4>C. Additional Components Requiring Pricing</h4>
+
+  <table border="1" cellpadding="8">
+    <tr>
+      <th>Component</th>
+      <th>Qty.</th>
+      <th>Status</th>
+    </tr>
+    <tr>
+      <td>Roton 89838 Nut Mounting Flanges</td>
+      <td>2</td>
+      <td>Price pending</td>
+    </tr>
+    <tr>
+      <td>Custom Crosshead</td>
+      <td>1</td>
+      <td>Material and machining cost pending</td>
+    </tr>
+    <tr>
+      <td>Motor Mounting Brackets</td>
+      <td>2</td>
+      <td>Material and fabrication cost pending</td>
+    </tr>
+    <tr>
+      <td>Motor-to-Lead-Screw Couplers</td>
+      <td>2</td>
+      <td>Material and fabrication cost pending</td>
+    </tr>
+    <tr>
+      <td>Floating Bearing Mounts</td>
+      <td>2</td>
+      <td>Material and fabrication cost pending</td>
+    </tr>
+    <tr>
+      <td>Fixed Bearing Supports</td>
+      <td>2</td>
+      <td>Selection and pricing pending</td>
+    </tr>
+    <tr>
+      <td>Bearings</td>
+      <td>TBD</td>
+      <td>Selection and pricing pending</td>
+    </tr>
+    <tr>
+      <td>Specimen Grips</td>
+      <td>2 sets</td>
+      <td>Selection and pricing pending</td>
+    </tr>
+    <tr>
+      <td>Fasteners and T-Slot Hardware</td>
+      <td>TBD</td>
+      <td>Quantity and pricing pending</td>
+    </tr>
+  </table>
+
+  <p>
+    These components must be included in the
+    final complete BOM. The current subtotal
+    does not include their costs.
+  </p>
+
+  <h4>D. Labor Cost Analysis</h4>
+
+  <p>
+    The assignment specifies a labor rate
+    of $35 per hour.
+  </p>
+
+  <p>
+    Labor Cost = Total Hours &times; Hourly Rate
+  </p>
+
+  <p>
+    For a preliminary example, assume
+    20 total engineering and fabrication hours:
+  </p>
+
+  <p>Labor Cost = 20 &times; $35</p>
+
+  <p><strong>Estimated Labor Cost = $700.00</strong></p>
+
+  <p>
+    The 20-hour value is an example only.
+    It must be replaced with the team's
+    actual recorded engineering, CAD,
+    analysis, and fabrication hours.
+  </p>
+
+  <h4>E. Preliminary Cost Summary</h4>
+
+  <table border="1" cellpadding="8">
+    <tr>
+      <th>Category</th>
+      <th>Estimated Cost</th>
+    </tr>
+    <tr>
+      <td>Priced Purchased Components</td>
+      <td>$2,400.48</td>
+    </tr>
+    <tr>
+      <td>Estimated Frame Material and Cuts</td>
+      <td>$192.50</td>
+    </tr>
+    <tr>
+      <td>Example Labor Estimate</td>
+      <td>$700.00</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>Preliminary Partial Total</strong>
+      </td>
+      <td><strong>$3,292.98</strong></td>
+    </tr>
+  </table>
+
+  <p>
+    Total = $2,400.48 + $192.50 + $700.00
+  </p>
+
+  <p><strong>Total = $3,292.98</strong></p>
+
+  <p>
+    This is a partial cost estimate, not
+    the complete manufacturing cost.
+    Additional components, machining,
+    hardware, and actual labor hours
+    must be included before the final
+    project cost can be determined.
+  </p>
+
+  <h4>F. Supporting Documentation</h4>
+
+  <p>
+    The final submission should include
+    supplier pricing evidence and the
+    completed bill of materials.
+  </p>
+
+  <p>
+    <strong>
+      [INSERT SUPPLIER PRICE SCREENSHOTS HERE]
+    </strong>
+  </p>
+
+  <p>
+    <strong>
+      [INSERT COMPLETE BOM IMAGE OR TABLE HERE]
+    </strong>
+  </p>
+
+  <h4>G. Engineering Conclusion</h4>
+
+  <p>
+    The preliminary combined A10/A11
+    cost estimate is $3,292.98, including
+    an illustrative labor allowance.
+  </p>
+
+  <p>
+    The two Bodine 4762 gearmotors represent
+    the largest identified purchased cost.
+  </p>
+
+  <p>
+    The final BOM must be updated after
+    component selection, CAD verification,
+    supplier pricing, and team labor
+    documentation are completed.
+  </p>
+
+</section>
 
-6061-T6 aluminum was selected as the preliminary coupler material because of its strength, machinability, and relatively low weight.
-
-**[INSERT PICTURE 9 — Coupler Design Concept]**
-
-*Figure 9. Preliminary shaft coupler connecting the motor output shaft to the Acme lead screw.*
-
-#### A. Known Values
-
-| Parameter | Value |
-|---|---|
-| Motor | Bodine 4762 |
-| Rated motor torque | 32.77 N·m |
-| Peak motor torque | 52.42 N·m |
-| Motor output shaft | 19.05 mm nominal |
-| Acme screw diameter | 12.70 mm nominal |
-| Coupler material | 6061-T6 aluminum |
-| Yield strength | 276 MPa |
-| Factor of safety | 4 |
-| Number of couplers | 2 |
-
-The coupler must accommodate two different shaft diameters. The Acme screw end will require a suitable machined journal or adapter.
-
-#### B. Free-Body Diagram
-
-The coupler transmits torque from the motor to the lead screw.
-
-**[INSERT PICTURE 10 — Coupler Torsion FBD]**
-
-*Figure 10. Free-body diagram showing motor input torque, resisting torque, and the coupler's torsional loading.*
-
-From rotational equilibrium:
-
-\[
-\sum M_x=0
-\]
-
-\[
-T_{\text{motor}}-T_{\text{screw}}=0
-\]
-
-#### C. Design Torque
-
-For a conservative preliminary analysis, apply a factor of safety of 4 to the rated motor torque:
-
-\[
-T_d=FS(T_{\text{rated}})
-\]
-
-\[
-T_d=4(32.77)
-\]
-
-\[
-\boxed{T_d=131.08\text{ N}\cdot\text{m}}
-\]
-
-Converting:
-
-\[
-\boxed{T_d=131080\text{ N}\cdot\text{mm}}
-\]
-
-This design torque exceeds the manufacturer's published peak motor torque and provides a conservative initial sizing load.
-
-#### D. Allowable Shear Stress
-
-Using the von Mises shear-yield approximation:
-
-\[
-\tau_y=\frac{\sigma_y}{\sqrt{3}}
-\]
-
-\[
-\tau_y=\frac{276}{\sqrt{3}}
-\]
-
-\[
-\boxed{\tau_y=159.35\text{ MPa}}
-\]
-
-The factor of safety has already been applied to the design torque, so the same factor is not applied again to the allowable stress.
-
-#### E. Minimum Coupler Outside Diameter
-
-For a hollow circular shaft:
-
-\[
-\tau_{\max}=\frac{Tc}{J}
-\]
-
-Where:
-
-\[
-c=\frac{D_o}{2}
-\]
-
-\[
-J=\frac{\pi}{32}(D_o^4-D_i^4)
-\]
-
-Substituting:
-
-\[
-\boxed{\tau_{\max}=\frac{16TD_o}{\pi(D_o^4-D_i^4)}}
-\]
-
-Using:
-
-\[
-D_i=19.05\text{ mm}
-\]
-
-\[
-T=131080\text{ N}\cdot\text{mm}
-\]
-
-The minimum diameter is determined from:
-
-\[
-159.35=\frac{16(131080)D_o}{\pi(D_o^4-19.05^4)}
-\]
-
-Solving numerically:
-
-\[
-\boxed{D_{o,\min}\approx21.9\text{ mm}}
-\]
-
-This calculation applies to an ideal, unkeyed hollow circular section.
-
-#### F. Select Coupler Diameter
-
-A preliminary outside diameter of 35 mm was selected to provide additional material for the keyed connection and machining.
-
-\[
-\boxed{D_o=35\text{ mm}}
-\]
-
-Check maximum shear stress:
-
-\[
-\tau_{\max}=\frac{16(131080)(35)}{\pi(35^4-19.05^4)}
-\]
-
-\[
-\boxed{\tau_{\max}\approx17.07\text{ MPa}}
-\]
-
-Since:
-
-\[
-17.07<159.35\text{ MPa}
-\]
-
-The selected diameter passes the simplified torsional shear calculation.
-
-#### G. Coupler Wall Thickness
-
-The minimum wall thickness occurs around the larger motor-side bore.
-
-\[
-t=\frac{D_o-D_i}{2}
-\]
-
-\[
-t=\frac{35-19.05}{2}
-\]
-
-\[
-\boxed{t=7.98\text{ mm}}
-\]
-
-#### H. Preliminary Coupler Specifications
-
-| Feature | Selection |
-|---|---|
-| Material | 6061-T6 aluminum |
-| Outer diameter | 35 mm |
-| Motor-side bore | 19.05 mm nominal |
-| Lead screw-side bore | 12.70 mm nominal, subject to journal design |
-| Motor-side radial wall thickness | 7.98 mm |
-| Motor connection | Keyed interface |
-| Coupler quantity | 2 |
-| Overall length | To be confirmed from shaft engagement requirements |
-
-The selected dimensions provide a preliminary coupler envelope. Final CAD must establish shaft engagement lengths, bore tolerances, keyway dimensions, and a suitable lead screw-end connection.
-
-[INSERT PICTURE 11 — Dimensioned Coupler CAD]
-
-Figure 11. CAD model showing the coupler's stepped bores, outside diameter, keyway, and overall length.
-
-[INSERT PICTURE 12 — Motor, Coupler, and Lead Screw Assembly]
-
-Figure 12. Coupler installed between the Bodine 4762 output shaft and the Acme lead screw.
-
-I. Engineering Conclusion
-
-A preliminary coupler outside diameter of 35 mm was selected. The simplified torsional analysis produced a maximum shear stress of approximately 17.07 MPa under the conservative design torque of 131.08 N·m.
-
-The selected diameter satisfies the ideal hollow-shaft torsion calculation. Final verification must account for keyway stresses, shaft connections, machining tolerances, alignment, and any coupling flexibility required by the assembly.
-
-The preliminary geometry will be incorporated into the CAD model and evaluated for fit with the motor and lead screw.
-### 4. Frame Connection Analysis
-
-The tensile testing machine uses a Heavy 40 Series aluminum extrusion frame to support the two Acme lead screws, moving crosshead, and motor assemblies.
-
-During operation, motor reaction torques and tensile forces are transferred into the upper frame through the motor mounts and lead screw supports. The frame connections must resist these loads without excessive movement or failure.
-
-A preliminary analysis was performed to determine the applied twisting moment, support reactions, and suitable T-slot connectors.
-
-**[INSERT PICTURE 13 — Top Frame Connection Concept]**
-
-*Figure 13. Upper aluminum frame showing the two motor locations and connections to the vertical supports.*
-
-#### A. Known Values
-
-| Parameter | Value |
-|---|---|
-| Maximum tensile load | 2,000 N |
-| Number of motors | 2 |
-| Load per lead screw | 1,000 N |
-| Motor | Bodine Electric 4762 |
-| Rated motor torque | 32.77 N·m |
-| Lead screw spacing | 200 mm |
-| Frame material | Heavy 40 Series aluminum |
-| Required factor of safety | 4 |
-
-The actual frame support spacing and connector locations will be established from the final CAD geometry.
-
-#### B. Free-Body Diagram
-
-The upper frame is subjected to motor reaction torques, lead screw support forces, and reactions from the vertical frame connections.
-
-**[INSERT PICTURE 14 — Frame Connection FBD]**
-
-*Figure 14. Free-body diagram of the upper frame showing two motor reaction torques, vertical screw-support loads, and frame connection reactions.*
-
-#### C. Calculate Motor-Induced Twisting Moment
-
-Assuming the two motor reaction torques act in the same direction:
-
-\[
-M_{\text{total}}=T_1+T_2
-\]
-
-\[
-M_{\text{total}}=32.77+32.77
-\]
-
-\[
-\boxed{M_{\text{total}}=65.54\text{ N}\cdot\text{m}}
-\]
-
-This is a conservative combined rated-torque loading case.
-
-Under the nominal operating condition:
-
-\[
-M_{\text{nominal}}=2(1.30)
-\]
-
-\[
-\boxed{M_{\text{nominal}}=2.60\text{ N}\cdot\text{m}}
-\]
-
-Both loading cases are considered in the preliminary design.
-
-Actual net frame torque depends on the motor rotation directions and mounting orientation.
-
-#### D. Frame Connection Reactions
-
-For a simplified equivalent force couple resisting the twisting moment:
-
-\[
-\sum M=0
-\]
-
-\[
-R(S)=M_{\text{total}}
-\]
-
-Rearranging:
-
-\[
-\boxed{R=\frac{M_{\text{total}}}{S}}
-\]
-
-Where:
-
-- \(R\) = equivalent reaction force (N)
-- \(S\) = separation between the opposing reaction force lines (m)
-- \(M_{\text{total}}\) = applied twisting moment (N·m)
-
-For an illustrative reaction separation of 200 mm:
-
-\[
-S=0.200\text{ m}
-\]
-
-\[
-R=\frac{65.54}{0.200}
-\]
-
-\[
-\boxed{R=327.7\text{ N}}
-\]
-
-The 200 mm distance comes from the lead screw spacing and is used here only as an illustrative moment arm. It is not yet the verified frame connection spacing.
-
-Final reactions must be recalculated using the actual connection geometry.
-
-#### E. T-Slot Connector Selection
-
-The preliminary connector selected is:
-
-**80/20 Part 40-4303 — Four-Hole Wide Inside Corner Bracket**
-
-This bracket is designed for right-angle connections in compatible 40 Series aluminum extrusion assemblies.
-
-Manufacturer reference:
-
-https://airinc.net/wp-content/uploads/2021/04/40-4303-Tech-Sheet.pdf
-
-Proposed connection arrangement:
-
-| Feature | Preliminary selection |
-|---|---|
-| Frame | Heavy 40 Series aluminum extrusion |
-| Connector | 80/20 Part 40-4303 |
-| Connection type | Right-angle corner bracket |
-| Preliminary quantity | 4 brackets |
-| Fasteners | Compatible T-slot bolts and T-nuts |
-| Factor of safety target | 4 |
-
-The proposed arrangement places reinforced connections at the upper horizontal frame member and vertical supports.
-
-**[INSERT PICTURE 15 — T-Slot Connector]**
-
-*Figure 15. Selected 80/20 40-4303 four-hole corner bracket with manufacturer dimensions.*
-
-#### F. Connection Stress Verification
-
-For a symmetric four-fastener bolt group resisting a moment:
-
-\[
-F_i=\frac{Mr_i}{\sum r_j^2}
-\]
-
-If all four fasteners are the same distance \(r\) from the bolt-group centroid:
-
-\[
-\boxed{F_i=\frac{M}{4r}}
-\]
-
-The actual force calculation requires the finalized connector geometry, fastener positions, and load distribution.
-
-Connection safety factor:
-
-\[
-FS=\frac{\text{Allowable connection capacity}}{\text{Applied connection load}}
-\]
-
-The design target is:
-
-\[
-\boxed{FS\geq4}
-\]
-
-The final analysis must account for fastener shear, tension, bracket bending, T-slot retention, and the manufacturer's allowable connection loads. A numerical safety factor cannot be established from the preliminary geometry alone.
-
-#### G. CAD and FEA Verification
-
-The CAD assembly will establish the final frame connection locations and the arrangement of the T-slot brackets.
-
-**[INSERT PICTURE 16 — Completed Frame Connection CAD]**
-
-*Figure 16. Final CAD close-up showing the selected corner brackets, fasteners, and connections between the upper horizontal frame and vertical supports.*
-
-FEA will be used to evaluate stresses and deflections in the horizontal and vertical frame members. The connection load cases must be consistent with the actual motor and lead screw load paths.
-
-#### H. Engineering Conclusion
-
-The preliminary analysis produced a combined rated motor reaction torque of 65.54 N·m and a nominal operating torque of 2.60 N·m.
-
-The 80/20 40-4303 corner bracket was selected as a preliminary connection component because of its compatibility with 40 Series T-slot framing.
-
-Final connection geometry, fastener loading, allowable capacities, and structural safety factors must be verified using the completed CAD assembly and manufacturer specifications.
-
-### 7. Floating Bearing Mount Analysis
-
-The tensile testing machine requires two floating bearing supports at the bottom of the Acme lead screws. These supports allow the screws to rotate while providing radial support and accommodating small axial movements.
-
-The upper fixed bearings are intended to resist the lead screw's axial thrust, while the lower floating bearings prevent excessive lateral movement and avoid overconstraining the screws.
-
-**[INSERT PICTURE 17 — Fixed and Floating Bearing Arrangement Diagram]**
-
-*Figure 17. Engineering diagram illustrating the fixed upper bearing and floating lower bearing arrangement.*
-
-#### A. Known Values
-
-| Parameter | Value |
-|---|---|
-| Number of lead screws | 2 |
-| Lead screw type | 1/2"-10 Acme |
-| Nominal screw diameter | 12.70 mm |
-| Minimum screw length | 457.2 mm |
-| Lead screw center spacing | 200 mm |
-| Bearing mount material | 6061-T6 aluminum |
-| Required fit | RC3 precision running fit |
-| Required factor of safety | 4 |
-
-#### B. Preliminary Design Dimensions
-
-| Feature | Preliminary dimension |
-|---|---|
-| Mount width | 80 mm |
-| Mount height | 40 mm |
-| Mount thickness | 20 mm |
-| Proposed machined journal diameter | 12 mm |
-| Mounting fasteners | Two M8 bolts |
-| Nominal bolt clearance holes | 9 mm |
-| Number of mounts | 2 |
-
-The dimensions above are preliminary design selections and must be checked against the actual lower frame geometry.
-
-#### C. Free-Body Diagram
-
-The floating support is designed to resist radial reactions while allowing axial movement of the lead screw.
-
-**[INSERT PICTURE 18 — Floating Bearing Free-Body Diagram]**
-
-*Figure 18. Free-body diagram showing radial bearing reactions and the intended axial freedom at the lower lead screw support.*
-
-For radial equilibrium:
-
-\[
-\sum F_x=0,\qquad \sum F_y=0
-\]
-
-For the ideal floating support:
-
-\[
-R_{\text{axial}}=0
-\]
-
-The axial load is intended to be carried by the upper fixed bearing arrangement.
-
-#### D. Bearing Pressure Analysis
-
-Projected bearing pressure is calculated using:
-
-\[
-p=\frac{R}{dL_b}
-\]
-
-Where:
-
-- \(R\) = radial bearing reaction (N)
-- \(d\) = journal diameter (mm)
-- \(L_b\) = effective bearing length (mm)
-
-Using the proposed 12 mm journal diameter and 20 mm bearing length:
-
-\[
-p=\frac{R}{12(20)}
-\]
-
-\[
-\boxed{p=\frac{R}{240}\text{ MPa}}
-\]
-
-A numerical bearing pressure cannot be determined until the radial reaction and selected bearing arrangement are established.
-
-The 1,000 N axial load per lead screw is not automatically equivalent to the radial bearing reaction.
-
-#### E. RC3 Running Fit
-
-An RC3 precision running fit was specified for the rotating bearing interface.
-
-The purpose of the fit is to provide controlled clearance for smooth rotation while maintaining accurate shaft alignment.
-
-Proposed nominal journal diameter:
-
-\[
-\boxed{d=12.00\text{ mm}}
-\]
-
-The final upper and lower tolerance limits must be selected from an applicable ANSI B4.1 RC3 fit table for the corresponding basic size.
-
-The fit must be applied to the correct rotating shaft and mating bearing surface. If a rolling-element bearing is selected, its manufacturer-specified shaft and housing fits must also be respected.
-
-**[INSERT PICTURE 19 — RC3 Fit and Tolerance Diagram]**
-
-*Figure 19. Shaft and mating bore tolerance zones illustrating the required precision running fit.*
-
-#### F. Mounting Bolt Clearance
-
-Two M8 bolts were provisionally selected to attach each support to the lower frame.
-
-Using a normal clearance hole:
-
-\[
-\boxed{d_h=9.0\text{ mm}}
-\]
-
-The mounting-hole locations and bolt loads will be finalized using the actual lower frame connections.
-
-#### G. Engineering Conclusion
-
-A preliminary 6061-T6 aluminum floating bearing mount measuring 80 × 40 × 20 mm was selected for each lead screw.
-
-A 12 mm machined journal and RC3 running fit are proposed to provide controlled rotational clearance.
-
-The bearing-pressure equation and mounting requirements have been established. Final validation requires the actual radial reactions, selected bearing dimensions, numerical RC3 tolerance limits, and verification of the fixed–floating support arrangement.
-
-## Cost Analysis and Bill of Materials
-
-### 8. Combined A10 and A11 Cost Analysis
-
-A preliminary cost analysis was performed to estimate the total cost of designing and constructing the 2 kN tensile testing machine. The analysis includes components selected during A10 and A11, purchased materials, custom-manufactured components, and engineering labor.
-
-Supplier prices were used where available. Components without confirmed prices are identified separately and will be updated after final CAD verification.
-
-#### A. Purchased Components
-
-| Component | Quantity | Unit Cost | Total |
-|---|---:|---:|---:|
-| Bodine 4762 DC gearmotor | 2 | $1,145.44 | $2,290.88 |
-| Roton #59284 Acme lead screw | 3 ft | $9.10/ft | $27.30 |
-| Roton #90222 bronze nut | 2 | $23.57 | $47.14 |
-| 80/20 40-4303 corner bracket | 4 | $8.79 | $35.16 |
-| Roton #89838 mounting flange | 2 | TBD | TBD |
-| Bearings and bearing hardware | TBD | TBD | TBD |
-| Motor/frame fasteners | TBD | TBD | TBD |
-
-**Subtotal of priced purchased components:**
-
-\[
-C_{\text{purchased}}=2290.88+27.30+47.14+35.16
-\]
-
-\[
-\boxed{C_{\text{purchased}}=\$2400.48}
-\]
-
-**[INSERT PICTURE 20 — Selected Purchased Components and Supplier Prices]**
-
-*Figure 20. Manufacturer and supplier references for the selected motors, lead screws, nuts, and frame connectors.*
-
-#### B. Aluminum Frame Cost
-
-The preliminary frame design uses Heavy 40 Series aluminum T-slot extrusion.
-
-Estimated extrusion length:
-
-\[
-L=2160\text{ mm}
-\]
-
-Estimated price:
-
-\[
-C_{\text{unit}}=\$0.0821/\text{mm}
-\]
-
-Material cost:
-
-\[
-C_{\text{material}}=(2160)(0.0821)
-\]
-
-\[
-\boxed{C_{\text{material}}=\$177.34}
-\]
-
-Assuming four cuts at $3.79 per cut:
-
-\[
-C_{\text{cutting}}=4(3.79)=\$15.16
-\]
-
-Total preliminary frame cost:
-
-\[
-C_{\text{frame}}=177.34+15.16
-\]
-
-\[
-\boxed{C_{\text{frame}}=\$192.50}
-\]
-
-The extrusion length and number of cuts are preliminary estimates and must be updated using the final CAD cut list.
-
-#### C. Custom Manufactured Components
-
-The following components require fabrication or additional sourcing.
-
-| Component | Quantity | Material | Cost |
-|---|---:|---|---|
-| Moving crosshead | 1 | 6061-T6 aluminum | TBD |
-| Motor mounting brackets | 2 | 6061-T6 aluminum | TBD |
-| Shaft couplers | 2 | 6061-T6 aluminum | TBD |
-| Floating bearing mounts | 2 | 6061-T6 aluminum | TBD |
-| Fixed bearing supports | 2 | To be selected | TBD |
-| Specimen grips/adapters | 2 sets | To be selected | TBD |
-
-These components will be priced using the final material dimensions, stock requirements, and estimated fabrication costs.
-
-**[INSERT PICTURE 21 — Custom Component Material and Cost References]**
-
-*Figure 21. Material selections and supplier references for the custom components.*
-
-#### D. Engineering Labor Cost
-
-The required engineering labor rate is:
-
-\[
-R=\$35/\text{hour}
-\]
-
-Labor cost is calculated using:
-
-\[
-C_{\text{labor}}=R(H_{\text{total}})
-\]
-
-Where \(H_{\text{total}}\) represents the team's actual engineering hours for A10 and A11.
-
-For an illustrative estimate of 20 total engineering hours:
-
-\[
-C_{\text{labor}}=35(20)
-\]
-
-\[
-\boxed{C_{\text{labor}}=\$700.00}
-\]
-
-The 20-hour value is an example and will be replaced with actual recorded hours before final submission.
-
-#### E. Preliminary Total Cost
-
-Purchased components:
-
-\[
-C_{\text{purchased}}=\$2400.48
-\]
-
-Aluminum frame:
-
-\[
-C_{\text{frame}}=\$192.50
-\]
-
-Illustrative engineering labor:
-
-\[
-C_{\text{labor}}=\$700.00
-\]
-
-Combined partial estimate:
-
-\[
-C_{\text{partial}}=2400.48+192.50+700.00
-\]
-
-\[
-\boxed{C_{\text{partial}}=\$3292.98}
-\]
-
-This is a partial cost estimate, not the final machine cost. It excludes unpriced components, custom fabrication costs, shipping, taxes, and other required hardware.
-
-The complete cost will be calculated using:
-
-\[
-\boxed{C_{\text{total}}=C_{\text{materials}}+C_{\text{purchased}}+C_{\text{fabrication}}+C_{\text{labor}}}
-\]
-
-**[INSERT PICTURE 22 — Final BOM and Cost Summary]**
-
-*Figure 22. Updated bill of materials showing confirmed component quantities, supplier prices, fabrication costs, and total engineering labor.*
-
-#### F. Engineering Conclusion
-
-The preliminary combined A10 and A11 cost analysis produced a partial estimate of $3,292.98, including an illustrative 20-hour engineering labor allowance.
-
-The two Bodine 4762 gearmotors represent the largest identified purchased-component expense. Material costs were estimated using supplier pricing, while custom components and additional hardware remain subject to final design confirmation.
-
-The bill of materials will be updated after the CAD assembly is completed and actual engineering labor hours are recorded.
 
 
 ## Decide
