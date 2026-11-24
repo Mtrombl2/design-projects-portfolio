@@ -1091,6 +1091,534 @@ The final design will incorporate a complete CAD assembly, structural finite ele
 
 </section>
 
+<section id="top-frame-fea">
+
+  <h3>5. Top Horizontal Frame FEA</h3>
+
+  <p>
+    Finite Element Analysis (FEA) was performed
+    in SolidWorks Simulation on the top horizontal
+    frame member of the tensile testing machine.
+  </p>
+
+  <p>
+    The purpose of this analysis was to evaluate
+    stress distribution and determine whether
+    the frame member satisfies the required
+    factor of safety of 4.
+  </p>
+
+  <h4>A. Simulation Setup</h4>
+
+  <p>
+    The simulation model represents a horizontal
+    T-slot aluminum frame member with loads
+    applied near the motor mounting locations.
+  </p>
+
+  <p>
+    The screenshots show restrained regions
+    at the beam ends and loads applied near
+    two mounting holes.
+  </p>
+
+  <p>
+    The simulation identifies a material yield
+    strength of 215 MPa. The exact material
+    assignment, applied force magnitudes,
+    torque values, and boundary conditions
+    should be verified against the saved
+    SolidWorks simulation study.
+  </p>
+
+  <h4>B. Coarse Mesh Stress Analysis</h4>
+
+  <figure>
+    <img src="stresscoarse.png"
+         alt="Coarse mesh von Mises stress"
+         width="600">
+    <figcaption>
+      Figure F1. Coarse mesh von Mises
+      stress distribution.
+    </figcaption>
+  </figure>
+
+  <p>
+    Maximum von Mises stress:
+  </p>
+
+  <p>
+    <strong>34.80 MPa</strong>
+  </p>
+
+  <p>
+    The greatest stress concentrations appear
+    near the loaded mounting holes.
+  </p>
+
+  <h4>C. Balanced Mesh Stress Analysis</h4>
+
+  <figure>
+    <img src="stressbalanced.png"
+         alt="Balanced mesh von Mises stress"
+         width="600">
+    <figcaption>
+      Figure F2. Balanced mesh von Mises
+      stress distribution.
+    </figcaption>
+  </figure>
+
+  <p>
+    Maximum von Mises stress:
+  </p>
+
+  <p>
+    <strong>35.41 MPa</strong>
+  </p>
+
+  <h4>D. Fine Mesh Stress Analysis</h4>
+
+  <figure>
+    <img src="stressfine.png"
+         alt="Fine mesh von Mises stress"
+         width="600">
+    <figcaption>
+      Figure F3. Fine mesh von Mises
+      stress distribution.
+    </figcaption>
+  </figure>
+
+  <p>
+    Maximum von Mises stress:
+  </p>
+
+  <p>
+    <strong>35.15 MPa</strong>
+  </p>
+
+  <p>
+    The fine mesh shows stress concentrations
+    near the mounting holes, while most
+    of the beam has considerably lower stress.
+  </p>
+
+  <h4>E. Mesh Convergence Comparison</h4>
+
+  <table border="1" cellpadding="8">
+    <tr>
+      <th>Mesh</th>
+      <th>Maximum Stress</th>
+    </tr>
+    <tr>
+      <td>Coarse</td>
+      <td>34.80 MPa</td>
+    </tr>
+    <tr>
+      <td>Balanced</td>
+      <td>35.41 MPa</td>
+    </tr>
+    <tr>
+      <td>Fine</td>
+      <td>35.15 MPa</td>
+    </tr>
+  </table>
+
+  <p>
+    Percent difference between balanced
+    and fine mesh stress results:
+  </p>
+
+  <p>
+    Difference =
+    |35.41 - 35.15| / 35.15 x 100
+  </p>
+
+  <p>
+    <strong>Difference = 0.74%</strong>
+  </p>
+
+  <p>
+    The maximum stresses are relatively
+    consistent across all three mesh settings.
+  </p>
+
+  <p>
+    This provides preliminary evidence of
+    stress-result convergence. A complete
+    mesh convergence study should additionally
+    report element sizes or element counts
+    and confirm consistent loading and
+    boundary conditions.
+  </p>
+
+  <h4>F. Factor of Safety Analysis</h4>
+
+  <p>
+    The factor of safety was evaluated
+    relative to yielding.
+  </p>
+
+  <p>
+    FS = Yield Strength / Maximum Stress
+  </p>
+
+  <p>
+    Yield strength = 215 MPa
+  </p>
+
+  <p>
+    Fine mesh maximum stress = 35.15 MPa
+  </p>
+
+  <p>
+    FS = 215 / 35.15
+  </p>
+
+  <p>
+    <strong>FS = 6.12</strong>
+  </p>
+
+  <p>
+    Required factor of safety = 4
+  </p>
+
+  <p>
+    <strong>6.12 &gt; 4</strong>
+  </p>
+
+  <p>
+    Therefore, the modeled top horizontal
+    frame meets the target factor of
+    safety under the simulated loading.
+  </p>
+
+  <h4>G. Factor of Safety Results</h4>
+
+  <figure>
+    <img src="FOScoarse.png"
+         alt="Coarse mesh factor of safety"
+         width="600">
+    <figcaption>
+      Figure F4. Coarse mesh factor
+      of safety distribution.
+    </figcaption>
+  </figure>
+
+  <figure>
+    <img src="FOSbalanced.png"
+         alt="Balanced mesh factor of safety"
+         width="600">
+    <figcaption>
+      Figure F5. Balanced mesh factor
+      of safety distribution.
+    </figcaption>
+  </figure>
+
+  <figure>
+    <img src="FOSfine.png"
+         alt="Fine mesh factor of safety"
+         width="600">
+    <figcaption>
+      Figure F6. Fine mesh factor
+      of safety distribution.
+    </figcaption>
+  </figure>
+
+  <table border="1" cellpadding="8">
+    <tr>
+      <th>Mesh</th>
+      <th>Approx. Minimum FS</th>
+    </tr>
+    <tr>
+      <td>Coarse</td>
+      <td>6.18</td>
+    </tr>
+    <tr>
+      <td>Balanced</td>
+      <td>6.07</td>
+    </tr>
+    <tr>
+      <td>Fine</td>
+      <td>6.12</td>
+    </tr>
+  </table>
+
+  <p>
+    The minimum factors of safety shown
+    in all three simulation screenshots
+    exceed the required value of 4.
+  </p>
+
+  <h4>H. Displacement Verification</h4>
+
+  <p>
+    A numerical displacement result for
+    the isolated top beam was not included
+    among the supplied screenshots.
+  </p>
+
+  <p>
+    The maximum displacement and its
+    location should be added from the
+    SolidWorks simulation study.
+  </p>
+
+  <h4>I. Engineering Conclusion</h4>
+
+  <p>
+    The fine mesh simulation reported a
+    maximum von Mises stress of 35.15 MPa
+    and a minimum factor of safety of
+    approximately 6.12.
+  </p>
+
+  <p>
+    The balanced and fine mesh stress
+    results differed by approximately
+    0.74 percent, suggesting that the
+    reported maximum stress is reasonably
+    stable across these mesh settings.
+  </p>
+
+  <p>
+    The frame passes the preliminary
+    strength check for the modeled
+    loading conditions.
+  </p>
+
+  <p>
+    Final validation requires confirmation
+    of the applied loads, supports,
+    mesh settings, and displacement
+    results in SolidWorks.
+  </p>
+
+</section>
+
+<section id="vertical-frame-fea">
+
+  <h3>6. Vertical Frame FEA</h3>
+
+  <p>
+    Finite Element Analysis was performed in
+    SolidWorks Simulation on the supporting frame
+    of the tensile testing machine.
+  </p>
+
+  <p>
+    The purpose of this analysis was to examine
+    stress distribution throughout the frame,
+    including the vertical support members,
+    under the applied loading conditions.
+  </p>
+
+  <h4>A. Frame Model and Loading</h4>
+
+  <p>
+    The frame consists of vertical aluminum
+    T-slot extrusion members connected by
+    upper and lower horizontal supports.
+  </p>
+
+  <p>
+    The provided simulation screenshots show
+    applied loads near the motor mounting
+    locations on the upper horizontal member.
+  </p>
+
+  <p>
+    Restraints are visible near the base
+    of the frame.
+  </p>
+
+  <figure>
+    <img src="coarsedisp.png"
+         alt="Frame simulation model and restraints"
+         width="600">
+    <figcaption>
+      Figure V1. Frame simulation model showing
+      loading locations and support restraints.
+    </figcaption>
+  </figure>
+
+  <p>
+    The image illustrates the simulation setup.
+    It does not provide a numerical displacement
+    result.
+  </p>
+
+  <h4>B. Von Mises Stress Analysis</h4>
+
+  <p>
+    The provided full-frame simulation shows
+    the von Mises stress distribution across
+    the supporting structure.
+  </p>
+
+  <figure>
+    <img src="framecoarse.png"
+         alt="Full frame von Mises stress analysis"
+         width="600">
+    <figcaption>
+      Figure V2. Coarse mesh stress analysis
+      of the complete supporting frame.
+    </figcaption>
+  </figure>
+
+  <p>
+    Maximum von Mises stress:
+  </p>
+
+  <p>
+    <strong>
+      Maximum Stress = 34.54 MPa
+    </strong>
+  </p>
+
+  <p>
+    The highest stresses appear near the
+    loaded regions of the upper horizontal
+    frame member.
+  </p>
+
+  <p>
+    Most of the vertical frame members
+    appear blue in the stress plot,
+    indicating comparatively lower stresses
+    within the displayed color scale.
+  </p>
+
+  <p>
+    The 34.54 MPa maximum applies to the
+    full-frame model. It should not be
+    interpreted as a separately measured
+    maximum stress in the vertical members.
+  </p>
+
+  <h4>C. Material Yield Strength</h4>
+
+  <p>
+    The SolidWorks stress plot identifies
+    the material yield strength as:
+  </p>
+
+  <p>
+    <strong>
+      Yield Strength = 215 MPa
+    </strong>
+  </p>
+
+  <h4>D. Factor of Safety Calculation</h4>
+
+  <p>
+    The estimated factor of safety
+    against yielding is calculated using:
+  </p>
+
+  <p>
+    FS = Yield Strength / Maximum Stress
+  </p>
+
+  <p>
+    FS = 215 / 34.54
+  </p>
+
+  <p>
+    <strong>FS = 6.22</strong>
+  </p>
+
+  <p>
+    Required factor of safety:
+  </p>
+
+  <p><strong>FS(required) = 4</strong></p>
+
+  <p>
+    Comparison:
+  </p>
+
+  <p><strong>6.22 &gt; 4</strong></p>
+
+  <p>
+    The full-frame model therefore satisfies
+    the preliminary yield-strength criterion
+    under the simulated loading conditions.
+  </p>
+
+  <h4>E. Mesh Analysis</h4>
+
+  <p>
+    The available full-frame stress screenshot
+    corresponds to a coarse mesh simulation.
+  </p>
+
+  <p>
+    A separate balanced and fine mesh
+    comparison for the complete frame
+    was not included in the provided files.
+  </p>
+
+  <p>
+    Therefore, numerical mesh convergence
+    for the vertical frame analysis
+    cannot be established from the
+    available screenshots.
+  </p>
+
+  <h4>F. Displacement Analysis</h4>
+
+  <p>
+    The supplied frame images show the
+    geometry, applied loads, and constraints,
+    but do not display a numerical
+    displacement contour result.
+  </p>
+
+  <p>
+    Consequently, the maximum displacement
+    of the vertical supports cannot
+    be reported from the available data.
+  </p>
+
+  <h4>G. Engineering Conclusion</h4>
+
+  <p>
+    The full-frame SolidWorks simulation
+    reported a maximum von Mises stress
+    of approximately 34.54 MPa.
+  </p>
+
+  <p>
+    Using the material yield strength
+    of 215 MPa shown in the simulation,
+    the estimated factor of safety
+    against yielding is 6.22.
+  </p>
+
+  <p>
+    This exceeds the required factor
+    of safety of 4 for the modeled
+    static loading conditions.
+  </p>
+
+  <p>
+    The available results provide
+    preliminary evidence that the
+    overall frame can withstand the
+    simulated loads without yielding.
+  </p>
+
+  <p>
+    However, vertical-member-specific
+    results, displacement values,
+    mesh convergence, and possible
+    buckling behavior require further
+    verification before the structure
+    can be considered fully validated.
+  </p>
+
+</section>
+
 
 
 <section id="floating-bearing-analysis">
@@ -1690,6 +2218,356 @@ The final design will incorporate a complete CAD assembly, structural finite ele
 
 
 ## Decide
-_Reference your concept selection (Pugh matrix) here. How does this design follow from that decision?_
+
+<section id="cad-design">
+
+  <h2>Design</h2>
+  <h3>CAD Modeling and Assembly</h3>
+
+  <p>
+    The A11 design builds upon the tensile testing
+    machine developed during A10. Additional
+    components were modeled in SolidWorks to
+    incorporate the motor drive system, motor
+    mounting plates, shaft couplers, and
+    supporting frame.
+  </p>
+
+  <p>
+    The CAD models allow the team to visualize
+    component positioning, examine mounting
+    interfaces, and assess the overall
+    assembly configuration.
+  </p>
+
+  <h4>A. Selected Motor</h4>
+
+  <p>
+    The proposed drive system uses two Bodine
+    Electric Model 4762 DC gearmotors, with
+    one motor positioned above each lead screw.
+  </p>
+
+  <p>
+    Motor dimensions and mounting features
+    must be checked against the manufacturer
+    drawing to ensure proper assembly.
+  </p>
+
+  <figure>
+    <img src="motor.png"
+         alt="Bodine 4762 gearmotor"
+         width="500">
+    <figcaption>
+      Figure D1. Selected Bodine Electric
+      Model 4762 gearmotor.
+    </figcaption>
+  </figure>
+
+  <h4>B. Motor Mounting Plate</h4>
+
+  <p>
+    A mounting plate was modeled to support
+    the motor and provide an attachment
+    interface to the testing machine frame.
+  </p>
+
+  <p>
+    The CAD images show the plate geometry,
+    mounting hole arrangement, and the
+    motor-to-plate interface.
+  </p>
+
+  <figure>
+    <img src="plate.png"
+         alt="Motor mounting plate"
+         width="500">
+    <figcaption>
+      Figure D2. Motor mounting plate model.
+    </figcaption>
+  </figure>
+
+  <figure>
+    <img src="plateholes.png"
+         alt="Mounting plate dimensions and holes"
+         width="500">
+    <figcaption>
+      Figure D3. Mounting plate hole layout
+      and dimensional features.
+    </figcaption>
+  </figure>
+
+  <figure>
+    <img src="boltholes.png"
+         alt="Motor mounting hole configuration"
+         width="500">
+    <figcaption>
+      Figure D4. Motor mounting hole
+      arrangement.
+    </figcaption>
+  </figure>
+
+  <figure>
+    <img src="boltsholesonplate.png"
+         alt="Motor and mounting plate alignment"
+         width="500">
+    <figcaption>
+      Figure D5. Motor and mounting plate
+      attachment alignment.
+    </figcaption>
+  </figure>
+
+  <figure>
+    <img src="plateandmotor.png"
+         alt="Motor and mounting plate"
+         width="500">
+    <figcaption>
+      Figure D6. Motor and mounting plate
+      CAD components.
+    </figcaption>
+  </figure>
+
+  <h4>C. Motor Mount Assembly</h4>
+
+  <p>
+    The motor and mounting plate were
+    assembled to illustrate the proposed
+    connection between the motor housing
+    and the support structure.
+  </p>
+
+  <figure>
+    <img
+      src="Screenshot 2026-11-23 210526.png"
+      alt="Motor mounting assembly"
+      width="500">
+    <figcaption>
+      Figure D7. Motor mounting assembly
+      modeled in SolidWorks.
+    </figcaption>
+  </figure>
+
+  <h4>D. Shaft Coupler</h4>
+
+  <p>
+    A shaft coupler was modeled to connect
+    the motor output shaft to the lead screw.
+  </p>
+
+  <p>
+    The CAD model shows a cylindrical body
+    with an internal bore and keyway feature.
+    The final mating dimensions must match
+    the selected motor shaft and machined
+    lead screw end.
+  </p>
+
+  <figure>
+    <img src="coupler.png"
+         alt="Shaft coupler CAD model"
+         width="500">
+    <figcaption>
+      Figure D8. Shaft coupler model.
+    </figcaption>
+  </figure>
+
+  <p>
+    The associated SolidWorks part and
+    drawing files are provided with the
+    team's CAD deliverables.
+  </p>
+
+  <h4>E. Updated Tensile Testing Assembly</h4>
+
+  <p>
+    The existing A10 frame assembly was
+    updated to incorporate the proposed
+    motor arrangement.
+  </p>
+
+  <p>
+    The assembly image shows two motors
+    at the upper portion of the frame,
+    with a horizontal crosshead positioned
+    between the vertical supports.
+  </p>
+
+  <figure>
+    <img src="finished.png"
+         alt="Updated tensile testing assembly"
+         width="600">
+    <figcaption>
+      Figure D9. Updated tensile testing
+      machine assembly.
+    </figcaption>
+  </figure>
+
+  <h4>F. Assembly Verification</h4>
+
+  <p>
+    The CAD models provide a preliminary
+    representation of the motor mounting
+    arrangement, coupler design, and
+    overall machine configuration.
+  </p>
+
+  <p>
+    Before fabrication, the final assembly
+    must be checked for shaft alignment,
+    bearing support locations, fastener
+    clearances, crosshead travel, and
+    compatibility between mating components.
+  </p>
+
+  <p>
+    The provided assembly screenshots do
+    not independently establish the final
+    bearing arrangement or verify all
+    mechanical interfaces.
+  </p>
+
+  <h4>G. SolidWorks Deliverables</h4>
+
+  <p>
+    The CAD package includes the following
+    native SolidWorks files:
+  </p>
+
+  <ul>
+    <li>finalassembly.SLDASM</li>
+    <li>motorandbracketassm.SLDASM</li>
+    <li>coupler.SLDPRT</li>
+    <li>couplerdrawing.SLDDRW</li>
+    <li>motordrawing.SLDDRW</li>
+  </ul>
+
+  <p>
+    These files should be included in the
+    downloadable CAD package. Assembly
+    dependencies should be checked so the
+    models open correctly on another computer.
+  </p>
+
+</section>
+
 
 ## Communicate
+
+<section id="communication">
+
+  <h2>Communication and Lessons Learned</h2>
+
+  <h3>Team Member Contributions</h3>
+
+  <p>
+    The A11 tensile testing machine project was
+    completed through collaboration between
+    three team members. Responsibilities were
+    divided between engineering analysis,
+    CAD modeling, simulation, and documentation.
+  </p>
+
+  <table border="1" cellpadding="8">
+    <tr>
+      <th>Team Member</th>
+      <th>Responsibilities</th>
+    </tr>
+    <tr>
+      <td>Mason</td>
+      <td>
+        Engineering calculations, motor selection,
+        motor mounting analysis, coupler analysis,
+        frame connection analysis, floating bearing
+        analysis, bill of materials, cost analysis,
+        and GitHub documentation.
+      </td>
+    </tr>
+    <tr>
+      <td>Jakub</td>
+      <td>
+        CAD modeling, component design, and
+        assembly development in SolidWorks.
+      </td>
+    </tr>
+    <tr>
+      <td>Amaha</td>
+      <td>
+        CAD modeling, component design, and
+        assembly development in SolidWorks.
+      </td>
+    </tr>
+  </table>
+
+  <h3>Time Spent on Project</h3>
+
+  <table border="1" cellpadding="8">
+    <tr>
+      <th>Work</th>
+      <th>Hours</th>
+    </tr>
+    <tr>
+      <td>CAD Modeling and Assembly
+          (Jakub and Amaha combined)</td>
+      <td>12 hours</td>
+    </tr>
+    <tr>
+      <td>Engineering Analysis and Documentation
+          (Mason)</td>
+      <td>To be recorded</td>
+    </tr>
+  </table>
+
+  <p>
+    The labor rate used for the project cost
+    analysis is $35 per hour.
+  </p>
+
+  <p>
+    CAD labor cost = 12 x $35
+  </p>
+
+  <p>
+    <strong>CAD Labor Cost = $420</strong>
+  </p>
+
+  <p>
+    The total team labor cost will be updated
+    when all individual work hours are recorded.
+  </p>
+
+  <h3>Lessons Learned</h3>
+
+  <p>
+    One important lesson from A11 was the
+    relationship between component selection,
+    engineering calculations, and CAD design.
+    The motor, couplers, brackets, and bearing
+    supports must be compatible for the complete
+    machine to function properly.
+  </p>
+
+  <p>
+    The project also demonstrated the importance
+    of using finite element analysis to evaluate
+    stresses and factors of safety in structural
+    components before manufacturing.
+  </p>
+
+  <p>
+    Another lesson was the importance of team
+    communication. Dividing the engineering
+    analysis and CAD responsibilities allowed
+    different parts of the design to be developed,
+    but required coordination to ensure that
+    the final models matched the calculations.
+  </p>
+
+  <p>
+    Overall, A11 provided experience in
+    mechanical design, CAD assembly,
+    structural analysis, cost estimation,
+    and collaborative engineering.
+  </p>
+
+</section>
+
