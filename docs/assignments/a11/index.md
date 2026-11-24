@@ -2434,11 +2434,37 @@ The final design will incorporate a complete CAD assembly, structural finite ele
   </p>
 
   <ul>
-    <li>finalassembly.SLDASM</li>
-    <li>motorandbracketassm.SLDASM</li>
-    <li>coupler.SLDPRT</li>
-    <li>couplerdrawing.SLDDRW</li>
-    <li>motordrawing.SLDDRW</li>
+    
+<h3>Download CAD Files</h3>
+
+<ul>
+  <li>
+    <a href="finalassembly.SLDASM" download>
+      Complete Assembly
+    </a>
+  </li>
+  <li>
+    <a href="motorandbracketassm.SLDASM" download>
+      Motor and Bracket Assembly
+    </a>
+  </li>
+  <li>
+    <a href="coupler.SLDPRT" download>
+      Coupler Part
+    </a>
+  </li>
+  <li>
+    <a href="couplerdrawing.SLDDRW" download>
+      Coupler Drawing
+    </a>
+  </li>
+  <li>
+    <a href="motordrawing.SLDDRW" download>
+      Motor Drawing
+    </a>
+  </li>
+</ul>
+
   </ul>
 
   <p>
@@ -2451,7 +2477,7 @@ The final design will incorporate a complete CAD assembly, structural finite ele
 </section>
 
 
-## Communicate
+
 
 <section id="communication">
 
